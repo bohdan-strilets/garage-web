@@ -9,16 +9,16 @@ export const darkTheme: AppTheme = {
   ...baseThemeTokens,
   colors: {
     ...baseThemeTokens.colors,
-    bg: '#020617',
-    surface: '#020617',
-    surfaceMuted: '#0f172a',
+    bg: '##1f1f1f',
+    surface: '#292929',
+    surfaceMuted: '#303030',
 
-    text: '#e5e7eb',
-    textMuted: '#9ca3af',
-    border: '#1f2937',
+    text: '#cfcfcf',
+    textMuted: '#adadad',
+    border: '#7a7a7a',
 
     primary: baseThemeTokens.colors.primary,
-    primarySoft: 'rgba(58, 119, 255, 0.25)',
+    primarySoft: 'rgba(255, 94, 98, 0.3)',
 
     success: '#22c55e',
     warning: '#eab308',
