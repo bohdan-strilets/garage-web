@@ -6,7 +6,7 @@ import { AppThemeProvider } from '@shared/styles/theme';
 
 import App from './App.tsx';
 
-import '../shared/styles/global.css';
+import '../shared/styles/global/index.css';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

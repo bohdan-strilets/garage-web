@@ -13,29 +13,34 @@ export interface ColorTokens {
   success: string;
   warning: string;
   danger: string;
+  successSoft: string;
+  warningSoft: string;
+  dangerSoft: string;
 }
 
 export interface ShadowTokens {
   sm: string;
   md: string;
   card: string;
+  insetSm: string;
 }
 
 export interface RadiusTokens {
   sm: string;
   md: string;
   lg: string;
+  xl: string;
 }
 
 export interface SpaceTokens {
-  1: number;
-  2: number;
-  3: number;
-  4: number;
-  5: number;
-  6: number;
-  8: number;
-  10: number;
+  1: string;
+  2: string;
+  3: string;
+  4: string;
+  5: string;
+  6: string;
+  7: string;
+  8: string;
 }
 
 export interface FontSizeTokens {
@@ -48,9 +53,36 @@ export interface FontSizeTokens {
   '3xl': string;
 }
 
+export interface FontFamilyTokens {
+  montserrat: string;
+  lobster: string;
+}
+
 export interface TypographyTokens {
-  fontFamily: string;
+  fontFamily: FontFamilyTokens;
   fontSizes: FontSizeTokens;
+}
+
+export interface InputTokens {
+  bg: string;
+  border: string;
+  focus: string;
+  placeholder: string;
+}
+
+export interface FocusRingTokens {
+  color: string;
+  width: string;
+}
+
+export interface OverlayTokens {
+  color: string;
+}
+
+export interface TransitionTokens {
+  fast: string;
+  normal: string;
+  slow: string;
 }
 
 export interface AppTheme {
@@ -59,4 +91,8 @@ export interface AppTheme {
   radii: RadiusTokens;
   space: SpaceTokens;
   typography: TypographyTokens;
+  input: InputTokens;
+  focusRing: FocusRingTokens;
+  overlay: OverlayTokens;
+  transitions: TransitionTokens;
 }

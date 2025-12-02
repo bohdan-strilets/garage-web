@@ -9,19 +9,19 @@ export const darkTheme: AppTheme = {
   ...baseThemeTokens,
   colors: {
     ...baseThemeTokens.colors,
-    bg: '##1f1f1f',
-    surface: '#292929',
-    surfaceMuted: '#303030',
+    bg: '#111111',
+    surface: '#181818',
+    surfaceMuted: '#202020',
 
-    text: '#cfcfcf',
-    textMuted: '#adadad',
-    border: '#7a7a7a',
+    text: '#f3f3f3',
+    textMuted: '#b0b0b0',
+    border: '#3a3a3a',
 
     primary: baseThemeTokens.colors.primary,
-    primarySoft: 'rgba(255, 94, 98, 0.3)',
+    primarySoft: 'rgba(255, 224, 0, 0.35)',
 
-    success: '#22c55e',
-    warning: '#eab308',
-    danger: '#f97373',
+    success: baseThemeTokens.colors.success,
+    warning: baseThemeTokens.colors.warning,
+    danger: baseThemeTokens.colors.danger,
   },
 };

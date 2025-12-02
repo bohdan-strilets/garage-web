@@ -16,41 +16,71 @@ export const baseThemeTokens: AppTheme = {
     success: 'var(--color-success)',
     warning: 'var(--color-warning)',
     danger: 'var(--color-danger)',
+    successSoft: 'var(--color-success-soft)',
+    warningSoft: 'var(--color-warning-soft)',
+    dangerSoft: 'var(--color-danger-soft)',
   },
 
   shadows: {
     sm: 'var(--shadow-sm)',
     md: 'var(--shadow-md)',
     card: 'var(--shadow-card)',
+    insetSm: 'var(--shadow-inset-sm)',
   },
 
   radii: {
-    sm: '6px',
-    md: '10px',
-    lg: '16px',
+    sm: 'var(--radius-sm)',
+    md: 'var(--radius-md)',
+    lg: 'var(--radius-lg)',
+    xl: 'var(--radius-xl)',
   },
 
   space: {
-    1: 4,
-    2: 8,
-    3: 12,
-    4: 16,
-    5: 20,
-    6: 24,
-    8: 32,
-    10: 40,
+    1: 'var(--space-1)',
+    2: 'var(--space-2)',
+    3: 'var(--space-3)',
+    4: 'var(--space-4)',
+    5: 'var(--space-5)',
+    6: 'var(--space-6)',
+    7: 'var(--space-7)',
+    8: 'var(--space-8)',
   },
 
   typography: {
-    fontFamily: `system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif`,
-    fontSizes: {
-      xs: '0.75rem', // 12px
-      sm: '0.875rem', // 14px
-      md: '1rem', // 16px
-      lg: '1.125rem', // 18px
-      xl: '1.25rem', // 20px
-      '2xl': '1.5rem', // 24px
-      '3xl': '1.875rem', // 30px
+    fontFamily: {
+      montserrat: 'var(--font-montserrat)',
+      lobster: 'var(--font-lobster)',
     },
+    fontSizes: {
+      xs: '--font-size-xs',
+      sm: '--font-size-sm',
+      md: '--font-size-md',
+      lg: '--font-size-lg',
+      xl: '--font-size-xl',
+      '2xl': '--font-size-2xl',
+      '3xl': '--font-size-3xl',
+    },
+  },
+
+  input: {
+    bg: 'var(--color-input-bg)',
+    border: 'var(--color-input-border)',
+    focus: 'var(--color-input-border-focus)',
+    placeholder: 'var(--color-input-placeholder)',
+  },
+
+  focusRing: {
+    color: 'var(--color-focus-ring)',
+    width: 'var(--focus-ring-width)',
+  },
+
+  overlay: {
+    color: 'var(--color-overlay)',
+  },
+
+  transitions: {
+    fast: 'var(--transition-fast)',
+    normal: 'var(--transition-normal)',
+    slow: 'var(--transition-slow)',
   },
 };
