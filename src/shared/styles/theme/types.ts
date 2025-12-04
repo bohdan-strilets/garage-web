@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 export interface ColorTokens {
   bg: string;
   surface: string;
@@ -85,6 +86,15 @@ export interface TransitionTokens {
   slow: string;
 }
 
+export type BreakpointKey = 'mobile' | 'tablet' | 'laptop' | 'desktop';
+
+export interface BreakpointTokens {
+  values: Record<BreakpointKey, number>;
+  up: (key: BreakpointKey) => string;
+  down: (key: BreakpointKey) => string;
+  between: (min: BreakpointKey, max: BreakpointKey) => string;
+}
+
 export interface AppTheme {
   colors: ColorTokens;
   shadows: ShadowTokens;
@@ -95,4 +105,5 @@ export interface AppTheme {
   focusRing: FocusRingTokens;
   overlay: OverlayTokens;
   transitions: TransitionTokens;
+  breakpoints: BreakpointTokens;
 }

@@ -1,4 +1,5 @@
-import type { AppTheme } from './types';
+import { breakpointValues } from './breakpoints';
+import type { AppTheme, BreakpointKey } from './types';
 
 export const baseThemeTokens: AppTheme = {
   colors: {
@@ -82,5 +83,19 @@ export const baseThemeTokens: AppTheme = {
     fast: 'var(--transition-fast)',
     normal: 'var(--transition-normal)',
     slow: 'var(--transition-slow)',
+  },
+
+  breakpoints: {
+    values: breakpointValues,
+    up: (key: BreakpointKey) => `@media (min-width: ${breakpointValues[key]}px)`,
+    down: (key: BreakpointKey) => {
+      const value = breakpointValues[key];
+      if (value === 0) return '@media (max-width: 99999px)';
+      return `@media (max-width: ${value - 0.02}px)`;
+    },
+    between: (min: BreakpointKey, max: BreakpointKey) =>
+      `@media (min-width: ${breakpointValues[min]}px) and (max-width: ${
+        breakpointValues[max] - 0.02
+      }px)`,
   },
 };
