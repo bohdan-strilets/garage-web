@@ -25,9 +25,15 @@ const App = () => {
       </Text>
       <Button variant="danger">Danger</Button>
       <Button variant="ghost">Ghost</Button>
-      <Button variant="primary">Primary</Button>
-      <Button variant="secondary">Secondary</Button>
-      <Button variant="success">Success</Button>
+      <Button variant="primary" size="sm">
+        Primary
+      </Button>
+      <Button variant="secondary" size="lg">
+        Secondary
+      </Button>
+      <Button variant="success" size="md" disabled>
+        Success
+      </Button>
     </div>
   );
 };

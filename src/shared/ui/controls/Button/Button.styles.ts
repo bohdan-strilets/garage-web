@@ -6,10 +6,10 @@ export const StyledButton = styled.button<ButtonStyleProps>(
   ({ theme, $variant, $size, $fullWidth, $disabled, $loading }) => {
     const isDisabled = $disabled || $loading;
 
-    let padding = `${theme.space[2]} ${theme.space[4]}`;
+    let padding = `${theme.space[2]} ${theme.space[7]}`;
 
-    if ($size === 'sm') padding = `${theme.space[1]} ${theme.space[3]}`;
-    if ($size === 'lg') padding = `${theme.space[3]} ${theme.space[5]}`;
+    if ($size === 'sm') padding = `${theme.space[1]} ${theme.space[5]}`;
+    if ($size === 'lg') padding = `${theme.space[3]} ${theme.space[7]}`;
 
     let fontSize = theme.typography.fontSizes.md;
 

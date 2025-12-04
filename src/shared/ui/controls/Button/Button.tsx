@@ -22,7 +22,7 @@ export const Button = ({
       $size={size}
       $fullWidth={fullWidth}
       $loading={loading}
-      disabled={isDisabled}
+      $disabled={isDisabled}
       {...rest}
     >
       {leftIcon && <IconWrapper>{leftIcon}</IconWrapper>}
