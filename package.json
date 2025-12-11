@@ -14,11 +14,22 @@
     "prepare": "husky install",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": [
+      "eslint --max-warnings=0 --no-warn-ignored",
+      "prettier --write"
+    ],
+    "*.{ts,tsx,js,jsx,json,md,css}": [
+      "prettier --write"
+    ]
+  },
   "dependencies": {
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^20.2.0",
+    "@commitlint/config-conventional": "^20.2.0",
     "@eslint/js": "^9.39.1",
     "@types/node": "^24.10.1",
     "@types/react": "^19.2.5",
