@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+echo "🔎 Running lint-staged…"
+npx --no lint-staged || exit 1
+
+echo "🧪 Typecheck…"
+npm run -s typecheck || exit 1
+
+echo "✅ Pre-commit passed!"
