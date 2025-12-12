@@ -2,6 +2,7 @@ import type { FC } from 'react';
 import { FiDollarSign, FiServer, FiSun, FiWatch } from 'react-icons/fi';
 
 import { Logo } from '@shared/ui/brand/Logo';
+import { Button } from '@shared/ui/controls/Button';
 import { Card } from '@shared/ui/surfaces/Card';
 import { IconSurface } from '@shared/ui/surfaces/IconSurface';
 import { Heading } from '@shared/ui/typography/Heading';
@@ -37,6 +38,16 @@ const App: FC = () => {
         <IconSurface tone="info" isGradient={true}>
           <FiWatch />
         </IconSurface>
+        <Button tone="danger">Danger button</Button>
+        <Button tone="ghost">Ghost button</Button>
+        <Button tone="info">Info button</Button>
+        <Button tone="inverted">Inverted button</Button>
+        <Button tone="muted">Muted button</Button>
+        <Button tone="primary">Primary button</Button>
+        <Button tone="success">Success button</Button>
+        <Button tone="warning" fullWidth={true}>
+          Warning button
+        </Button>
       </Card>
     </div>
   );

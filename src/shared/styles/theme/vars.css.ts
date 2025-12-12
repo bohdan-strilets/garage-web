@@ -6,6 +6,7 @@ export const vars = createThemeContract({
       default: null,
       muted: null,
       strong: null,
+      inverted: null,
     },
     surface: {
       default: null,

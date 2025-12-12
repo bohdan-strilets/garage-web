@@ -3,6 +3,7 @@ export const lightColors = {
     default: 'oklch(0.961 0 89.876)',
     muted: 'oklch(0.925 0 89.876)',
     strong: 'oklch(0.864 0 89.876)',
+    inverted: 'oklch(0.244 0.004 247.217)',
   },
   surface: {
     default: 'oklch(1 0 89.876)',
@@ -60,6 +61,7 @@ export const darkColors = {
     default: 'oklch(0.244 0.004 247.217)',
     muted: 'oklch(0.293 0.004 247.08)',
     strong: 'oklch(0.17 0.003 247.137)',
+    inverted: 'oklch(0.961 0 89.876)',
   },
   surface: {
     default: 'oklch(0.307 0.008 247.285)',
