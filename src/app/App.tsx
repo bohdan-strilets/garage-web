@@ -1,12 +1,14 @@
 import type { FC } from 'react';
 
 import { Card } from '@shared/ui/surfaces/Card';
+import { Heading } from '@shared/ui/typography/Heading';
 import { Paragraph } from '@shared/ui/typography/Paragraph';
 
 const App: FC = () => {
   return (
     <div>
       <Card border="default" tone="default" interactive={false} elevation="md">
+        <Heading size="xl">Car description</Heading>
         <Paragraph tone="success" size="xs" weight="medium">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut aliquid modi est assumenda
           labore quos voluptatem, delectus dignissimos quasi voluptas molestiae expedita harum
