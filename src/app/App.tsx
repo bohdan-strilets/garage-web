@@ -1,6 +1,7 @@
 import type { FC } from 'react';
 import { FiDollarSign, FiServer, FiSun, FiWatch } from 'react-icons/fi';
 
+import { Logo } from '@shared/ui/brand/Logo';
 import { Card } from '@shared/ui/surfaces/Card';
 import { IconSurface } from '@shared/ui/surfaces/IconSurface';
 import { Heading } from '@shared/ui/typography/Heading';
@@ -8,6 +9,7 @@ import { Paragraph } from '@shared/ui/typography/Paragraph';
 const App: FC = () => {
   return (
     <div>
+      <Logo />
       <Card border="default" tone="default" interactive={false} elevation="md">
         <Heading size="xl">Car description</Heading>
         <Paragraph tone="success" size="xs" weight="medium">
