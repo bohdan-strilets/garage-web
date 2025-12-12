@@ -2,7 +2,7 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 
 import App from './App.tsx';
-import { ThemeProvider } from './prividers/theme';
+import { ThemeProvider } from './provider/theme/index.ts';
 
 import '@shared/styles/reset.css.ts';
 
