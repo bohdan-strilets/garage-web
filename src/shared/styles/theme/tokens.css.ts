@@ -155,9 +155,9 @@ export const fonts = {
     bold: '700',
   },
   lineHeights: {
-    tight: '0.75rem',
-    normal: '1rem',
-    relaxed: '1.25rem',
+    tight: '1.1',
+    normal: '1.5',
+    relaxed: '1.95',
   },
 } as const;
 
