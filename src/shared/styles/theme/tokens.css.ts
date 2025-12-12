@@ -24,7 +24,7 @@ export const lightColors = {
 
   primary: {
     solid: 'oklch(0.825 0.171 80.013)',
-    soft: 'oklch(0.825 0.171 80.013 / 0.45)',
+    soft: 'oklch(0.825 0.171 80.013 / 0.2)',
   },
   success: {
     solid: 'oklch(0.479 0.133 141.868)',
@@ -81,7 +81,7 @@ export const darkColors = {
 
   primary: {
     solid: 'oklch(0.825 0.171 80.013)',
-    soft: 'oklch(0.825 0.171 80.013 / 0.42)',
+    soft: 'oklch(0.825 0.171 80.013 / 0.3)',
   },
   success: {
     solid: 'oklch(0.479 0.133 141.868)',

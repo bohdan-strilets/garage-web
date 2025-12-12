@@ -1,9 +1,10 @@
 import type { FC } from 'react';
+import { FiDollarSign, FiServer, FiSun, FiWatch } from 'react-icons/fi';
 
 import { Card } from '@shared/ui/surfaces/Card';
+import { IconSurface } from '@shared/ui/surfaces/IconSurface';
 import { Heading } from '@shared/ui/typography/Heading';
 import { Paragraph } from '@shared/ui/typography/Paragraph';
-
 const App: FC = () => {
   return (
     <div>
@@ -22,6 +23,18 @@ const App: FC = () => {
           veritatis nostrum officiis, repellat id illum architecto pariatur nihil. In, provident
           tempore!
         </Paragraph>
+        <IconSurface tone="success" isGradient={true}>
+          <FiServer />
+        </IconSurface>
+        <IconSurface tone="danger" isGradient={true}>
+          <FiDollarSign />
+        </IconSurface>
+        <IconSurface tone="warning" isGradient={true}>
+          <FiSun />
+        </IconSurface>
+        <IconSurface tone="info" isGradient={true}>
+          <FiWatch />
+        </IconSurface>
       </Card>
     </div>
   );
