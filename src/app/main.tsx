@@ -1,8 +1,8 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 
-import App from './App.tsx';
-import { ThemeProvider } from './provider/theme/index.ts';
+import { AppRouterProvider } from './providers/router/RouterProvider.tsx';
+import { ThemeProvider } from './providers/theme/index.ts';
 
 import '@shared/styles/reset.css.ts';
 
@@ -11,7 +11,7 @@ const rootDiv = document.getElementById('root') as HTMLDivElement;
 createRoot(rootDiv).render(
   <StrictMode>
     <ThemeProvider>
-      <App />
+      <AppRouterProvider />
     </ThemeProvider>
   </StrictMode>,
 );

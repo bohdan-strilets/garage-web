@@ -12,13 +12,13 @@ export const mainNav: NavItem[] = [
     id: '1',
     icon: <GoHomeFill />,
     label: 'Home',
-    to: '/home',
+    to: '/',
   },
   {
     id: '2',
     icon: <IoCarSportSharp />,
-    label: 'Cars',
-    to: '/cars',
+    label: 'Vehicles',
+    to: '/vehicles',
   },
   {
     id: '3',

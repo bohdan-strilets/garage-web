@@ -1,4 +1,5 @@
 import { style } from '@vanilla-extract/css';
+import { recipe } from '@vanilla-extract/recipes';
 
 import { vars } from '@shared/styles';
 
@@ -14,31 +15,39 @@ export const item = style({
   marginBottom: vars.spaces.sm,
 });
 
-export const button = style({
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'flex-start',
+export const link = recipe({
+  base: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
 
-  width: '100%',
-  height: '50px',
-  padding: `0 ${vars.spaces.md}`,
+    width: '100%',
+    height: '50px',
+    padding: `0 ${vars.spaces.md}`,
 
-  border: 'none',
-  background: 'transparent',
-  borderRadius: vars.radius.sm,
+    border: 'none',
+    borderRadius: vars.radius.sm,
+    background: 'transparent',
 
-  cursor: 'pointer',
-  transition: `background-color ${vars.transitions.normal} ${vars.transitions.easingStandard}`,
+    cursor: 'pointer',
+    transition: `background-color ${vars.transitions.normal} ${vars.transitions.easingStandard}`,
 
-  selectors: {
-    '&:hover': {
-      backgroundColor: vars.colors.background.muted,
+    selectors: {
+      '&:hover': {
+        backgroundColor: vars.colors.background.muted,
+      },
+
+      '&:focus-visible': {
+        backgroundColor: vars.colors.background.muted,
+        outline: `2px solid ${vars.colors.ring.outline}`,
+        outlineOffset: '2px',
+      },
     },
+  },
 
-    '&:focus-visible': {
-      backgroundColor: vars.colors.background.muted,
-      outline: `2px solid ${vars.colors.ring.outline}`,
-      outlineOffset: '2px',
+  variants: {
+    active: {
+      true: { backgroundColor: vars.colors.primary.solid },
     },
   },
 });
@@ -53,8 +62,13 @@ export const iconWrapper = style({
   transition: `color ${vars.transitions.normal} ${vars.transitions.easingStandard}`,
 
   selectors: {
-    [`${button}:hover &`]: { color: vars.colors.primary.solid },
-    [`${button}:focus-visible &`]: { color: vars.colors.primary.solid },
+    [`${link()}:hover &`]: {
+      color: vars.colors.primary.solid,
+    },
+
+    [`${link()}:focus-visible &`]: {
+      color: vars.colors.primary.solid,
+    },
   },
 });
 
