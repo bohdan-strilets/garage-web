@@ -17,7 +17,7 @@ globalStyle('body', {
   fontSize: vars.fonts.sizes.md,
   lineHeight: vars.fonts.lineHeights.relaxed,
 
-  backgroundColor: vars.colors.background.default,
+  backgroundColor: vars.colors.background.muted,
   color: vars.colors.text.primary,
 
   textRendering: 'optimizeLegibility',

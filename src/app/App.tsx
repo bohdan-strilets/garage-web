@@ -1,16 +1,13 @@
 import type { FC } from 'react';
-import { FiDollarSign, FiServer, FiSun, FiWatch } from 'react-icons/fi';
 
-import { Logo } from '@shared/ui/brand/Logo';
 import { Button } from '@shared/ui/controls/Button';
+import { AppLayout } from '@shared/ui/layout/AppLayout';
 import { Card } from '@shared/ui/surfaces/Card';
-import { IconSurface } from '@shared/ui/surfaces/IconSurface';
 import { Heading } from '@shared/ui/typography/Heading';
 import { Paragraph } from '@shared/ui/typography/Paragraph';
 const App: FC = () => {
   return (
-    <div>
-      <Logo />
+    <AppLayout>
       <Card border="default" tone="default" interactive={false} elevation="md">
         <Heading size="xl">Car description</Heading>
         <Paragraph tone="success" size="xs" weight="medium">
@@ -26,30 +23,87 @@ const App: FC = () => {
           veritatis nostrum officiis, repellat id illum architecto pariatur nihil. In, provident
           tempore!
         </Paragraph>
-        <IconSurface tone="success" isGradient={true}>
-          <FiServer />
-        </IconSurface>
-        <IconSurface tone="danger" isGradient={true}>
-          <FiDollarSign />
-        </IconSurface>
-        <IconSurface tone="warning" isGradient={true}>
-          <FiSun />
-        </IconSurface>
-        <IconSurface tone="info" isGradient={true}>
-          <FiWatch />
-        </IconSurface>
-        <Button tone="danger">Danger button</Button>
-        <Button tone="ghost">Ghost button</Button>
-        <Button tone="info">Info button</Button>
-        <Button tone="inverted">Inverted button</Button>
-        <Button tone="muted">Muted button</Button>
-        <Button tone="primary">Primary button</Button>
-        <Button tone="success">Success button</Button>
-        <Button tone="warning" fullWidth={true}>
+        <Button tone="inverted" fullWidth={true}>
           Warning button
         </Button>
       </Card>
-    </div>
+      <Card border="muted" tone="muted" interactive={false} elevation="md">
+        <Heading size="xl">Car description</Heading>
+        <Paragraph tone="success" size="xs" weight="medium">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut aliquid modi est assumenda
+          labore quos voluptatem, delectus dignissimos quasi voluptas molestiae expedita harum
+          mollitia minima vero. Ex reiciendis quod iste error nostrum voluptatibus porro, dolorem
+          officia veniam quasi atque reprehenderit nihil et cum distinctio numquam earum iure? Iste
+          suscipit ducimus ipsa neque nulla hic cumque provident nihil labore unde rerum, omnis
+          voluptates est dolor ea sed. Facilis, assumenda voluptatum quia dicta distinctio magni
+          porro non nostrum obcaecati qui saepe atque unde in, nulla perspiciatis. Repudiandae, rem
+          cupiditate! Delectus eligendi beatae molestiae neque omnis autem doloremque accusamus
+          laborum consequatur. Dolore in quisquam neque obcaecati est amet quia labore harum
+          veritatis nostrum officiis, repellat id illum architecto pariatur nihil. In, provident
+          tempore!
+        </Paragraph>
+        <Button tone="primary" fullWidth={true}>
+          Warning button
+        </Button>
+      </Card>
+      <Card border="muted" tone="muted" interactive={false} elevation="md">
+        <Heading size="xl">Car description</Heading>
+        <Paragraph tone="success" size="xs" weight="medium">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut aliquid modi est assumenda
+          labore quos voluptatem, delectus dignissimos quasi voluptas molestiae expedita harum
+          mollitia minima vero. Ex reiciendis quod iste error nostrum voluptatibus porro, dolorem
+          officia veniam quasi atque reprehenderit nihil et cum distinctio numquam earum iure? Iste
+          suscipit ducimus ipsa neque nulla hic cumque provident nihil labore unde rerum, omnis
+          voluptates est dolor ea sed. Facilis, assumenda voluptatum quia dicta distinctio magni
+          porro non nostrum obcaecati qui saepe atque unde in, nulla perspiciatis. Repudiandae, rem
+          cupiditate! Delectus eligendi beatae molestiae neque omnis autem doloremque accusamus
+          laborum consequatur. Dolore in quisquam neque obcaecati est amet quia labore harum
+          veritatis nostrum officiis, repellat id illum architecto pariatur nihil. In, provident
+          tempore!
+        </Paragraph>
+        <Button tone="primary" fullWidth={true}>
+          Warning button
+        </Button>
+      </Card>
+      <Card border="muted" tone="muted" interactive={false} elevation="md">
+        <Heading size="xl">Car description</Heading>
+        <Paragraph tone="success" size="xs" weight="medium">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut aliquid modi est assumenda
+          labore quos voluptatem, delectus dignissimos quasi voluptas molestiae expedita harum
+          mollitia minima vero. Ex reiciendis quod iste error nostrum voluptatibus porro, dolorem
+          officia veniam quasi atque reprehenderit nihil et cum distinctio numquam earum iure? Iste
+          suscipit ducimus ipsa neque nulla hic cumque provident nihil labore unde rerum, omnis
+          voluptates est dolor ea sed. Facilis, assumenda voluptatum quia dicta distinctio magni
+          porro non nostrum obcaecati qui saepe atque unde in, nulla perspiciatis. Repudiandae, rem
+          cupiditate! Delectus eligendi beatae molestiae neque omnis autem doloremque accusamus
+          laborum consequatur. Dolore in quisquam neque obcaecati est amet quia labore harum
+          veritatis nostrum officiis, repellat id illum architecto pariatur nihil. In, provident
+          tempore!
+        </Paragraph>
+        <Button tone="primary" fullWidth={true}>
+          Warning button
+        </Button>
+      </Card>
+      <Card border="muted" tone="muted" interactive={false} elevation="md">
+        <Heading size="xl">Car description</Heading>
+        <Paragraph tone="success" size="xs" weight="medium">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut aliquid modi est assumenda
+          labore quos voluptatem, delectus dignissimos quasi voluptas molestiae expedita harum
+          mollitia minima vero. Ex reiciendis quod iste error nostrum voluptatibus porro, dolorem
+          officia veniam quasi atque reprehenderit nihil et cum distinctio numquam earum iure? Iste
+          suscipit ducimus ipsa neque nulla hic cumque provident nihil labore unde rerum, omnis
+          voluptates est dolor ea sed. Facilis, assumenda voluptatum quia dicta distinctio magni
+          porro non nostrum obcaecati qui saepe atque unde in, nulla perspiciatis. Repudiandae, rem
+          cupiditate! Delectus eligendi beatae molestiae neque omnis autem doloremque accusamus
+          laborum consequatur. Dolore in quisquam neque obcaecati est amet quia labore harum
+          veritatis nostrum officiis, repellat id illum architecto pariatur nihil. In, provident
+          tempore!
+        </Paragraph>
+        <Button tone="primary" fullWidth={true}>
+          Warning button
+        </Button>
+      </Card>
+    </AppLayout>
   );
 };
 
