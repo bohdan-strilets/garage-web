@@ -6,19 +6,26 @@ import importPlugin from "eslint-plugin-import";
 import prettier from "eslint-config-prettier";
 
 export default tseslint.config(
+  // Global ignores
   {
     ignores: ["dist", "node_modules"],
   },
+
+  // Base JS rules
   js.configs.recommended,
+
+  // TypeScript rules
   ...tseslint.configs.recommended,
+
+  // Application source files
   {
     files: ["**/*.{ts,tsx}"],
     languageOptions: {
       ecmaVersion: "latest",
       sourceType: "module",
       globals: {
-        document: "readonly",
         window: "readonly",
+        document: "readonly",
       },
     },
     plugins: {
@@ -49,5 +56,19 @@ export default tseslint.config(
       "@typescript-eslint/no-explicit-any": "warn",
     },
   },
+
+  // Node.js config files (commitlint, vite, etc.)
+  {
+    files: ["*.config.js", "*.config.cjs"],
+    languageOptions: {
+      globals: {
+        module: "readonly",
+        require: "readonly",
+        process: "readonly",
+      },
+    },
+  },
+
+  // Disable ESLint rules conflicting with Prettier
   prettier,
 );
