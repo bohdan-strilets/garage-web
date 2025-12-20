@@ -1,12 +1,22 @@
-export const App = () => {
+import type { FC } from "react";
+
+const App: FC = () => {
   return (
-    <div>
-      <h1>Hello React</h1>
+    <>
+      <h1>Hello</h1>
       <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit, modi necessitatibus
-        laborum perferendis recusandae, suscipit aperiam soluta, magni delectus reiciendis
-        voluptatem iste impedit! Numquam porro nulla odit unde voluptatibus ex!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, quam quae rem consequuntur
+        expedita maxime quaerat ducimus sit. Illum vero quia, et debitis modi obcaecati laborum
+        alias odio nobis doloremque.
       </p>
-    </div>
+      <h2>User name</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium possimus similique
+        maiores iusto voluptates aliquid magni, voluptate enim iste, mollitia iure, quas accusamus
+        nesciunt laudantium quidem quos? Nobis, accusamus ea.
+      </p>
+    </>
   );
 };
+
+export default App;
