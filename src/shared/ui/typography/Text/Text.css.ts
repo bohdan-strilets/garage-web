@@ -36,6 +36,9 @@ export const root = recipe({
       secondary: { color: themeContract.color.text.secondary },
       muted: { color: themeContract.color.text.muted },
       inverted: { color: themeContract.color.text.inverted },
+      danger: { color: themeContract.color.status.danger },
+      warning: { color: themeContract.color.status.warning },
+      success: { color: themeContract.color.status.success },
     },
 
     size: {
