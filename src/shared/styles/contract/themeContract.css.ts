@@ -79,6 +79,7 @@ export const themeContract = createThemeContract({
     xl: null,
   },
   radius: {
+    none: null,
     xs: null,
     sm: null,
     md: null,
