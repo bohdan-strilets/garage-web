@@ -30,14 +30,14 @@ const App = () => {
             </p>
           </Box>
         </Surface>
-        <Box padding="sm">
-          <Surface>
+        <Surface>
+          <Box padding="sm">
             <h3>Change theme here</h3>
             <button type="button" onClick={toggle}>
               Toggle Theme
             </button>
-          </Surface>
-        </Box>
+          </Box>
+        </Surface>
       </Stack>
     </Container>
   );

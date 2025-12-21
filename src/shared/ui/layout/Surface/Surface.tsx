@@ -4,6 +4,6 @@ import { root } from "./Surface.css";
 
 import type { SurfaceProps } from "./types/SurfaceProps";
 
-export const Surface = ({ children, className, variant }: SurfaceProps) => {
-  return <div className={clsx(root({ variant }), className)}>{children}</div>;
+export const Surface = ({ children, className, ...props }: SurfaceProps) => {
+  return <div className={clsx(root({ ...props }), className)}>{children}</div>;
 };
