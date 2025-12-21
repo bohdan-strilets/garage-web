@@ -3,6 +3,7 @@ import { TfiAndroid } from "react-icons/tfi";
 import { useTheme } from "@shared/styles";
 import { Button } from "@shared/ui/controls/Button";
 import { IconButton } from "@shared/ui/controls/IconButton";
+import { FieldError } from "@shared/ui/form/FieldError";
 import { Box } from "@shared/ui/layout/Box";
 import { Container } from "@shared/ui/layout/Container";
 import { Divider } from "@shared/ui/layout/Divider";
@@ -79,6 +80,7 @@ const App = () => {
               </Label>
               <Caption>What is your first name?</Caption>
               <input type="text" id="firstName" />
+              <FieldError>First name is required</FieldError>
             </form>
           </Box>
         </Surface>
