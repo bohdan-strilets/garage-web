@@ -10,6 +10,7 @@ import { Spacer } from "@shared/ui/layout/Spacer";
 import { Stack } from "@shared/ui/layout/Stack";
 import { Surface } from "@shared/ui/layout/Surface";
 import { Heading } from "@shared/ui/typography/Heading";
+import { Label } from "@shared/ui/typography/Label";
 import { Text } from "@shared/ui/typography/Text";
 
 const App = () => {
@@ -64,6 +65,19 @@ const App = () => {
                 <TfiAndroid />
               </IconButton>
             </Stack>
+          </Box>
+        </Surface>
+
+        <Spacer size="xs" />
+
+        <Surface>
+          <Box padding="sm">
+            <form>
+              <Label required={true} htmlFor="firstName">
+                First name
+              </Label>
+              <input type="text" id="firstName" />
+            </form>
           </Box>
         </Surface>
       </Stack>

@@ -10,12 +10,21 @@ export const Text = <T extends ElementType = "p">({
   as,
   className,
   children,
+  variant,
+  tone,
+  size,
+  weight,
+  lineHeight,
+  letterSpacing,
   ...props
 }: TextProps<T>) => {
   const Component = (as ?? "p") as ElementType;
 
   return (
-    <Component className={clsx(root(props), className)} {...props}>
+    <Component
+      className={clsx(root({ variant, tone, size, weight, lineHeight, letterSpacing }), className)}
+      {...props}
+    >
       {children}
     </Component>
   );

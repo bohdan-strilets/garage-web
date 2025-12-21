@@ -9,6 +9,28 @@ export const root = recipe({
   },
 
   variants: {
+    variant: {
+      body: {
+        fontSize: themeContract.font.size.md,
+        fontWeight: themeContract.font.weight.normal,
+        lineHeight: themeContract.font.lineHeight.md,
+        letterSpacing: "normal",
+      },
+
+      label: {
+        fontSize: themeContract.font.size.sm,
+        fontWeight: themeContract.font.weight.medium,
+        lineHeight: themeContract.font.lineHeight.sm,
+        letterSpacing: themeContract.font.letterSpacing.xs,
+      },
+
+      caption: {
+        fontSize: themeContract.font.size.xs,
+        lineHeight: themeContract.font.lineHeight.xs,
+        color: themeContract.color.text.muted,
+      },
+    },
+
     tone: {
       primary: { color: themeContract.color.text.primary },
       secondary: { color: themeContract.color.text.secondary },
@@ -44,10 +66,7 @@ export const root = recipe({
   },
 
   defaultVariants: {
+    variant: "body",
     tone: "secondary",
-    size: "md",
-    weight: "normal",
-    lineHeight: "md",
-    letterSpacing: "none",
   },
 });
