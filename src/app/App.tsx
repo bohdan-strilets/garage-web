@@ -9,6 +9,7 @@ import { Divider } from "@shared/ui/layout/Divider";
 import { Spacer } from "@shared/ui/layout/Spacer";
 import { Stack } from "@shared/ui/layout/Stack";
 import { Surface } from "@shared/ui/layout/Surface";
+import { Caption } from "@shared/ui/typography/Caption";
 import { Heading } from "@shared/ui/typography/Heading";
 import { Label } from "@shared/ui/typography/Label";
 import { Text } from "@shared/ui/typography/Text";
@@ -76,6 +77,7 @@ const App = () => {
               <Label required={true} htmlFor="firstName">
                 First name
               </Label>
+              <Caption>What is your first name?</Caption>
               <input type="text" id="firstName" />
             </form>
           </Box>
