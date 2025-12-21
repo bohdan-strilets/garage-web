@@ -1,12 +1,13 @@
 import type { FC } from "react";
 
 import { useTheme } from "@shared/styles";
+import { Container } from "@shared/ui/layout/Container";
 
 const App: FC = () => {
   const { toggle } = useTheme();
 
   return (
-    <>
+    <Container>
       <h1>Hello</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, quam quae rem consequuntur
@@ -25,7 +26,7 @@ const App: FC = () => {
           Toggle Theme
         </button>
       </div>
-    </>
+    </Container>
   );
 };
 
