@@ -1,7 +1,9 @@
+import { TfiAndroid } from "react-icons/tfi";
+
 import { useTheme } from "@shared/styles";
 import { Button } from "@shared/ui/controls/Button";
+import { IconButton } from "@shared/ui/controls/IconButton";
 import { Box } from "@shared/ui/layout/Box";
-import { Center } from "@shared/ui/layout/Center";
 import { Container } from "@shared/ui/layout/Container";
 import { Divider } from "@shared/ui/layout/Divider";
 import { Spacer } from "@shared/ui/layout/Spacer";
@@ -49,10 +51,20 @@ const App = () => {
 
         <Spacer size="xs" />
 
-        <Surface>
-          <Center fullHeight>
-            <Text size="lg">-----</Text>
-          </Center>
+        <Surface variant="outlined">
+          <Box padding="sm">
+            <Stack justifyContent="center" direction="row" gap="sm">
+              <IconButton ariaLabel="android-btn">
+                <TfiAndroid />
+              </IconButton>
+              <IconButton ariaLabel="android-btn">
+                <TfiAndroid />
+              </IconButton>
+              <IconButton ariaLabel="android-btn">
+                <TfiAndroid />
+              </IconButton>
+            </Stack>
+          </Box>
         </Surface>
       </Stack>
     </Container>
