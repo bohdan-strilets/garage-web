@@ -50,6 +50,13 @@ export const themeContract = createThemeContract({
       xl: null,
       ["2xl"]: null,
     },
+    weight: {
+      light: null,
+      normal: null,
+      medium: null,
+      bold: null,
+      black: null,
+    },
     lineHeight: {
       xs: null,
       sm: null,

@@ -13,6 +13,14 @@ export const typography = {
     "2xl": "1.75rem",
   },
 
+  weight: {
+    light: "300",
+    normal: "400",
+    medium: "500",
+    bold: "700",
+    black: "900",
+  },
+
   lineHeight: {
     xs: "1.15",
     sm: "1.65",
