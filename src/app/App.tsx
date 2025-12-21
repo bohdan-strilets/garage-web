@@ -3,6 +3,7 @@ import { Box } from "@shared/ui/layout/Box";
 import { Center } from "@shared/ui/layout/Center";
 import { Container } from "@shared/ui/layout/Container";
 import { Divider } from "@shared/ui/layout/Divider";
+import { Spacer } from "@shared/ui/layout/Spacer";
 import { Stack } from "@shared/ui/layout/Stack";
 import { Surface } from "@shared/ui/layout/Surface";
 import { Heading } from "@shared/ui/typography/Heading";
@@ -46,6 +47,8 @@ const App = () => {
             </button>
           </Box>
         </Surface>
+
+        <Spacer size="xs" />
 
         <Surface>
           <Center fullHeight>
