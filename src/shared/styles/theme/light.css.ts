@@ -5,7 +5,7 @@ import { lightColors } from "../tokens/colorsLight";
 import { layout } from "../tokens/layout";
 import { motion } from "../tokens/motion";
 import { radius } from "../tokens/radius";
-import { shadow } from "../tokens/shadow";
+import { shadowLight } from "../tokens/shadowLight";
 import { space } from "../tokens/spacing";
 import { typography } from "../tokens/typography";
 import { zIndex } from "../tokens/zIndex";
@@ -15,7 +15,7 @@ export const lightTheme = createTheme(themeContract, {
   font: typography,
   space,
   radius,
-  shadow,
+  shadow: shadowLight,
   motion,
   zIndex,
   layout,

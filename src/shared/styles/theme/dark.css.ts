@@ -5,7 +5,7 @@ import { darkColors } from "../tokens/colorsDark";
 import { layout } from "../tokens/layout";
 import { motion } from "../tokens/motion";
 import { radius } from "../tokens/radius";
-import { shadow } from "../tokens/shadow";
+import { shadowDark } from "../tokens/shadowDark";
 import { space } from "../tokens/spacing";
 import { typography } from "../tokens/typography";
 import { zIndex } from "../tokens/zIndex";
@@ -15,7 +15,7 @@ export const darkTheme = createTheme(themeContract, {
   font: typography,
   space,
   radius,
-  shadow,
+  shadow: shadowDark,
   motion,
   zIndex,
   layout,
