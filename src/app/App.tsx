@@ -1,5 +1,6 @@
 import { useTheme } from "@shared/styles";
 import { Box } from "@shared/ui/layout/Box";
+import { Center } from "@shared/ui/layout/Center";
 import { Container } from "@shared/ui/layout/Container";
 import { Divider } from "@shared/ui/layout/Divider";
 import { Stack } from "@shared/ui/layout/Stack";
@@ -23,6 +24,7 @@ const App = () => {
             </Text>
           </Box>
         </Surface>
+
         <Surface>
           <Box padding="sm">
             <Heading as="h2">User name</Heading>
@@ -33,7 +35,9 @@ const App = () => {
             </Text>
           </Box>
         </Surface>
+
         <Divider orientation="horizontal" tone="muted" size="sm" />
+
         <Surface>
           <Box padding="sm">
             <Heading as="h4">Change theme here</Heading>
@@ -41,6 +45,12 @@ const App = () => {
               Toggle Theme
             </button>
           </Box>
+        </Surface>
+
+        <Surface>
+          <Center fullHeight>
+            <Text size="lg">-----</Text>
+          </Center>
         </Surface>
       </Stack>
     </Container>
