@@ -8,7 +8,11 @@ import "@shared/styles/global.css";
 type Props = { children: ReactNode };
 
 export const ThemeProvider = ({ children }: Props) => {
-  const { isDark } = useTheme();
+  const { isDark, init } = useTheme();
+
+  useEffect(() => {
+    init();
+  }, [init]);
 
   useEffect(() => {
     const root = document.body;

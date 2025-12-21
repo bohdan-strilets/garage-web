@@ -7,35 +7,42 @@ import { getSystemTheme } from "../utils/getSystemTheme";
 import type { ThemeMode } from "../types/ThemeMode";
 import type { ThemeState } from "../types/ThemeState";
 
-export const useThemeStore = create<ThemeState>((set, get) => {
-  const storageValue = localStorage.getItem(STORAGE_KEY) as ThemeMode | null;
-  const saved = typeof window !== "undefined" ? storageValue : null;
-  const initialMode = saved ?? THEME_MODE.SYSTEM;
+export const useThemeStore = create<ThemeState>((set, get) => ({
+  mode: THEME_MODE.SYSTEM,
+  resolvedMode: THEME_MODE.LIGHT,
 
-  return {
-    mode: initialMode,
-    resolvedMode: initialMode === THEME_MODE.SYSTEM ? getSystemTheme() : initialMode,
+  init: () => {
+    if (typeof window === "undefined") return;
 
-    setMode: mode => {
+    const saved = localStorage.getItem(STORAGE_KEY) as ThemeMode | null;
+    const mode = saved ?? THEME_MODE.SYSTEM;
+    const isSystem = mode === THEME_MODE.SYSTEM;
+
+    set({ mode, resolvedMode: isSystem ? getSystemTheme() : mode });
+  },
+
+  setMode: mode => {
+    if (typeof window !== "undefined") {
       localStorage.setItem(STORAGE_KEY, mode);
+    }
 
-      set({
-        mode,
-        resolvedMode: mode === THEME_MODE.SYSTEM ? getSystemTheme() : mode,
-      });
-    },
+    const isSystem = mode === THEME_MODE.SYSTEM;
+    set({ mode, resolvedMode: isSystem ? getSystemTheme() : mode });
+  },
 
-    toggle: () => {
-      const { resolvedMode } = get();
+  toggle: () => {
+    const { resolvedMode } = get();
 
-      const next = resolvedMode === THEME_MODE.LIGHT ? THEME_MODE.DARK : THEME_MODE.LIGHT;
+    const light = THEME_MODE.LIGHT;
+    const dark = THEME_MODE.DARK;
+    const isLight = resolvedMode === light;
 
+    const next = isLight ? dark : light;
+
+    if (typeof window !== "undefined") {
       localStorage.setItem(STORAGE_KEY, next);
+    }
 
-      set({
-        mode: next,
-        resolvedMode: next,
-      });
-    },
-  };
-});
+    set({ mode: next, resolvedMode: next });
+  },
+}));

@@ -7,6 +7,7 @@ export const useTheme = () => {
   const resolvedMode = useThemeStore(state => state.resolvedMode);
   const setMode = useThemeStore(state => state.setMode);
   const toggle = useThemeStore(state => state.toggle);
+  const init = useThemeStore(state => state.init);
 
   const isLight = resolvedMode === THEME_MODE.LIGHT;
   const isDark = resolvedMode === THEME_MODE.DARK;
@@ -24,5 +25,6 @@ export const useTheme = () => {
     setDark,
     setSystem,
     toggle,
+    init,
   };
 };

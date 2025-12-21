@@ -6,4 +6,5 @@ export type ThemeState = {
   resolvedMode: ResolvedTheme;
   setMode: (mode: ThemeMode) => void;
   toggle: () => void;
+  init: () => void;
 };
