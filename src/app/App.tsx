@@ -1,4 +1,5 @@
 import { useTheme } from "@shared/styles";
+import { Button } from "@shared/ui/controls/Button";
 import { Box } from "@shared/ui/layout/Box";
 import { Center } from "@shared/ui/layout/Center";
 import { Container } from "@shared/ui/layout/Container";
@@ -42,9 +43,7 @@ const App = () => {
         <Surface>
           <Box padding="sm">
             <Heading as="h4">Change theme here</Heading>
-            <button type="button" onClick={toggle}>
-              Toggle Theme
-            </button>
+            <Button onClick={toggle}>Toggle Theme</Button>
           </Box>
         </Surface>
 
