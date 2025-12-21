@@ -3,6 +3,7 @@ import { Box } from "@shared/ui/layout/Box";
 import { Container } from "@shared/ui/layout/Container";
 import { Stack } from "@shared/ui/layout/Stack";
 import { Surface } from "@shared/ui/layout/Surface";
+import { Heading } from "@shared/ui/typography/Heading";
 import { Text } from "@shared/ui/typography/Text";
 
 const App = () => {
@@ -13,7 +14,7 @@ const App = () => {
       <Stack>
         <Surface>
           <Box padding="sm">
-            <h1>Hello</h1>
+            <Heading as="h2">Hello</Heading>
             <Text size="sm">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, quam quae rem
               consequuntur expedita maxime quaerat ducimus sit. Illum vero quia, et debitis modi
@@ -23,7 +24,7 @@ const App = () => {
         </Surface>
         <Surface>
           <Box padding="sm">
-            <h2>User name</h2>
+            <Heading as="h2">User name</Heading>
             <Text size="sm">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium possimus
               similique maiores iusto voluptates aliquid magni, voluptate enim iste, mollitia iure,
@@ -33,7 +34,7 @@ const App = () => {
         </Surface>
         <Surface>
           <Box padding="sm">
-            <h3>Change theme here</h3>
+            <Heading as="h4">Change theme here</Heading>
             <button type="button" onClick={toggle}>
               Toggle Theme
             </button>
