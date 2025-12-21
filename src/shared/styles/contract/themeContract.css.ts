@@ -96,4 +96,7 @@ export const themeContract = createThemeContract({
     tooltip: null,
     sticky: null,
   },
+  layout: {
+    container: null,
+  },
 });

@@ -2,6 +2,7 @@ import { createTheme } from "@vanilla-extract/css";
 
 import { themeContract } from "../contract/themeContract.css";
 import { darkColors } from "../tokens/colorsDark";
+import { layout } from "../tokens/layout";
 import { motion } from "../tokens/motion";
 import { radius } from "../tokens/radius";
 import { shadow } from "../tokens/shadow";
@@ -17,4 +18,5 @@ export const darkTheme = createTheme(themeContract, {
   shadow,
   motion,
   zIndex,
+  layout,
 });

@@ -1,8 +1,16 @@
 import { style } from "@vanilla-extract/css";
 
-import { themeContract } from "@shared/styles";
+import { mediaQueries, themeContract } from "@shared/styles";
 
 export const root = style({
   width: "100%",
-  padding: `0 ${themeContract.space.md}`,
+  maxWidth: themeContract.layout.container,
+  marginInline: "auto",
+  paddingInline: themeContract.space.md,
+
+  "@media": {
+    [mediaQueries.laptop]: {
+      paddingInline: themeContract.space.lg,
+    },
+  },
 });

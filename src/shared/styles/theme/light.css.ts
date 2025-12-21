@@ -2,6 +2,7 @@ import { createTheme } from "@vanilla-extract/css";
 
 import { themeContract } from "../contract/themeContract.css";
 import { lightColors } from "../tokens/colorsLight";
+import { layout } from "../tokens/layout";
 import { motion } from "../tokens/motion";
 import { radius } from "../tokens/radius";
 import { shadow } from "../tokens/shadow";
@@ -17,4 +18,5 @@ export const lightTheme = createTheme(themeContract, {
   shadow,
   motion,
   zIndex,
+  layout,
 });
