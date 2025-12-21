@@ -1,6 +1,10 @@
 import type { FC } from "react";
 
+import { useTheme } from "@shared/styles";
+
 const App: FC = () => {
+  const { toggle } = useTheme();
+
   return (
     <>
       <h1>Hello</h1>
@@ -15,6 +19,12 @@ const App: FC = () => {
         maiores iusto voluptates aliquid magni, voluptate enim iste, mollitia iure, quas accusamus
         nesciunt laudantium quidem quos? Nobis, accusamus ea.
       </p>
+      <div>
+        <h3>Change theme here</h3>
+        <button type="button" onClick={toggle}>
+          Toggle Theme
+        </button>
+      </div>
     </>
   );
 };
