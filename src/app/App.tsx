@@ -3,6 +3,7 @@ import { TfiAndroid } from "react-icons/tfi";
 import { useTheme } from "@shared/styles";
 import { Button } from "@shared/ui/controls/Button";
 import { IconButton } from "@shared/ui/controls/IconButton";
+import { Input } from "@shared/ui/controls/Input";
 import { FieldError } from "@shared/ui/form/FieldError";
 import { Box } from "@shared/ui/layout/Box";
 import { Container } from "@shared/ui/layout/Container";
@@ -75,12 +76,14 @@ const App = () => {
         <Surface>
           <Box padding="sm">
             <form>
-              <Label required={true} htmlFor="firstName">
-                First name
-              </Label>
-              <Caption>What is your first name?</Caption>
-              <input type="text" id="firstName" />
-              <FieldError>First name is required</FieldError>
+              <Stack gap="sm">
+                <Label required={true} htmlFor="firstName">
+                  First name
+                </Label>
+                <Caption>What is your first name?</Caption>
+                <Input type="text" id="firstName" />
+                <FieldError>First name is required</FieldError>
+              </Stack>
             </form>
           </Box>
         </Surface>
