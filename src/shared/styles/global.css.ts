@@ -2,8 +2,12 @@ import { globalStyle } from "@vanilla-extract/css";
 
 import { themeContract } from "./contract/themeContract.css";
 
-globalStyle("html", {
-  colorScheme: "light dark",
+globalStyle("html[data-theme='light']", {
+  colorScheme: "light",
+});
+
+globalStyle("html[data-theme='dark']", {
+  colorScheme: "dark",
 });
 
 globalStyle("body", {

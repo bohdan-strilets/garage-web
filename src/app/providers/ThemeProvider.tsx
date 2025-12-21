@@ -15,10 +15,12 @@ export const ThemeProvider = ({ children }: Props) => {
   }, [init]);
 
   useEffect(() => {
-    const root = document.body;
+    const root = document.documentElement;
 
     root.classList.remove(lightTheme, darkTheme);
     root.classList.add(isDark ? darkTheme : lightTheme);
+
+    root.setAttribute("data-theme", isDark ? "dark" : "light");
   }, [isDark]);
 
   return <>{children}</>;
