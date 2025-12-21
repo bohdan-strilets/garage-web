@@ -1,6 +1,7 @@
 import { useTheme } from "@shared/styles";
 import { Box } from "@shared/ui/layout/Box";
 import { Container } from "@shared/ui/layout/Container";
+import { Divider } from "@shared/ui/layout/Divider";
 import { Stack } from "@shared/ui/layout/Stack";
 import { Surface } from "@shared/ui/layout/Surface";
 import { Heading } from "@shared/ui/typography/Heading";
@@ -32,6 +33,7 @@ const App = () => {
             </Text>
           </Box>
         </Surface>
+        <Divider orientation="horizontal" tone="muted" size="sm" />
         <Surface>
           <Box padding="sm">
             <Heading as="h4">Change theme here</Heading>
