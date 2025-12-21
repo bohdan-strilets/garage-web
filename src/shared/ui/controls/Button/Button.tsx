@@ -1,14 +1,16 @@
 import clsx from "clsx";
 
-import { root } from "./Button.css";
+import { Spinner } from "@shared/ui/feedback/Spinner";
+
+import { label, root } from "./Button.css";
 
 import type { ButtonProps } from "./types/ButtonProps";
 
 export const Button = ({
   type = "button",
-  variant,
-  size,
-  fullWidth,
+  variant = "primary",
+  size = "md",
+  fullWidth = false,
   className,
   children,
   disabled,
@@ -22,8 +24,15 @@ export const Button = ({
       className={clsx(root({ variant, size, fullWidth }), className)}
       {...props}
     >
-      <span aria-hidden={loading}>{children}</span>
-      {loading && "..."}
+      <span aria-hidden={loading} className={loading ? label : ""}>
+        {children}
+      </span>
+      {loading && (
+        <Spinner
+          size={size === "sm" ? "xs" : "sm"}
+          tone={variant === "primary" ? "inverse" : "default"}
+        />
+      )}
     </button>
   );
 };

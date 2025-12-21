@@ -57,10 +57,10 @@ const App = () => {
               <IconButton ariaLabel="android-btn">
                 <TfiAndroid />
               </IconButton>
-              <IconButton ariaLabel="android-btn">
+              <IconButton ariaLabel="android-btn" variant="secondary">
                 <TfiAndroid />
               </IconButton>
-              <IconButton ariaLabel="android-btn">
+              <IconButton ariaLabel="android-btn" variant="ghost">
                 <TfiAndroid />
               </IconButton>
             </Stack>

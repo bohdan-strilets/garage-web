@@ -1,3 +1,4 @@
+import { style } from "@vanilla-extract/css";
 import { recipe } from "@vanilla-extract/recipes";
 
 import { themeContract } from "@shared/styles";
@@ -87,10 +88,8 @@ export const root = recipe({
       true: { width: "100%" },
     },
   },
+});
 
-  defaultVariants: {
-    variant: "primary",
-    size: "md",
-    fullWidth: false,
-  },
+export const label = style({
+  paddingInline: themeContract.space.sm,
 });
