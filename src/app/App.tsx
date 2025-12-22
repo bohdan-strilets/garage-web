@@ -2,6 +2,7 @@ import { TfiAndroid } from "react-icons/tfi";
 
 import { useTheme } from "@shared/styles";
 import { Button } from "@shared/ui/controls/Button";
+import { Checkbox } from "@shared/ui/controls/Checkbox";
 import { IconButton } from "@shared/ui/controls/IconButton";
 import { Input } from "@shared/ui/controls/Input";
 import { PasswordInput } from "@shared/ui/controls/PasswordInput";
@@ -91,6 +92,13 @@ const App = () => {
                   </Label>
                   <Caption>What is your password?</Caption>
                   <PasswordInput id="password" />
+                </Stack>
+
+                <Stack gap="sm">
+                  <Checkbox
+                    id="terms"
+                    label="Accept terms and conditions Accept terms and conditions Accept terms and conditions Accept terms and conditions"
+                  />
                 </Stack>
               </Stack>
             </form>
