@@ -6,6 +6,7 @@ import { Checkbox } from "@shared/ui/controls/Checkbox";
 import { IconButton } from "@shared/ui/controls/IconButton";
 import { Input } from "@shared/ui/controls/Input";
 import { PasswordInput } from "@shared/ui/controls/PasswordInput";
+import { Switch } from "@shared/ui/controls/Switch";
 import { Box } from "@shared/ui/layout/Box";
 import { Container } from "@shared/ui/layout/Container";
 import { Divider } from "@shared/ui/layout/Divider";
@@ -95,10 +96,11 @@ const App = () => {
                 </Stack>
 
                 <Stack gap="sm">
-                  <Checkbox
-                    id="terms"
-                    label="Accept terms and conditions Accept terms and conditions Accept terms and conditions Accept terms and conditions"
-                  />
+                  <Checkbox id="terms" label="Accept terms and conditions" />
+                </Stack>
+
+                <Stack gap="sm">
+                  <Switch id="terms" label="Switch me" />
                 </Stack>
               </Stack>
             </form>
