@@ -1,13 +1,11 @@
-import { FormProvider, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { TfiAndroid } from "react-icons/tfi";
 
 import { useTheme } from "@shared/styles";
 import { Button } from "@shared/ui/controls/Button";
-import { Checkbox } from "@shared/ui/controls/Checkbox";
 import { IconButton } from "@shared/ui/controls/IconButton";
 import { Input } from "@shared/ui/controls/Input";
-import { PasswordInput } from "@shared/ui/controls/PasswordInput";
-import { Switch } from "@shared/ui/controls/Switch";
+import { Form } from "@shared/ui/form/Form";
 import { FormField } from "@shared/ui/form/FormField";
 import { Box } from "@shared/ui/layout/Box";
 import { Container } from "@shared/ui/layout/Container";
@@ -18,30 +16,20 @@ import { Surface } from "@shared/ui/layout/Surface";
 import { Heading } from "@shared/ui/typography/Heading";
 import { Text } from "@shared/ui/typography/Text";
 
-type FormValues = {
+type LoginFormValues = {
   email: string;
   password: string;
-  terms: boolean;
-  notifications: boolean;
 };
 
 const App = () => {
   const { toggle } = useTheme();
 
-  const form = useForm<FormValues>({
+  const form = useForm<LoginFormValues>({
     defaultValues: {
       email: "",
       password: "",
-      terms: false,
-      notifications: true,
     },
   });
-
-  const { register, handleSubmit } = form;
-
-  const onSubmit = (data: FormValues) => {
-    console.log(data);
-  };
 
   return (
     <Container>
@@ -99,62 +87,22 @@ const App = () => {
 
         <Surface>
           <Box padding="sm">
-            <FormProvider {...form}>
-              <form onSubmit={handleSubmit(onSubmit)}>
-                <Stack>
-                  <FormField
-                    name="email"
-                    label="Email"
-                    description="We will never share your email"
-                    required
-                  >
-                    <Input
-                      type="email"
-                      placeholder="email@example.com"
-                      {...register("email", {
-                        required: "Email is required",
-                        pattern: {
-                          value: /\S+@\S+\.\S+/,
-                          message: "Invalid email address",
-                        },
-                      })}
-                    />
-                  </FormField>
+            <Form
+              form={form}
+              onSubmit={values => {
+                console.log(values);
+              }}
+            >
+              <FormField name="email" label="Email" required>
+                <Input {...form.register("email")} />
+              </FormField>
 
-                  <FormField
-                    name="password"
-                    label="Password"
-                    description="Minimum 8 characters"
-                    required
-                  >
-                    <PasswordInput
-                      {...register("password", {
-                        required: "Password is required",
-                        minLength: {
-                          value: 8,
-                          message: "Password must be at least 8 characters",
-                        },
-                      })}
-                    />
-                  </FormField>
+              <FormField name="password" label="Password" required>
+                <Input type="password" {...form.register("password")} />
+              </FormField>
 
-                  <FormField name="terms">
-                    <Checkbox
-                      label="I accept the terms and conditions"
-                      {...register("terms", {
-                        required: "You must accept the terms",
-                      })}
-                    />
-                  </FormField>
-
-                  <FormField name="notifications">
-                    <Switch label="Enable notifications" {...register("notifications")} />
-                  </FormField>
-
-                  <Button type="submit">Create account</Button>
-                </Stack>
-              </form>
-            </FormProvider>
+              <Button type="submit">Login</Button>
+            </Form>
           </Box>
         </Surface>
       </Stack>
