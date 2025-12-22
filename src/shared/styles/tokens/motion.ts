@@ -1,5 +1,5 @@
 export const motion = {
-  fast: "120ms ease",
-  medium: "200ms ease",
-  slow: "320ms ease",
+  fast: "120ms",
+  medium: "200ms",
+  slow: "320ms",
 } as const;

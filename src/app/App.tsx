@@ -100,7 +100,7 @@ const App = () => {
                 </Stack>
 
                 <Stack gap="sm">
-                  <Switch id="terms" label="Switch me" />
+                  <Switch id="switch" label="Switch me" />
                 </Stack>
               </Stack>
             </form>
