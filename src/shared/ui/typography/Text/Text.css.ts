@@ -29,6 +29,12 @@ export const root = recipe({
         lineHeight: themeContract.font.lineHeight.xs,
         color: themeContract.color.text.muted,
       },
+
+      checkboxLabel: {
+        fontSize: themeContract.font.size.sm,
+        fontWeight: themeContract.font.weight.normal,
+        lineHeight: themeContract.font.lineHeight.sm,
+      },
     },
 
     tone: {
