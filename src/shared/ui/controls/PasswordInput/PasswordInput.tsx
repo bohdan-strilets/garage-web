@@ -9,7 +9,7 @@ import { buttonVisible, inputWrapper } from "./PasswordInput.css";
 import type { PasswordInputProps } from "./types/PasswordInputProps";
 
 export const PasswordInput = forwardRef<HTMLInputElement, PasswordInputProps>(
-  ({ size, className, disabled = true, hasError, ...props }, ref) => {
+  ({ size, className, disabled, hasError, ...props }, ref) => {
     const [visible, setVisible] = useState(false);
     const toggleVisibility = () => setVisible(state => !state);
 
