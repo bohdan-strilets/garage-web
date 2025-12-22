@@ -47,6 +47,10 @@ export const box = recipe({
     transition: `background-color ${themeContract.motion.fast} ease, border-color ${themeContract.motion.fast} ease`,
 
     selectors: {
+      [`${root()}:hover &`]: {
+        borderColor: themeContract.color.border.strong,
+      },
+
       [`${hiddenInput}:checked + &`]: {
         backgroundColor: themeContract.color.brand.primary,
         borderColor: themeContract.color.brand.primary,
