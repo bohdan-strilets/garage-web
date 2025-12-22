@@ -4,7 +4,7 @@ import { useTheme } from "@shared/styles";
 import { Button } from "@shared/ui/controls/Button";
 import { IconButton } from "@shared/ui/controls/IconButton";
 import { Input } from "@shared/ui/controls/Input";
-import { FieldError } from "@shared/ui/form/FieldError";
+import { PasswordInput } from "@shared/ui/controls/PasswordInput";
 import { Box } from "@shared/ui/layout/Box";
 import { Container } from "@shared/ui/layout/Container";
 import { Divider } from "@shared/ui/layout/Divider";
@@ -76,13 +76,22 @@ const App = () => {
         <Surface>
           <Box padding="sm">
             <form>
-              <Stack gap="sm">
-                <Label required={true} htmlFor="firstName">
-                  First name
-                </Label>
-                <Caption>What is your first name?</Caption>
-                <Input type="text" id="firstName" />
-                <FieldError>First name is required</FieldError>
+              <Stack>
+                <Stack gap="sm">
+                  <Label required={true} htmlFor="firstName">
+                    First name
+                  </Label>
+                  <Caption>What is your first name?</Caption>
+                  <Input type="text" id="firstName" />
+                </Stack>
+
+                <Stack gap="sm">
+                  <Label required={true} htmlFor="password">
+                    Password
+                  </Label>
+                  <Caption>What is your password?</Caption>
+                  <PasswordInput id="password" />
+                </Stack>
               </Stack>
             </form>
           </Box>

@@ -25,7 +25,7 @@ export const root = recipe({
         color: themeContract.color.text.muted,
       },
 
-      "&:hover": {
+      "&:hover:not(:disabled)": {
         borderColor: themeContract.color.border.strong,
       },
 
