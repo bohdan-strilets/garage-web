@@ -5,7 +5,7 @@ import { mediaQueries, themeContract } from "@shared/styles";
 export const root = recipe({
   base: {
     width: "100%",
-    maxWidth: themeContract.layout.container,
+    maxWidth: themeContract.layout.container.desktop,
     marginInline: "auto",
     paddingInline: themeContract.space.md,
 
