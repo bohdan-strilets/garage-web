@@ -106,6 +106,18 @@ export const themeContract = createThemeContract({
     sticky: null,
   },
   layout: {
-    container: null,
+    container: {
+      mobile: null,
+      tablet: null,
+      laptop: null,
+      desktop: null,
+    },
+    sidebar: {
+      collapsed: null,
+      expanded: null,
+    },
+    header: {
+      height: null,
+    },
   },
 });
