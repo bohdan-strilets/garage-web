@@ -99,11 +99,14 @@ export const themeContract = createThemeContract({
     slow: null,
   },
   zIndex: {
+    sticky: null,
     dropdown: null,
-    modal: null,
     popover: null,
     tooltip: null,
-    sticky: null,
+    overlay: null,
+    drawer: null,
+    modal: null,
+    toast: null,
   },
   layout: {
     container: {
