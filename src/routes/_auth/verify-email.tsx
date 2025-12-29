@@ -1,9 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-export const Route = createFileRoute("/_auth/verify-email")({
-  component: RouteComponent,
-});
+import { VerifyEmailPage } from "@pages/auth/VerifyEmailPage";
 
-function RouteComponent() {
-  return <div>Hello "/_auth/verify-email"!</div>;
-}
+export const Route = createFileRoute("/_auth/verify-email")({
+  component: () => <VerifyEmailPage />,
+});
