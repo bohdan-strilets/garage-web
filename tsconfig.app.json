@@ -32,7 +32,8 @@
       "@features/*": ["src/features/*"],
       "@routes/*": ["src/routes/*"],
       "@pages/*": ["src/pages/*"],
-      "@assets/*": ["src/assets/*"]
+      "@assets/*": ["src/assets/*"],
+      "@entities/*": ["src/entities/*"]
     }
   },
   "include": ["src"]

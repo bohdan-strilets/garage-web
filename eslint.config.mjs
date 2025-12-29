@@ -70,6 +70,7 @@ export default tseslint.config(
             { pattern: "@routes/**", group: "internal" },
             { pattern: "@pages/**", group: "internal" },
             { pattern: "@assets/**", group: "internal" },
+            { pattern: "@entities/**", group: "internal" },
           ],
           pathGroupsExcludedImportTypes: ["react"],
           "newlines-between": "always",
