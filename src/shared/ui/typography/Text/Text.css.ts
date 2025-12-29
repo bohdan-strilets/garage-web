@@ -72,10 +72,17 @@ export const root = recipe({
       sm: { letterSpacing: themeContract.font.letterSpacing.sm },
       md: { letterSpacing: themeContract.font.letterSpacing.md },
     },
+
+    align: {
+      left: { textAlign: "left" },
+      center: { textAlign: "center" },
+      right: { textAlign: "right" },
+    },
   },
 
   defaultVariants: {
     variant: "body",
     tone: "secondary",
+    align: "left",
   },
 });

@@ -20,9 +20,16 @@ export const root = recipe({
       h5: { fontSize: themeContract.font.size.sm },
       h6: { fontSize: themeContract.font.size.xs },
     },
+
+    align: {
+      left: { textAlign: "left" },
+      center: { textAlign: "center" },
+      right: { textAlign: "right" },
+    },
   },
 
   defaultVariants: {
     as: "h1",
+    align: "left",
   },
 });
