@@ -7,7 +7,7 @@ import { Text } from "@shared/ui/typography/Text";
 import { useVerifyEmail } from "../model/useVerifyEmail";
 
 export const VerifyEmailView = () => {
-  const { resend, isResending, isResent, error } = useVerifyEmail();
+  const { resend, isResending } = useVerifyEmail();
   const { user } = useSessionStore();
 
   return (
@@ -29,17 +29,6 @@ export const VerifyEmailView = () => {
         <Text tone="muted">- Make sure your inbox is not full</Text>
         <Text tone="muted">- Wait a couple of minutes</Text>
       </Stack>
-
-      {isResent && (
-        <Text tone="success" align="center">
-          Verification email has been sent again.
-        </Text>
-      )}
-      {error && (
-        <Text tone="danger" align="center">
-          Failed to resend verification email.
-        </Text>
-      )}
 
       <Button onClick={resend} loading={isResending} variant="secondary">
         Resend email
