@@ -1,11 +1,19 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
+import { useNavigate } from "@tanstack/react-router";
 import { useForm } from "react-hook-form";
+
+import { useSessionStore } from "@entities/session";
+import { isEmailVerified } from "@entities/user";
+import type { AuthResponse } from "@shared/types/auth/AuthResponse";
 
 import { register } from "./registerApi";
 import { registerSchema, type RegisterFormValues } from "./registerSchema";
 
 export const useRegisterForm = () => {
+  const { setSession } = useSessionStore();
+  const navigate = useNavigate();
+
   const form = useForm<RegisterFormValues>({
     resolver: zodResolver(registerSchema),
     defaultValues: {
@@ -17,14 +25,31 @@ export const useRegisterForm = () => {
     },
   });
 
+  const registerFn = (data: RegisterFormValues) => {
+    return register({
+      firstName: data.firstName,
+      lastName: data.lastName,
+      email: data.email,
+      password: data.password,
+    });
+  };
+
+  const onSuccess = (response: AuthResponse) => {
+    setSession({
+      accessToken: response.accessToken,
+      user: response.user,
+    });
+
+    if (isEmailVerified(response.user)) {
+      navigate({ to: "/" });
+    } else {
+      navigate({ to: "/verify-email" });
+    }
+  };
+
   const mutation = useMutation({
-    mutationFn: (data: RegisterFormValues) =>
-      register({
-        firstName: data.firstName,
-        lastName: data.lastName,
-        email: data.email,
-        password: data.password,
-      }),
+    mutationFn: registerFn,
+    onSuccess,
   });
 
   const onSubmit = (data: RegisterFormValues) => {

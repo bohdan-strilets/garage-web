@@ -7,7 +7,3 @@ export const isEmailVerified = (user: UserSelf | null): boolean => {
 export const isPhoneVerified = (user: UserSelf | null): boolean => {
   return Boolean(user?.verification.isPhoneVerified);
 };
-
-export const isAuthenticatedUser = (user: UserSelf | null): boolean => {
-  return Boolean(user?._id);
-};

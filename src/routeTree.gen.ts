@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as AuthRouteImport } from './routes/_auth'
 import { Route as AppRouteImport } from './routes/_app'
 import { Route as AppIndexRouteImport } from './routes/_app/index'
+import { Route as AuthVerifyEmailRouteImport } from './routes/_auth/verify-email'
 import { Route as AuthRegisterRouteImport } from './routes/_auth/register'
 import { Route as AuthLoginRouteImport } from './routes/_auth/login'
 import { Route as AppVehiclesRouteImport } from './routes/_app/vehicles'
@@ -29,6 +30,11 @@ const AppIndexRoute = AppIndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => AppRoute,
+} as any)
+const AuthVerifyEmailRoute = AuthVerifyEmailRouteImport.update({
+  id: '/verify-email',
+  path: '/verify-email',
+  getParentRoute: () => AuthRoute,
 } as any)
 const AuthRegisterRoute = AuthRegisterRouteImport.update({
   id: '/register',
@@ -56,6 +62,7 @@ export interface FileRoutesByFullPath {
   '/vehicles': typeof AppVehiclesRoute
   '/login': typeof AuthLoginRoute
   '/register': typeof AuthRegisterRoute
+  '/verify-email': typeof AuthVerifyEmailRoute
   '/': typeof AppIndexRoute
 }
 export interface FileRoutesByTo {
@@ -63,6 +70,7 @@ export interface FileRoutesByTo {
   '/vehicles': typeof AppVehiclesRoute
   '/login': typeof AuthLoginRoute
   '/register': typeof AuthRegisterRoute
+  '/verify-email': typeof AuthVerifyEmailRoute
   '/': typeof AppIndexRoute
 }
 export interface FileRoutesById {
@@ -73,13 +81,20 @@ export interface FileRoutesById {
   '/_app/vehicles': typeof AppVehiclesRoute
   '/_auth/login': typeof AuthLoginRoute
   '/_auth/register': typeof AuthRegisterRoute
+  '/_auth/verify-email': typeof AuthVerifyEmailRoute
   '/_app/': typeof AppIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/gallery' | '/vehicles' | '/login' | '/register' | '/'
+  fullPaths:
+    | '/gallery'
+    | '/vehicles'
+    | '/login'
+    | '/register'
+    | '/verify-email'
+    | '/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/gallery' | '/vehicles' | '/login' | '/register' | '/'
+  to: '/gallery' | '/vehicles' | '/login' | '/register' | '/verify-email' | '/'
   id:
     | '__root__'
     | '/_app'
@@ -88,6 +103,7 @@ export interface FileRouteTypes {
     | '/_app/vehicles'
     | '/_auth/login'
     | '/_auth/register'
+    | '/_auth/verify-email'
     | '/_app/'
   fileRoutesById: FileRoutesById
 }
@@ -118,6 +134,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/'
       preLoaderRoute: typeof AppIndexRouteImport
       parentRoute: typeof AppRoute
+    }
+    '/_auth/verify-email': {
+      id: '/_auth/verify-email'
+      path: '/verify-email'
+      fullPath: '/verify-email'
+      preLoaderRoute: typeof AuthVerifyEmailRouteImport
+      parentRoute: typeof AuthRoute
     }
     '/_auth/register': {
       id: '/_auth/register'
@@ -167,11 +190,13 @@ const AppRouteWithChildren = AppRoute._addFileChildren(AppRouteChildren)
 interface AuthRouteChildren {
   AuthLoginRoute: typeof AuthLoginRoute
   AuthRegisterRoute: typeof AuthRegisterRoute
+  AuthVerifyEmailRoute: typeof AuthVerifyEmailRoute
 }
 
 const AuthRouteChildren: AuthRouteChildren = {
   AuthLoginRoute: AuthLoginRoute,
   AuthRegisterRoute: AuthRegisterRoute,
+  AuthVerifyEmailRoute: AuthVerifyEmailRoute,
 }
 
 const AuthRouteWithChildren = AuthRoute._addFileChildren(AuthRouteChildren)
