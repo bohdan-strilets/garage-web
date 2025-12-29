@@ -12,7 +12,7 @@ import {
 import type { NavigationLink } from "../types/NavigationLink";
 
 export const primaryNavigationItems: NavigationLink[] = [
-  { id: "1", label: "Home", icon: FaHome, path: "/home" },
+  { id: "1", label: "Home", icon: FaHome, path: "/" },
   { id: "2", label: "Vehicles", icon: FaCar, path: "/vehicles" },
   { id: "3", label: "Energy", icon: FaBolt, path: "/energy" },
   { id: "4", label: "Maintenance", icon: FaWrench, path: "/maintenance" },

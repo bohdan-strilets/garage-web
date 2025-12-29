@@ -3,17 +3,22 @@ import { style } from "@vanilla-extract/css";
 import { themeContract } from "@shared/styles";
 
 export const item = style({
+  height: 40,
+});
+
+export const link = style({
   display: "flex",
   alignItems: "center",
 
   paddingInline: themeContract.space.md,
-  height: 40,
+  height: "100%",
   width: "100%",
 
   textAlign: "left",
 
-  border: "none",
+  color: themeContract.color.text.primary,
   background: "transparent",
+  border: "none",
   borderRadius: themeContract.radius.md,
 
   cursor: "pointer",
@@ -21,6 +26,7 @@ export const item = style({
   selectors: {
     "&:hover": {
       background: themeContract.color.surface.muted,
+      textDecoration: "none",
     },
 
     '[data-sidebar-open="false"] &': {
@@ -28,6 +34,10 @@ export const item = style({
       paddingInline: 0,
     },
   },
+});
+
+export const active = style({
+  backgroundColor: themeContract.color.brand.primarySoft,
 });
 
 export const icon = style({

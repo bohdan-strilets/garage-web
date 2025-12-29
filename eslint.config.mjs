@@ -67,6 +67,7 @@ export default tseslint.config(
             { pattern: "@app/**", group: "internal" },
             { pattern: "@shared/**", group: "internal" },
             { pattern: "@features/**", group: "internal" },
+            { pattern: "@routes/**", group: "internal" },
             { pattern: "@pages/**", group: "internal" },
             { pattern: "@assets/**", group: "internal" },
           ],

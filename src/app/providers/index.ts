@@ -1,2 +1,3 @@
-export * from "./AppProviders";
+export * from "./AppProvider";
 export * from "./ThemeProvider";
+export * from "./RouterProvider";

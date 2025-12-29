@@ -30,6 +30,7 @@
       "@app/*": ["src/app/*"],
       "@shared/*": ["src/shared/*"],
       "@features/*": ["src/features/*"],
+      "@routes/*": ["src/routes/*"],
       "@pages/*": ["src/pages/*"],
       "@assets/*": ["src/assets/*"]
     }

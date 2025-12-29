@@ -8,8 +8,8 @@ export const Navigation = ({ items }: NavigationProps) => {
   return (
     <nav className={root} aria-label="Main navigation">
       <ul className={list}>
-        {items.map(({ id, icon, label }) => (
-          <NavigationAction key={id} icon={icon} text={label} />
+        {items.map(({ id, icon, label, path }) => (
+          <NavigationAction key={id} icon={icon} text={label} to={path} />
         ))}
       </ul>
     </nav>
