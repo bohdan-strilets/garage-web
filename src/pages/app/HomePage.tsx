@@ -2,6 +2,7 @@ import { TfiAndroid } from "react-icons/tfi";
 
 import { useTheme } from "@shared/styles";
 import { Button } from "@shared/ui/controls/Button";
+import { ButtonGroup } from "@shared/ui/controls/ButtonGroup";
 import { IconButton } from "@shared/ui/controls/IconButton";
 import { Box } from "@shared/ui/layout/Box";
 import { Container } from "@shared/ui/layout/Container";
@@ -54,15 +55,17 @@ export const HomePage = () => {
         <Surface variant="outlined">
           <Box padding="sm">
             <Stack justifyContent="center" direction="row" gap="sm">
-              <IconButton ariaLabel="android-btn">
-                <TfiAndroid />
-              </IconButton>
-              <IconButton ariaLabel="android-btn" variant="secondary">
-                <TfiAndroid />
-              </IconButton>
-              <IconButton ariaLabel="android-btn" variant="ghost">
-                <TfiAndroid />
-              </IconButton>
+              <ButtonGroup>
+                <IconButton ariaLabel="android-btn">
+                  <TfiAndroid />
+                </IconButton>
+                <IconButton ariaLabel="android-btn" variant="secondary">
+                  <TfiAndroid />
+                </IconButton>
+                <IconButton ariaLabel="android-btn" variant="ghost">
+                  <TfiAndroid />
+                </IconButton>
+              </ButtonGroup>
             </Stack>
           </Box>
         </Surface>
