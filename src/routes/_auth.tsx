@@ -1,10 +1,11 @@
 import { createFileRoute, Outlet } from "@tanstack/react-router";
 
+import { AuthLayout } from "@app/layouts/AuthLayout";
+
 export const Route = createFileRoute("/_auth")({
   component: () => (
-    <div>
-      <div>AUTH PAGE HEADER</div>
+    <AuthLayout>
       <Outlet />
-    </div>
+    </AuthLayout>
   ),
 });
