@@ -1,5 +1,7 @@
 import axios from "axios";
 
+import { ERROR_CODES } from "@shared/errors";
+
 import type { ApiError } from "./types/ApiError";
 
 export const normalizeApiError = (error: unknown): ApiError => {
@@ -11,19 +13,13 @@ export const normalizeApiError = (error: unknown): ApiError => {
     }
 
     return {
-      success: false,
       statusCode: response?.status ?? 500,
-      message: [error.message || "Request failed"],
-      timestamp: new Date().toISOString(),
-      path: "",
+      code: ERROR_CODES.INTERNAL_SERVER_ERROR,
     };
   }
 
   return {
-    success: false,
     statusCode: 500,
-    message: ["Unexpected error"],
-    timestamp: new Date().toISOString(),
-    path: "",
+    code: ERROR_CODES.INTERNAL_SERVER_ERROR,
   };
 };

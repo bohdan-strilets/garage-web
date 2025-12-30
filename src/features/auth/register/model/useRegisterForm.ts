@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 import { useSessionStore } from "@entities/session";
 import { isEmailVerified } from "@entities/user";
 
+import { handleRegisterError } from "./handleRegisterError";
 import { register } from "./registerApi";
 import { registerSchema, type RegisterFormValues } from "./registerSchema";
 
@@ -51,6 +52,7 @@ export const useRegisterForm = () => {
   const mutation = useMutation({
     mutationFn: registerFn,
     onSuccess,
+    onError: handleRegisterError(form),
   });
 
   const onSubmit = (data: RegisterFormValues) => {

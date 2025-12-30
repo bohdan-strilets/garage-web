@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 import { useSessionStore } from "@entities/session";
 import { isEmailVerified } from "@entities/user";
 
+import { handleLoginError } from "./handleLoginError";
 import { login } from "./loginApi";
 import { LoginSchema, type LoginFormValues } from "./loginSchema";
 
@@ -46,6 +47,7 @@ export const useLoginForm = () => {
   const mutation = useMutation({
     mutationFn: loginFn,
     onSuccess,
+    onError: handleLoginError(form),
   });
 
   const onSubmit = (data: LoginFormValues) => {

@@ -1,6 +1,7 @@
 import { useMutation } from "@tanstack/react-query";
 import toast from "react-hot-toast";
 
+import { handleVerifyEmailError } from "./handleVerifyEmailError";
 import { resendVerificationEmail } from "./verifyEmailApi";
 
 export const useVerifyEmail = () => {
@@ -11,9 +12,7 @@ export const useVerifyEmail = () => {
       toast.success("Verification email has been sent");
     },
 
-    onError: () => {
-      toast.error("Failed to resend verification email");
-    },
+    onError: handleVerifyEmailError,
   });
 
   return {
