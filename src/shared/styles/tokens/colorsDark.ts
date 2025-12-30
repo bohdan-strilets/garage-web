@@ -1,7 +1,7 @@
 export const darkColors = {
   brand: {
-    primary: "#f83600",
-    primarySoft: "rgba(248, 54, 0, 0.5)",
+    primary: "#a2ab58",
+    primarySoft: "rgba(162, 171, 88, 0.5)",
   },
 
   surface: {
@@ -22,7 +22,7 @@ export const darkColors = {
     subtle: "#3a3a3a",
     default: "#4a4a4a",
     strong: "#6a6a6a",
-    accent: "#f83600",
+    accent: "#a2ab58",
   },
 
   status: {

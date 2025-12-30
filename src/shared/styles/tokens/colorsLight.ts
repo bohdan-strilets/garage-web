@@ -1,7 +1,7 @@
 export const lightColors = {
   brand: {
-    primary: "#f83600",
-    primarySoft: "rgba(248, 54, 0, 0.5)",
+    primary: "#a2ab58",
+    primarySoft: "rgba(162, 171, 88, 0.5)",
   },
 
   surface: {
@@ -22,7 +22,7 @@ export const lightColors = {
     subtle: "#dddddd",
     default: "#cfcfcf",
     strong: "#a8a8a8",
-    accent: "#f83600",
+    accent: "#a2ab58",
   },
 
   status: {
