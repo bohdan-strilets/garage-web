@@ -5,10 +5,11 @@ import { useForm } from "react-hook-form";
 
 import { useSessionStore } from "@entities/session";
 import { isEmailVerified } from "@entities/user";
-import type { AuthResponse } from "@shared/types/auth/AuthResponse";
 
 import { register } from "./registerApi";
 import { registerSchema, type RegisterFormValues } from "./registerSchema";
+
+import type { RegisterResponse } from "../types/RegisterResponse";
 
 export const useRegisterForm = () => {
   const { setSession } = useSessionStore();
@@ -34,7 +35,7 @@ export const useRegisterForm = () => {
     });
   };
 
-  const onSuccess = (response: AuthResponse) => {
+  const onSuccess = (response: RegisterResponse) => {
     setSession({
       accessToken: response.accessToken,
       user: response.user,
