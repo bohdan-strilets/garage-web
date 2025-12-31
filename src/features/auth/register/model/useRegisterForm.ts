@@ -3,7 +3,7 @@ import { useMutation } from "@tanstack/react-query";
 import { useNavigate } from "@tanstack/react-router";
 import { useForm } from "react-hook-form";
 
-import { useSessionStore } from "@entities/session";
+import { sessionActions } from "@entities/session";
 import { isEmailVerified } from "@entities/user";
 
 import { handleRegisterError } from "./handleRegisterError";
@@ -13,7 +13,6 @@ import { registerSchema, type RegisterFormValues } from "./registerSchema";
 import type { RegisterResponse } from "../types/RegisterResponse";
 
 export const useRegisterForm = () => {
-  const { setSession } = useSessionStore();
   const navigate = useNavigate();
 
   const form = useForm<RegisterFormValues>({
@@ -37,7 +36,7 @@ export const useRegisterForm = () => {
   };
 
   const onSuccess = (response: RegisterResponse) => {
-    setSession({
+    sessionActions.set({
       accessToken: response.accessToken,
       user: response.user,
     });

@@ -1,5 +1,6 @@
 import { Overlay } from "@app/overlay";
 
+import { AuthProvider } from "./AuthProvider";
 import { QueryProvider } from "./QueryProvider";
 import { RouterProvider } from "./RouterProvider";
 import { ThemeProvider } from "./ThemeProvider";
@@ -10,8 +11,10 @@ export const AppProviders = () => {
     <>
       <QueryProvider>
         <ThemeProvider>
-          <ToasterProvider />
-          <RouterProvider />
+          <AuthProvider>
+            <ToasterProvider />
+            <RouterProvider />
+          </AuthProvider>
         </ThemeProvider>
       </QueryProvider>
 

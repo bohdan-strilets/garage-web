@@ -1,4 +1,4 @@
-import { useSessionStore } from "@entities/session";
+import { useSession } from "@entities/session";
 import { Button } from "@shared/ui/controls/Button";
 import { Stack } from "@shared/ui/layout/Stack";
 import { Heading } from "@shared/ui/typography/Heading";
@@ -8,7 +8,7 @@ import { useVerifyEmail } from "../model/useVerifyEmail";
 
 export const VerifyEmailView = () => {
   const { resend, isResending } = useVerifyEmail();
-  const { user } = useSessionStore();
+  const { user } = useSession();
 
   return (
     <Stack gap="lg" alignItems="center">

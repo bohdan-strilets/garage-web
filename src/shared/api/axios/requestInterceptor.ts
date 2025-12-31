@@ -1,14 +1,15 @@
-import { accessToken } from "../token/accessToken";
+import { getAccessToken, isAuthenticated } from "@entities/session";
 
 import type { InternalAxiosRequestConfig } from "axios";
 
 export const attachAccessToken = (
   config: InternalAxiosRequestConfig,
 ): InternalAxiosRequestConfig => {
-  const token = accessToken.get();
+  const accessToken = getAccessToken();
+  const isAuth = isAuthenticated();
 
-  if (token) {
-    config.headers.Authorization = `Bearer ${token}`;
+  if (isAuth) {
+    config.headers.Authorization = `Bearer ${accessToken}`;
   }
 
   return config;

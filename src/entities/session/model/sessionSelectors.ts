@@ -1,5 +1,9 @@
-import type { AuthSession } from "../types/Session";
+import { useSessionStore } from "./useSessionStore";
 
-export const isAuthenticated = (session: AuthSession): boolean => {
-  return Boolean(session.accessToken);
+export const isAuthenticated = (): boolean => {
+  return Boolean(useSessionStore.getState().accessToken);
+};
+
+export const getAccessToken = (): string | null => {
+  return useSessionStore.getState().accessToken;
 };

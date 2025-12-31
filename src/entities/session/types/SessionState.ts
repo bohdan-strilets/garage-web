@@ -1,9 +1,12 @@
-import type { AuthResponse } from "@shared/types/auth/AuthResponse";
+import type { UserSelf } from "@entities/user/types/UserSelf";
 
-import type { AuthSession } from "./Session";
+import type { AuthSession } from "./AuthSession";
 
-export type SessionState = AuthSession & {
-  setSession: (data: AuthResponse) => void;
+export type SessionState = {
+  accessToken: string | null;
+  user: UserSelf | null;
+  isInitialized: boolean;
 
+  setSession: (data: AuthSession) => void;
   clearSession: () => void;
 };
