@@ -23,8 +23,9 @@ export const AppSideBar = () => {
 
       <Navigation items={primaryNavigationItems} />
 
+      <Divider tone="muted" />
+
       <div className={accountSection}>
-        <Divider tone="muted" />
         <Navigation items={accountNavigationItems} />
       </div>
     </div>
