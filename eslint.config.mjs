@@ -71,6 +71,7 @@ export default tseslint.config(
             { pattern: "@pages/**", group: "internal" },
             { pattern: "@assets/**", group: "internal" },
             { pattern: "@entities/**", group: "internal" },
+            { pattern: "@widgets/**", group: "internal" },
           ],
           pathGroupsExcludedImportTypes: ["react"],
           "newlines-between": "always",
