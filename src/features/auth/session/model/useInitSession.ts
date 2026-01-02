@@ -4,15 +4,17 @@ import { useEffect } from "react";
 import { useMutation } from "@tanstack/react-query";
 
 import { sessionActions } from "@entities/session";
-import type { AuthSession } from "@entities/session/types/AuthSession";
 
 import { getMe } from "./getMeApi";
 
+import type { GetMeResponse } from "../types/GetMeResponse";
+
 export const useInitSession = () => {
-  const onSuccess = (data: AuthSession) => {
+  const onSuccess = (data: GetMeResponse) => {
+    const state = data.data;
     sessionActions.set({
-      accessToken: data.accessToken,
-      user: data.user,
+      accessToken: state.accessToken,
+      user: state.user,
     });
   };
 

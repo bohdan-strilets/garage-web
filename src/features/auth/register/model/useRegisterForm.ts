@@ -36,12 +36,13 @@ export const useRegisterForm = () => {
   };
 
   const onSuccess = (response: RegisterResponse) => {
+    const state = response.data;
     sessionActions.set({
-      accessToken: response.accessToken,
-      user: response.user,
+      accessToken: state.accessToken,
+      user: state.user,
     });
 
-    if (isEmailVerified(response.user)) {
+    if (isEmailVerified(state.user)) {
       navigate({ to: "/" });
     } else {
       navigate({ to: "/verify-email" });
