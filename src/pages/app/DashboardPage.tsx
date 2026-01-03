@@ -13,7 +13,7 @@ import { Surface } from "@shared/ui/layout/Surface";
 import { Heading } from "@shared/ui/typography/Heading";
 import { Text } from "@shared/ui/typography/Text";
 
-export const HomePage = () => {
+export const DashboardPage = () => {
   const { toggle } = useTheme();
 
   return (
