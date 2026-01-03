@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 
 import { sessionActions } from "@entities/session";
 import { isEmailVerified } from "@entities/user";
+import { NAVIGATION_PATHS } from "@features/navigation/config/navigationPaths";
 
 import { handleLoginError } from "./handleLoginError";
 import { login } from "./loginApi";
@@ -38,9 +39,9 @@ export const useLoginForm = () => {
     });
 
     if (isEmailVerified(state.user)) {
-      navigate({ to: "/" });
+      navigate({ to: NAVIGATION_PATHS.DASHBOARD });
     } else {
-      navigate({ to: "/verify-email" });
+      navigate({ to: NAVIGATION_PATHS.EMAIL_VERIFICATION });
     }
   };
 
