@@ -6,6 +6,8 @@ export const root = recipe({
   base: {
     display: "inline-flex",
     alignItems: "stretch",
+
+    width: "100%",
   },
 
   variants: {
