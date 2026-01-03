@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import clsx from "clsx";
 
 import logoImg from "@assets/images/logo/garage-logo.webp";
@@ -8,9 +9,9 @@ import type { LogoProps } from "./types/LogoProps";
 
 export const Logo = ({ size, variant = "icon", className }: LogoProps) => {
   return (
-    <div className={clsx(root, className)}>
+    <Link to="/" className={clsx(root, className)}>
       <img src={logoImg} alt="Garage Logo" className={image({ size })} />
       {variant === "full" && <p className={text({ size })}>Garage</p>}
-    </div>
+    </Link>
   );
 };

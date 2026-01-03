@@ -6,6 +6,8 @@ import { themeContract } from "@shared/styles";
 export const root = style({
   display: "inline-flex",
   alignItems: "end",
+
+  cursor: "pointer",
 });
 
 export const image = recipe({
@@ -24,7 +26,6 @@ export const image = recipe({
 export const text = recipe({
   base: {
     fontWeight: themeContract.font.weight.bold,
-
     color: themeContract.color.text.primary,
   },
 
