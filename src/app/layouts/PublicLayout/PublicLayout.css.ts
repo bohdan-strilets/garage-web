@@ -18,7 +18,7 @@ export const container = style({
   justifyContent: "space-between",
 
   width: "100%",
-  maxWidth: 420,
+  maxWidth: themeContract.layout.container.desktop,
   minHeight: "100vh",
   paddingBlock: themeContract.space.xl,
   paddingInline: themeContract.space.md,
@@ -28,29 +28,4 @@ export const container = style({
       paddingInline: themeContract.space.xl,
     },
   },
-});
-
-export const logo = style({
-  display: "flex",
-  justifyContent: "center",
-});
-
-export const card = style({
-  padding: themeContract.space.md,
-  marginBlock: "auto",
-
-  borderRadius: themeContract.radius.md,
-  background: themeContract.color.surface.base,
-  boxShadow: themeContract.shadow.lg,
-
-  "@media": {
-    [mediaQueries.tablet]: {
-      padding: themeContract.space.lg,
-    },
-  },
-});
-
-export const footer = style({
-  display: "flex",
-  justifyContent: "center",
 });
