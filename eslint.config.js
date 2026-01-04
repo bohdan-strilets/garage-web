@@ -3,8 +3,10 @@ import globals from 'globals'
 import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
 import tseslint from 'typescript-eslint'
-import { defineConfig, globalIgnores } from 'eslint/config'
+import importPlugin from 'eslint-plugin-import'
+import unusedImports from 'eslint-plugin-unused-imports'
 import prettier from 'eslint-config-prettier'
+import { defineConfig, globalIgnores } from 'eslint/config'
 
 export default defineConfig([
   globalIgnores(['dist']),
@@ -20,7 +22,18 @@ export default defineConfig([
       prettier,
     ],
 
-    plugins: {},
+    plugins: {
+      import: importPlugin,
+      'unused-imports': unusedImports,
+    },
+
+    settings: {
+      'import/resolver': {
+        typescript: {
+          project: './tsconfig.json',
+        },
+      },
+    },
 
     languageOptions: {
       ecmaVersion: 2022,
@@ -32,13 +45,73 @@ export default defineConfig([
       'no-console': ['warn', { allow: ['warn', 'error'] }],
       'no-debugger': 'error',
 
-      '@typescript-eslint/no-unused-vars': [
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': 'off',
+
+      'unused-imports/no-unused-imports': 'error',
+      'unused-imports/no-unused-vars': [
         'warn',
-        { argsIgnorePattern: '^_' },
+        {
+          vars: 'all',
+          varsIgnorePattern: '^_',
+          args: 'after-used',
+          argsIgnorePattern: '^_',
+        },
       ],
+
       '@typescript-eslint/consistent-type-imports': [
         'warn',
         { prefer: 'type-imports' },
+      ],
+
+      'import/order': [
+        'error',
+        {
+          groups: [
+            'builtin',
+            'external',
+            'internal',
+            'parent',
+            'sibling',
+            'index',
+            'type',
+          ],
+
+          pathGroups: [
+            {
+              pattern: 'react',
+              group: 'external',
+              position: 'before',
+            },
+            {
+              pattern: 'react/**',
+              group: 'external',
+              position: 'before',
+            },
+
+            { pattern: '@app/**', group: 'internal' },
+            { pattern: '@pages/**', group: 'internal' },
+            { pattern: '@widgets/**', group: 'internal' },
+            { pattern: '@features/**', group: 'internal' },
+            { pattern: '@entities/**', group: 'internal' },
+            { pattern: '@shared/**', group: 'internal' },
+
+            {
+              pattern: '**/*.css.ts',
+              group: 'sibling',
+              position: 'after',
+            },
+          ],
+
+          pathGroupsExcludedImportTypes: ['builtin', 'external'],
+
+          'newlines-between': 'always',
+
+          alphabetize: {
+            order: 'asc',
+            caseInsensitive: true,
+          },
+        },
       ],
     },
   },
