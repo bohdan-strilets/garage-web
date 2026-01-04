@@ -3,14 +3,10 @@ import { createRoot } from 'react-dom/client'
 
 import { AppProvider } from '@app/providers/app'
 
-import App from './App'
-
 const root = document.getElementById('root') as HTMLDivElement
 
 createRoot(root).render(
   <StrictMode>
-    <AppProvider>
-      <App />
-    </AppProvider>
+    <AppProvider />
   </StrictMode>,
 )

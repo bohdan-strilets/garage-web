@@ -1,7 +1,12 @@
+import { createFileRoute } from '@tanstack/react-router'
 import { motion } from 'motion/react'
 
-import { slideUp } from '@shared/motion'
-import { useTheme } from '@shared/styles'
+import { slideUp } from '../../shared/motion/presets/slideUp'
+import { useTheme } from '../../shared/styles/model/useTheme'
+
+export const Route = createFileRoute('/')({
+  component: () => <App />,
+})
 
 const App = () => {
   const { toggleTheme } = useTheme()
@@ -21,5 +26,3 @@ const App = () => {
     </>
   )
 }
-
-export default App

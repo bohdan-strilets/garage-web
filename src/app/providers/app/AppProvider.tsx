@@ -1,7 +1,10 @@
+import { RouterProvider } from '../router'
 import { ThemeProvider } from '../theme'
 
-import type { AppProviderProps } from './Props'
-
-export const AppProvider = ({ children }: AppProviderProps) => {
-  return <ThemeProvider>{children}</ThemeProvider>
+export const AppProvider = () => {
+  return (
+    <ThemeProvider>
+      <RouterProvider />
+    </ThemeProvider>
+  )
 }
