@@ -1,0 +1,17 @@
+# build
+dist
+build
+
+# dependencies
+node_modules
+
+# env
+.env
+.env.*
+
+# generated
+coverage
+.vite
+
+# misc
+*.lock
