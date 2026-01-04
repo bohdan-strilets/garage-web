@@ -1,5 +1,12 @@
 const App = () => {
-  return <p>Hello react APP + Vite</p>
+  return (
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores
+      doloremque rem perferendis unde! Totam voluptate fugiat explicabo vitae
+      exercitationem corrupti asperiores eum beatae error aperiam, optio ut.
+      Minus, quaerat facere.
+    </p>
+  )
 }
 
 export default App
