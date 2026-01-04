@@ -1,4 +1,8 @@
+import { useTheme } from '@shared/styles'
+
 const App = () => {
+  const { toggleTheme } = useTheme()
+
   return (
     <>
       <p>
@@ -8,7 +12,9 @@ const App = () => {
         Minus, quaerat facere.
       </p>
 
-      <button type="button">Click me</button>
+      <button type="button" onClick={toggleTheme}>
+        Change THEME
+      </button>
     </>
   )
 }
