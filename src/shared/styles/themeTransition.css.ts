@@ -6,10 +6,12 @@ export const THEME_TRANSITION_CLASS = 'theme-transition'
 export const DISABLE_THEME_TRANSITION_CLASS = 'disable-theme-transition'
 export const THEME_TRANSITION_DURATION_MS = 120
 
+const { duration, easing } = themeContract.motion
+
 globalStyle('body', {
   transition: `
-    background-color ${themeContract.motion.normal} ease, 
-    color ${themeContract.motion.normal} ease,
+    background-color ${duration.fast} ${easing.standard}, 
+    color ${duration.fast} ${easing.standard},
     opacity ${THEME_TRANSITION_DURATION_MS} ease
   `,
 })

@@ -104,9 +104,23 @@ export const themeContract = createThemeContract({
   },
 
   motion: {
-    fast: null,
-    normal: null,
-    slow: null,
+    duration: {
+      fast: null,
+      base: null,
+      slow: null,
+    },
+
+    delay: {
+      short: null,
+      medium: null,
+      long: null,
+    },
+
+    easing: {
+      standard: null,
+      emphasized: null,
+      linear: null,
+    },
   },
 
   borderWidth: {
