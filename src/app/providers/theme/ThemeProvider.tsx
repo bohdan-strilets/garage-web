@@ -2,7 +2,7 @@
 
 import { useEffect, useLayoutEffect, useRef } from 'react'
 
-import { getSystemTheme } from '@shared/lib/getSystemTheme'
+import { getSystemTheme } from '@shared/lib/theme'
 import { applyTheme, THEME, themeActions, useTheme } from '@shared/styles'
 import { DISABLE_THEME_TRANSITION_CLASS } from '@shared/styles/themeTransition.css'
 
