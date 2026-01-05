@@ -86,11 +86,17 @@ export const themeContract = createThemeContract({
     dropdown: null,
     modal: null,
     overlay: null,
+    sidebar: null,
   },
 
   layout: {
     header: {
       height: null,
+    },
+
+    sidebar: {
+      collapsedWidth: null,
+      expandedWidth: null,
     },
 
     container: {

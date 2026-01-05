@@ -1,6 +1,11 @@
 export const layout = {
   header: {
-    height: '64px',
+    height: '68px',
+  },
+
+  sidebar: {
+    collapsedWidth: '64px',
+    expandedWidth: '280px',
   },
 
   container: {
