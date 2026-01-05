@@ -13,3 +13,5 @@ export * from './primitives/active.css'
 export * from './primitives/disabled.css'
 export * from './primitives/focus.css'
 export * from './primitives/hover.css'
+
+export * from './types/Media'
