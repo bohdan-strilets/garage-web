@@ -92,18 +92,30 @@ export const themeContract = createThemeContract({
     header: {
       height: null,
     },
+
     container: {
       mobile: null,
       tablet: null,
       laptop: null,
       desktop: null,
     },
+
     modal: {
       width: null,
       maxWidth: null,
     },
+
     input: {
       height: {
+        sm: null,
+        md: null,
+        lg: null,
+      },
+    },
+
+    icon: {
+      size: {
+        xs: null,
         sm: null,
         md: null,
         lg: null,
