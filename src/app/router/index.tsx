@@ -1,6 +1,8 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { motion } from 'motion/react'
 
+import Container from '@shared/ui/layouts/Container'
+
 import { slideUp } from '../../shared/motion/presets/slideUp'
 import { useTheme } from '../../shared/styles/model/useTheme'
 
@@ -12,7 +14,7 @@ const App = () => {
   const { toggleTheme } = useTheme()
 
   return (
-    <>
+    <Container>
       <motion.p {...slideUp()}>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores
         doloremque rem perferendis unde! Totam voluptate fugiat explicabo vitae
@@ -23,6 +25,6 @@ const App = () => {
       <button type="button" onClick={toggleTheme}>
         Change THEME
       </button>
-    </>
+    </Container>
   )
 }
