@@ -123,9 +123,4 @@ export const themeContract = createThemeContract({
       linear: null,
     },
   },
-
-  borderWidth: {
-    hairline: null,
-    thin: null,
-  },
 })

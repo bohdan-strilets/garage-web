@@ -2,15 +2,15 @@
 
 import { useEffect, useLayoutEffect, useRef } from 'react'
 
+import { DISABLE_THEME_TRANSITION_CLASS } from '@app/theme/themeTransition.css'
 import { getSystemTheme } from '@shared/lib/theme'
 import { applyTheme, THEME, themeActions, useTheme } from '@shared/styles'
-import { DISABLE_THEME_TRANSITION_CLASS } from '@shared/styles/themeTransition.css'
 
 import type { ThemeProviderProps } from './Props'
 
-import '@shared/styles/reset.css'
-import '@shared/styles/globals.css'
-import '@shared/styles/themeTransition.css'
+import '@app/theme/reset.css'
+import '@app/theme/globals.css'
+import '@app/theme/themeTransition.css'
 
 export const ThemeProvider = ({ children }: ThemeProviderProps) => {
   const { mode } = useTheme()

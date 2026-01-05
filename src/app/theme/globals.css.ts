@@ -1,6 +1,6 @@
 import { globalStyle } from '@vanilla-extract/css'
 
-import { themeContract } from './theme'
+import { themeContract } from '@shared/styles'
 
 globalStyle('body', {
   fontFamily: themeContract.font.family.base,

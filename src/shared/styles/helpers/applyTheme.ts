@@ -1,10 +1,12 @@
-import { THEME } from '../enums/Theme'
-import { darkTheme, lightTheme } from '../theme'
 import {
   DISABLE_THEME_TRANSITION_CLASS,
   THEME_TRANSITION_CLASS,
   THEME_TRANSITION_DURATION_MS,
-} from '../themeTransition.css'
+} from '@app/theme/themeTransition.css'
+
+import { THEME } from '../enums/Theme'
+import { darkTheme } from '../theme/dark.css'
+import { lightTheme } from '../theme/light.css'
 
 import type { ResolvedTheme } from '../types/ResolvedTheme'
 

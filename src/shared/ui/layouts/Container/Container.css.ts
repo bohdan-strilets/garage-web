@@ -1,7 +1,6 @@
 import { style } from '@vanilla-extract/css'
 
-import { themeContract } from '@shared/styles'
-import { media } from '@shared/styles/theme/media'
+import { media, themeContract } from '@shared/styles'
 
 export const root = style({
   maxWidth: themeContract.layout.container.mobile,

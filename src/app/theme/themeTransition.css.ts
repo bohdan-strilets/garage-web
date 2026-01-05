@@ -1,6 +1,6 @@
 import { globalStyle } from '@vanilla-extract/css'
 
-import { themeContract } from './theme/contract.css'
+import { themeContract } from '@shared/styles'
 
 export const THEME_TRANSITION_CLASS = 'theme-transition'
 export const DISABLE_THEME_TRANSITION_CLASS = 'disable-theme-transition'

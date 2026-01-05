@@ -1,4 +1,4 @@
-import { breakpoints } from './breakpoints'
+import { breakpoints } from '../tokens/breakpoints'
 
 import type { Media } from '../types/Media'
 
