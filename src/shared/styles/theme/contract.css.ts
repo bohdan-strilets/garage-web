@@ -148,4 +148,10 @@ export const themeContract = createThemeContract({
       linear: null,
     },
   },
+
+  overlay: {
+    subtle: null,
+    base: null,
+    strong: null,
+  },
 })
