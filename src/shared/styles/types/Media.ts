@@ -1,5 +1,6 @@
+import type { media } from '@shared/lib/responsive'
+
 import type { Breakpoint } from './Breakpoint'
-import type { media } from '../theme/media'
 
 export type Media = Record<Breakpoint, string>
 

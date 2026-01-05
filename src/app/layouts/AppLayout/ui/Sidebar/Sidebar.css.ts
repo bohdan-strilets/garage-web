@@ -1,6 +1,7 @@
 import { recipe } from '@vanilla-extract/recipes'
 
-import { media, themeContract } from '@shared/styles'
+import { media } from '@shared/lib/responsive'
+import { themeContract } from '@shared/styles'
 
 export const root = recipe({
   base: {

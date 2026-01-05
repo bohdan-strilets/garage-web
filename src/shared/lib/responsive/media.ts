@@ -1,6 +1,5 @@
-import { breakpoints } from '../tokens/breakpoints'
-
-import type { Media } from '../types/Media'
+import type { Media } from '@shared/styles'
+import { breakpoints } from '@shared/styles/tokens/breakpoints'
 
 export const media: Media = {
   MOBILE: '',

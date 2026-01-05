@@ -1,5 +1,4 @@
-import { useMediaQuery } from '@shared/lib/responsive'
-import { media } from '@shared/styles'
+import { media, useMediaQuery } from '@shared/lib/responsive'
 
 import { useSidebar } from '../../model/useSidebar'
 import SidebarToggle from '../SidebarToggle'
