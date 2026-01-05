@@ -13,6 +13,7 @@ export const lightTheme = createTheme(themeContract, {
       canvas: '#f8f9fb',
       base: '#ffffff',
       muted: '#f1f3f7',
+      inverted: '#181c24',
     },
 
     text: {

@@ -13,6 +13,7 @@ export const darkTheme = createTheme(themeContract, {
       canvas: '#181c24',
       base: '#202532',
       muted: '#262c3a',
+      inverted: '#f8f9fb',
     },
 
     text: {

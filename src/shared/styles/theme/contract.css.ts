@@ -10,6 +10,7 @@ export const themeContract = createThemeContract({
       canvas: null,
       base: null,
       muted: null,
+      inverted: null,
     },
 
     text: {
