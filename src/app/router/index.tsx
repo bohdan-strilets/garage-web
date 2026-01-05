@@ -4,8 +4,10 @@ import Box from '@shared/ui/layouts/Box'
 import Container from '@shared/ui/layouts/Container'
 import Divider from '@shared/ui/layouts/Divider'
 import Grid from '@shared/ui/layouts/Grid'
+import Spacer from '@shared/ui/layouts/Spacer'
 import Stack from '@shared/ui/layouts/Stack'
 import Surface from '@shared/ui/layouts/Surface'
+import Heading from '@shared/ui/typography/Heading'
 import Paragraph from '@shared/ui/typography/Paragraph'
 
 import { useTheme } from '../../shared/styles/model/useTheme'
@@ -20,15 +22,22 @@ const App = () => {
   return (
     <Container>
       <Box gap="xl" display="grid">
+        <Heading level={1}>Lorem ipsum dolor sit amet</Heading>
+        <Spacer />
+
         <Surface tone="muted" padding="md" radius="md" shadow="md">
           <Stack gap="md">
+            <Heading level={2}>Lorem ipsum dolor sit amet</Heading>
             <Paragraph>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores
               doloremque rem perferendis unde! Totam voluptate fugiat explicabo
               vitae exercitationem corrupti asperiores eum beatae error aperiam,
               optio ut. Minus, quaerat facere.
             </Paragraph>
+
             <Divider />
+
+            <Heading level={2}>Lorem ipsum dolor sit amet</Heading>
             <Paragraph>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores
               doloremque rem perferendis unde! Totam voluptate fugiat explicabo
@@ -85,9 +94,13 @@ const App = () => {
         </Surface>
 
         <Surface tone="muted" padding="md" radius="md" shadow="md">
-          <button type="button" onClick={toggleTheme}>
-            Change THEME
-          </button>
+          <Stack align="start" gap="md">
+            <Heading level={3}>Theme settings</Heading>
+
+            <button type="button" onClick={toggleTheme}>
+              Change THEME
+            </button>
+          </Stack>
         </Surface>
       </Box>
     </Container>
