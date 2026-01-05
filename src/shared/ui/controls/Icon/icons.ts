@@ -1,4 +1,4 @@
-import { Plus, Trash, Pencil, Search, Check, X } from 'lucide-react'
+import { Plus, Trash, Pencil, Search, Check, X, Menu } from 'lucide-react'
 
 export const icons = {
   plus: Plus,
@@ -7,4 +7,5 @@ export const icons = {
   search: Search,
   check: Check,
   close: X,
+  menu: Menu,
 } as const
