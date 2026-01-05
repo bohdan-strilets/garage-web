@@ -6,7 +6,7 @@ export const interaction = {
   disabledOpacity: 0.4,
 
   hover: {
-    opacity: 0.92,
+    opacity: 0.84,
     transition: `opacity ${duration.base} ${easing.standard}`,
   },
 

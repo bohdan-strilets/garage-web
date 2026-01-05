@@ -1,32 +1,32 @@
 export const lightColor = {
   brand: {
-    primary: '#f2a93b',
+    primary: '#F2C200',
   },
 
   surface: {
-    canvas: '#f8f9fb',
-    base: '#ffffff',
-    muted: '#f1f3f7',
-    inverted: '#181c24',
+    canvas: '#E9ECF0',
+    base: '#FFFFFF',
+    muted: '#DEE3E8',
+    inverted: '#0E0F11',
   },
 
   text: {
-    primary: '#1f2430',
-    secondary: '#4f566b',
-    muted: '#8a90a3',
-    inverted: '#ffffff',
-    onAccent: '#1f2430',
+    primary: '#08090C',
+    secondary: '#262B33',
+    muted: '#4E5562',
+    inverted: '#FFFFFF',
+    onAccent: '#08090C',
   },
 
   border: {
-    subtle: '#e4e7ee',
-    default: '#d5dae4',
-    accent: '#f2a93b',
+    subtle: '#CCD2DA',
+    default: '#AEB6C2',
+    accent: '#F2C200',
   },
 
   status: {
-    success: '#3cb179',
-    warning: '#e6b800',
-    danger: '#e35d4f',
+    success: '#166534',
+    warning: '#C2410C',
+    danger: '#991B1B',
   },
 } as const

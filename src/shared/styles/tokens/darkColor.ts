@@ -1,32 +1,32 @@
 export const darkColor = {
   brand: {
-    primary: '#f3b86a',
+    primary: '#F2C200',
   },
 
   surface: {
-    canvas: '#181c24',
-    base: '#202532',
-    muted: '#262c3a',
-    inverted: '#f8f9fb',
+    canvas: '#0E0F11',
+    base: '#16181C',
+    muted: '#1F2227',
+    inverted: '#E9ECF0',
   },
 
   text: {
-    primary: '#e6e9ef',
-    secondary: '#c1c7d6',
-    muted: '#9aa1b4',
-    inverted: '#181c24',
-    onAccent: '#202532',
+    primary: '#d8d9db',
+    secondary: '#D0D3D8',
+    muted: '#9CA2AA',
+    inverted: '#0B0C0F',
+    onAccent: '#0B0C0F',
   },
 
   border: {
-    subtle: '#2e3446',
-    default: '#3a4158',
-    accent: '#f3b86a',
+    subtle: '#2A2D33',
+    default: '#3A3E46',
+    accent: '#F2C200',
   },
 
   status: {
-    success: '#5bcfa0',
-    warning: '#f2c66d',
-    danger: '#ff8a7a',
+    success: '#4ADE80',
+    warning: '#FACC15',
+    danger: '#F87171',
   },
 } as const
