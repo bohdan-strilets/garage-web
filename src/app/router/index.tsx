@@ -3,8 +3,8 @@ import { motion } from 'motion/react'
 
 import Box from '@shared/ui/layouts/Box'
 import Container from '@shared/ui/layouts/Container'
+import Divider from '@shared/ui/layouts/Divider'
 import Grid from '@shared/ui/layouts/Grid'
-import Spacer from '@shared/ui/layouts/Spacer'
 import Stack from '@shared/ui/layouts/Stack'
 import Surface from '@shared/ui/layouts/Surface'
 
@@ -29,7 +29,7 @@ const App = () => {
               vitae exercitationem corrupti asperiores eum beatae error aperiam,
               optio ut. Minus, quaerat facere.
             </motion.p>
-            <Spacer size="xl" />
+            <Divider />
             <motion.p {...slideUp()}>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores
               doloremque rem perferendis unde! Totam voluptate fugiat explicabo
