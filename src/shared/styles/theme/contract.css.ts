@@ -102,6 +102,13 @@ export const themeContract = createThemeContract({
       width: null,
       maxWidth: null,
     },
+    input: {
+      height: {
+        sm: null,
+        md: null,
+        lg: null,
+      },
+    },
   },
 
   motion: {

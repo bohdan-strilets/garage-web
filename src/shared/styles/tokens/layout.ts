@@ -14,4 +14,11 @@ export const layout = {
     width: '100%',
     maxWidth: '520px',
   },
+  input: {
+    height: {
+      sm: '32px',
+      md: '40px',
+      lg: '48px',
+    },
+  },
 } as const
