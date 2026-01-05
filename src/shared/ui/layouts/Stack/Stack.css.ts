@@ -5,7 +5,6 @@ import { themeContract } from '@shared/styles'
 export const root = recipe({
   base: {
     display: 'flex',
-    boxSizing: 'border-box',
     minWidth: 0,
   },
 

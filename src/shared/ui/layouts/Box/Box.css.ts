@@ -4,7 +4,6 @@ import { themeContract } from '@shared/styles'
 
 export const root = recipe({
   base: {
-    boxSizing: 'border-box',
     minWidth: 0,
   },
 
