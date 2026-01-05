@@ -12,6 +12,7 @@ export default defineConfig({
     router({
       routesDirectory: 'src/app/router',
       generatedRouteTree: 'src/app/router/routeTree.gen.ts',
+      routeFileIgnorePattern: '(routeTree\\.gen\\.ts|router\\.ts)$',
     }),
   ],
   resolve: {
