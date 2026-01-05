@@ -8,6 +8,7 @@ export const root = style({
 
   flexShrink: 0,
   height: themeContract.layout.header.height,
+  padding: themeContract.space.md,
 
   backgroundColor: themeContract.color.surface.base,
   borderBottom: `1px solid ${themeContract.color.border.subtle}`,

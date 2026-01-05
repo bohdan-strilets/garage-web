@@ -11,6 +11,7 @@ export const root = recipe({
 
     height: '100vh',
     width: themeContract.layout.sidebar.expandedWidth,
+    padding: themeContract.space.md,
 
     backgroundColor: themeContract.color.surface.base,
     borderRight: `1px solid ${themeContract.color.border.subtle}`,

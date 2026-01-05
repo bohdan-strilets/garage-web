@@ -2,7 +2,6 @@ import { AnimatePresence } from 'motion/react'
 
 import { useMediaQuery } from '@shared/lib/responsive'
 import { media } from '@shared/styles'
-import Container from '@shared/ui/layouts/Container'
 import Overlay from '@shared/ui/overlays/Overlay'
 
 import { useSidebar } from '../../model/useSidebar'
@@ -21,9 +20,7 @@ const Sidebar = ({ children }: SidebarProps) => {
         {!isLaptop && <Overlay open={isOpen} onClick={collapse} />}
       </AnimatePresence>
 
-      <aside className={root({ state })}>
-        <Container>{children}</Container>
-      </aside>
+      <aside className={root({ state })}>{children}</aside>
     </>
   )
 }

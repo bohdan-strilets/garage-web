@@ -7,7 +7,7 @@ import Sidebar from './ui/Sidebar'
 
 import type { AppLayoutProps } from './Props'
 
-export const AppLayout = ({ children }: AppLayoutProps) => {
+const AppLayout = ({ children }: AppLayoutProps) => {
   return (
     <div className={root}>
       <Sidebar>
@@ -24,3 +24,5 @@ export const AppLayout = ({ children }: AppLayoutProps) => {
     </div>
   )
 }
+
+export default AppLayout
