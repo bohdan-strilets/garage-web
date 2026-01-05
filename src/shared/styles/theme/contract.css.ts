@@ -127,6 +127,16 @@ export const themeContract = createThemeContract({
         lg: null,
       },
     },
+
+    logo: {
+      size: {
+        xs: null,
+        sm: null,
+        md: null,
+        lg: null,
+        xl: null,
+      },
+    },
   },
 
   motion: {

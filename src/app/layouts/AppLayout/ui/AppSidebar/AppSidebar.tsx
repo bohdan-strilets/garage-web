@@ -1,3 +1,5 @@
+import Logo from '@shared/ui/branding/Logo'
+
 import { useSidebar } from '../../model/useSidebar'
 import SidebarToggle from '../SidebarToggle'
 
@@ -6,6 +8,7 @@ const AppSidebar = () => {
 
   return (
     <>
+      <Logo />
       Bar
       <SidebarToggle toggle={toggle} isOpen={isOpen} />
     </>

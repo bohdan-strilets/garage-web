@@ -36,4 +36,14 @@ export const layout = {
       lg: '24px',
     },
   },
+
+  logo: {
+    size: {
+      xs: '20px',
+      sm: '28px',
+      md: '40px',
+      lg: '56px',
+      xl: '72px',
+    },
+  },
 } as const
