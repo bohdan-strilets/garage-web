@@ -4,6 +4,7 @@ export const themeContract = createThemeContract({
   color: {
     brand: {
       primary: null,
+      primarySoft: null,
     },
 
     surface: {

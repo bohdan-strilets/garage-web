@@ -1,6 +1,7 @@
 export const darkColor = {
   brand: {
     primary: '#F2C200',
+    primarySoft: 'rgba(242, 194, 0, 0.47)',
   },
 
   surface: {

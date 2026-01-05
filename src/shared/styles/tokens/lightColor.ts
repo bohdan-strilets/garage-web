@@ -1,6 +1,7 @@
 export const lightColor = {
   brand: {
     primary: '#F2C200',
+    primarySoft: 'rgba(242, 194, 0, 0.57)',
   },
 
   surface: {
