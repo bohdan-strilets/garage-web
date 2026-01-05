@@ -30,11 +30,6 @@ globalStyle('button', {
 
 globalStyle(':focus-visible', {
   outline: 'none',
-  boxShadow: `
-    0 0 0 2px ${themeContract.color.border.accent},
-    0 0 0 4px color-mix(in srgb, ${themeContract.color.border.accent} 40%, transparent)
-  `,
-  borderRadius: themeContract.radius.sm,
 })
 
 globalStyle('::selection', {

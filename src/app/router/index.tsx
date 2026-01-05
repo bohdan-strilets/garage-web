@@ -1,5 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
 
+import Button from '@shared/ui/controls/Button'
 import Box from '@shared/ui/layouts/Box'
 import Container from '@shared/ui/layouts/Container'
 import Divider from '@shared/ui/layouts/Divider'
@@ -97,9 +98,7 @@ const App = () => {
           <Stack align="start" gap="md">
             <Heading level={3}>Theme settings</Heading>
 
-            <button type="button" onClick={toggleTheme}>
-              Change THEME
-            </button>
+            <Button onClick={toggleTheme}>Change THEME</Button>
           </Stack>
         </Surface>
       </Box>
