@@ -1,3 +1,4 @@
+import Loader from '@shared/ui/feedback/Loader'
 import Stack from '@shared/ui/layouts/Stack'
 import Surface from '@shared/ui/layouts/Surface'
 import Heading from '@shared/ui/typography/Heading'
@@ -22,6 +23,7 @@ const VehiclesPage = () => {
           nam at laudantium necessitatibus accusamus. Doloremque asperiores
           cumque nesciunt id eaque omnis corrupti quae. Sequi.
         </Paragraph>
+        <Loader />
       </Stack>
     </Surface>
   )
