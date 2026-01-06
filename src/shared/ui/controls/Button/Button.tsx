@@ -1,6 +1,7 @@
 import clsx from 'clsx'
 
 import { disabled, focusable, hoverable, pressable } from '@shared/styles'
+import Loader from '@shared/ui/feedback/Loader'
 
 import { root } from './Button.css'
 
@@ -38,7 +39,11 @@ const Button = ({
       aria-disabled={notActive}
     >
       {children}
-      {loading && <span aria-hidden="true">...</span>}
+      {loading && (
+        <span aria-hidden="true">
+          <Loader tone="muted" size="sm" />
+        </span>
+      )}
     </button>
   )
 }
