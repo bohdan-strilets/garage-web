@@ -13,6 +13,8 @@ import {
   ChartBar,
   SidebarClose,
   SidebarOpen,
+  EyeIcon,
+  EyeOff,
 } from 'lucide-react'
 
 export const icons = {
@@ -30,4 +32,6 @@ export const icons = {
   chart: ChartBar,
   sidebarClose: SidebarClose,
   sidebarOpen: SidebarOpen,
+  eyeOn: EyeIcon,
+  eyeOff: EyeOff,
 } as const

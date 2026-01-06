@@ -1,3 +1,4 @@
+import PasswordInput from '@shared/ui/form/PasswordInput'
 import TextInput from '@shared/ui/form/TextInput'
 import Stack from '@shared/ui/layouts/Stack'
 import Surface from '@shared/ui/layouts/Surface'
@@ -33,8 +34,9 @@ const DashboardPage = () => {
         </Paragraph>
       </Stack>
 
-      <Stack>
+      <Stack gap="md">
         <TextInput placeholder="First name" />
+        <PasswordInput placeholder="Password" />
       </Stack>
     </Surface>
   )
