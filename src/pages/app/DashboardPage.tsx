@@ -1,3 +1,4 @@
+import TextInput from '@shared/ui/form/TextInput'
 import Stack from '@shared/ui/layouts/Stack'
 import Surface from '@shared/ui/layouts/Surface'
 import Heading from '@shared/ui/typography/Heading'
@@ -30,6 +31,10 @@ const DashboardPage = () => {
           laborum repudiandae tenetur modi vel, doloremque, velit omnis minima
           nostrum ut sunt!
         </Paragraph>
+      </Stack>
+
+      <Stack>
+        <TextInput placeholder="First name" />
       </Stack>
     </Surface>
   )
