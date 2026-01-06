@@ -1,6 +1,6 @@
 import { style } from '@vanilla-extract/css'
 
-import { themeContract } from '@shared/styles'
+import { focusBoxShadow, themeContract } from '@shared/styles'
 
 export const root = style({
   display: 'inline-flex',
@@ -40,6 +40,11 @@ export const box = style({
     [`${input}:checked + &`]: {
       backgroundColor: themeContract.color.brand.primary,
       borderColor: themeContract.color.brand.primary,
+    },
+
+    [`${input}:focus-visible + &`]: {
+      boxShadow: focusBoxShadow,
+      borderRadius: themeContract.radius.sm,
     },
   },
 })

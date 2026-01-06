@@ -1,7 +1,7 @@
 import clsx from 'clsx'
 import { forwardRef } from 'react'
 
-import { disabled, focusable, hoverable } from '@shared/styles'
+import { disabled, hoverable } from '@shared/styles'
 import Icon from '@shared/ui/controls/Icon'
 
 import { root, input, box, checkmark } from './Checkbox.css'
@@ -11,11 +11,11 @@ import type { CheckboxProps } from './Props'
 const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
   ({ label, className, disabled: isDisabled, ...props }, ref) => {
     return (
-      <label className={clsx(root, hoverable, focusable, disabled, className)}>
+      <label className={clsx(root, hoverable, disabled, className)}>
         <input
           ref={ref}
           type="checkbox"
-          className={input}
+          className={clsx(input)}
           disabled={isDisabled}
           {...props}
         />

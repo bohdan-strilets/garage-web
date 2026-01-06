@@ -13,7 +13,7 @@ const focusGlow = `color-mix(
   transparent
 )`
 
-const focusBoxShadow = `
+export const focusBoxShadow = `
   0 0 0 ${focusOffset} transparent,
   0 0 0 calc(${focusOffset} + ${focusWidth}) ${focusGlow}
 `
