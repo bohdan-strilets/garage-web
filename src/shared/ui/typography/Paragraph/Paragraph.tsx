@@ -13,11 +13,17 @@ const Paragraph = ({
   tone,
   align,
   weight,
+  lineHeight,
 }: ParagraphProps) => {
   const Component = as || 'p'
 
   return (
-    <Component className={clsx(root({ size, tone, align, weight }), className)}>
+    <Component
+      className={clsx(
+        root({ size, tone, align, weight, lineHeight }),
+        className,
+      )}
+    >
       {children}
     </Component>
   )

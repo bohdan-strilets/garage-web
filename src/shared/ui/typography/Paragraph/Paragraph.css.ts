@@ -39,6 +39,12 @@ export const root = recipe({
       medium: { fontWeight: themeContract.font.weight.medium },
       bold: { fontWeight: themeContract.font.weight.bold },
     },
+
+    lineHeight: {
+      normal: { lineHeight: themeContract.font.lineHeight.normal },
+      relaxed: { lineHeight: themeContract.font.lineHeight.relaxed },
+      tight: { lineHeight: themeContract.font.lineHeight.tight },
+    },
   },
 
   defaultVariants: {
