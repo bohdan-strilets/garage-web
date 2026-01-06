@@ -20,6 +20,7 @@ export const trigger = style({
   backgroundColor: themeContract.color.surface.base,
   border: `1px solid ${themeContract.color.border.subtle}`,
   borderRadius: themeContract.radius.md,
+  boxShadow: themeContract.shadow.sm,
 
   cursor: 'pointer',
 })
