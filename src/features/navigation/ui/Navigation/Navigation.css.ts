@@ -2,6 +2,10 @@ import { style } from '@vanilla-extract/css'
 
 import { themeContract } from '@shared/styles'
 
+export const root = style({
+  width: '100%',
+})
+
 export const list = style({
   display: 'flex',
   flexDirection: 'column',

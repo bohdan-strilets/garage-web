@@ -1,12 +1,12 @@
 import NavItem from '../NavItem'
 
-import { list } from './Navigation.css'
+import { list, root } from './Navigation.css'
 
 import type { NavigationPoprs } from './Props'
 
 const Navigation = ({ items }: NavigationPoprs) => {
   return (
-    <nav aria-label="Primary navigation">
+    <nav className={root} aria-label="Primary navigation">
       <ul className={list}>
         {items.map(item => {
           return <NavItem key={item.key} item={item} />
