@@ -19,7 +19,6 @@ export const toggle = style({
 
   height: themeContract.layout.input.height.sm,
   width: themeContract.layout.input.height.sm,
-  borderRadius: themeContract.radius.sm,
 
   color: themeContract.color.text.muted,
   cursor: 'pointer',
