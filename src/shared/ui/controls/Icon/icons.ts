@@ -15,6 +15,8 @@ import {
   SidebarOpen,
   EyeIcon,
   EyeOff,
+  ChevronUp,
+  ChevronDown,
 } from 'lucide-react'
 
 export const icons = {
@@ -35,4 +37,6 @@ export const icons = {
   eyeOn: EyeIcon,
   eyeOff: EyeOff,
   checkmark: Check,
+  arrowDown: ChevronDown,
+  arrowUp: ChevronUp,
 } as const
