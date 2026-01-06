@@ -1,3 +1,5 @@
+import { primaryNav } from '@features/navigation'
+import Navigation from '@features/navigation/ui/Navigation'
 import Logo from '@shared/ui/branding/Logo'
 
 import { useSidebar } from '../../model/useSidebar'
@@ -11,6 +13,7 @@ const AppSidebar = () => {
       <Logo />
       Bar
       <SidebarToggle toggle={toggle} isOpen={isOpen} />
+      <Navigation items={primaryNav} />
     </>
   )
 }
