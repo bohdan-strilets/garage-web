@@ -27,7 +27,7 @@ export const darkColor = {
 
   status: {
     success: '#4ADE80',
-    warning: '#FACC15',
+    warning: '#df933c',
     danger: '#F87171',
   },
 } as const

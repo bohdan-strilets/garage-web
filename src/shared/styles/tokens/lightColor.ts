@@ -26,8 +26,8 @@ export const lightColor = {
   },
 
   status: {
-    success: '#166534',
-    warning: '#C2410C',
-    danger: '#991B1B',
+    success: '#46b36e',
+    warning: '#df933c',
+    danger: '#d51f1f',
   },
 } as const
