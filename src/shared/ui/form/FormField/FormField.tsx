@@ -1,11 +1,9 @@
-import clsx from 'clsx'
 import { Children, cloneElement, isValidElement } from 'react'
 import { Controller, useFormContext, type FieldValues } from 'react-hook-form'
 
+import Stack from '@shared/ui/layouts/Stack'
 import ErrorMessage from '@shared/ui/typography/ErrorMessage'
 import Label from '@shared/ui/typography/Label'
-
-import { root } from './FormField.css'
 
 import type { FormFieldProps } from './Props'
 
@@ -34,13 +32,13 @@ const FormField = <T extends FieldValues>({
         const controlEl = cloneElement(child, { ...field })
 
         return (
-          <div className={clsx(root, className)}>
+          <Stack gap="xs" className={className}>
             {label && <Label isRequired={required}>{label}</Label>}
 
             {controlEl}
 
             {fieldError && <ErrorMessage>{fieldError}</ErrorMessage>}
-          </div>
+          </Stack>
         )
       }}
     />
