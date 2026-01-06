@@ -44,7 +44,9 @@ const DashboardPage = () => {
       </Stack>
 
       <Stack gap="md">
-        <Label htmlFor="firstName">Set your name</Label>
+        <Label htmlFor="firstName" isRequired>
+          Set your name
+        </Label>
         <TextInput id="firstName" placeholder="First name" />
         <ErrorMessage>First name is required</ErrorMessage>
 
