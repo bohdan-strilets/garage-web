@@ -22,13 +22,6 @@ const VehiclesPage = () => {
           nam at laudantium necessitatibus accusamus. Doloremque asperiores
           cumque nesciunt id eaque omnis corrupti quae. Sequi.
         </Paragraph>
-
-        <Paragraph>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus
-          officia itaque dignissimos excepturi quo sed blanditiis corporis ea
-          laborum repudiandae tenetur modi vel, doloremque, velit omnis minima
-          nostrum ut sunt!
-        </Paragraph>
       </Stack>
     </Surface>
   )
