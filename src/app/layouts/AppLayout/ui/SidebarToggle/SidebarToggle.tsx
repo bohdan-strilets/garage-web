@@ -11,7 +11,7 @@ const SidebarToggle = ({ toggle, isOpen }: SidebarToggleProps) => {
       variant="ghost"
       aria-label={isOpen ? 'Close sidebar' : 'Open sidebar'}
     >
-      <Icon name={isOpen ? 'close' : 'menu'} />
+      <Icon name={isOpen ? 'sidebarClose' : 'sidebarOpen'} />
     </Button>
   )
 }
