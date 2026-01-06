@@ -46,4 +46,8 @@ export const layout = {
       xl: '72px',
     },
   },
+
+  checkbox: {
+    size: '24px',
+  },
 } as const

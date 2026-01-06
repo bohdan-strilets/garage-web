@@ -138,6 +138,10 @@ export const themeContract = createThemeContract({
         xl: null,
       },
     },
+
+    checkbox: {
+      size: null,
+    },
   },
 
   motion: {

@@ -34,4 +34,5 @@ export const icons = {
   sidebarOpen: SidebarOpen,
   eyeOn: EyeIcon,
   eyeOff: EyeOff,
+  checkmark: Check,
 } as const
