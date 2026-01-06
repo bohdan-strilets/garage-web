@@ -6,7 +6,6 @@ import type { ParagraphProps } from './Props'
 
 const Paragraph = ({
   children,
-  as,
   className,
 
   size,
@@ -15,17 +14,15 @@ const Paragraph = ({
   weight,
   lineHeight,
 }: ParagraphProps) => {
-  const Component = as || 'p'
-
   return (
-    <Component
+    <p
       className={clsx(
         root({ size, tone, align, weight, lineHeight }),
         className,
       )}
     >
       {children}
-    </Component>
+    </p>
   )
 }
 
