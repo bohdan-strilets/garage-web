@@ -1,4 +1,19 @@
-import { Plus, Trash, Pencil, Search, Check, X, Menu } from 'lucide-react'
+import {
+  Plus,
+  Trash,
+  Pencil,
+  Search,
+  Check,
+  X,
+  Menu,
+  LayoutDashboard,
+  CarFront,
+  Wrench,
+  Fuel,
+  ChartBar,
+  SidebarClose,
+  SidebarOpen,
+} from 'lucide-react'
 
 export const icons = {
   plus: Plus,
@@ -8,4 +23,11 @@ export const icons = {
   check: Check,
   close: X,
   menu: Menu,
+  dashboard: LayoutDashboard,
+  car: CarFront,
+  wrench: Wrench,
+  fuel: Fuel,
+  chart: ChartBar,
+  sidebarClose: SidebarClose,
+  sidebarOpen: SidebarOpen,
 } as const

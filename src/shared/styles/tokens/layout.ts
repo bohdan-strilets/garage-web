@@ -4,7 +4,7 @@ export const layout = {
   },
 
   sidebar: {
-    collapsedWidth: '64px',
+    collapsedWidth: '70px',
     expandedWidth: '280px',
   },
 
