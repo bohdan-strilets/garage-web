@@ -1,0 +1,5 @@
+export { post } from './post'
+export { get } from './get'
+export { put } from './put'
+export { del } from './delete'
+export { patch } from './patch'

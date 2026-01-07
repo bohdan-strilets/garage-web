@@ -25,6 +25,7 @@
   "dependencies": {
     "@tanstack/react-query": "^5.90.16",
     "@tanstack/react-router": "^1.144.0",
+    "axios": "^1.13.2",
     "lucide-react": "^0.562.0",
     "motion": "^12.23.26",
     "polished": "^4.3.1",

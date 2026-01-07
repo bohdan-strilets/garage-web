@@ -29,3 +29,6 @@ roadmap.md
 
 # Route files
 .tanstack
+
+# Environment variables
+.env
