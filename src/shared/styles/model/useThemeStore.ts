@@ -1,7 +1,7 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 
-import { STORAGE_KEYS } from '@shared/config/storageKeys'
+import { STORAGE_KEYS } from '@shared/config/storage'
 
 import { THEME } from '../enums/Theme'
 
