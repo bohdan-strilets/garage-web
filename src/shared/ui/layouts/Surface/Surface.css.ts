@@ -1,40 +1,40 @@
 import { recipe } from '@vanilla-extract/recipes'
 
-import { themeContract } from '@shared/styles'
+import { vars } from '@shared/styles'
 
 export const root = recipe({
   base: {},
 
   variants: {
     tone: {
-      base: { backgroundColor: themeContract.color.surface.base },
-      canvas: { backgroundColor: themeContract.color.surface.canvas },
-      muted: { backgroundColor: themeContract.color.surface.muted },
+      base: { backgroundColor: vars.color.surface.base },
+      canvas: { backgroundColor: vars.color.surface.canvas },
+      muted: { backgroundColor: vars.color.surface.muted },
       inverted: {
-        backgroundColor: themeContract.color.surface.inverted,
-        color: themeContract.color.text.inverted,
+        backgroundColor: vars.color.surface.inverted,
+        color: vars.color.text.inverted,
       },
     },
 
     shadow: {
       none: { boxShadow: 'none' },
-      sm: { boxShadow: themeContract.shadow.sm },
-      md: { boxShadow: themeContract.shadow.md },
-      lg: { boxShadow: themeContract.shadow.lg },
+      sm: { boxShadow: vars.shadow.sm },
+      md: { boxShadow: vars.shadow.md },
+      lg: { boxShadow: vars.shadow.lg },
     },
 
     radius: {
-      sm: { borderRadius: themeContract.radius.sm },
-      md: { borderRadius: themeContract.radius.md },
-      lg: { borderRadius: themeContract.radius.lg },
+      sm: { borderRadius: vars.radius.sm },
+      md: { borderRadius: vars.radius.md },
+      lg: { borderRadius: vars.radius.lg },
     },
 
     padding: {
-      xs: { padding: themeContract.space.xs },
-      sm: { padding: themeContract.space.sm },
-      md: { padding: themeContract.space.md },
-      lg: { padding: themeContract.space.lg },
-      xl: { padding: themeContract.space.xl },
+      xs: { padding: vars.space.xs },
+      sm: { padding: vars.space.sm },
+      md: { padding: vars.space.md },
+      lg: { padding: vars.space.lg },
+      xl: { padding: vars.space.xl },
     },
   },
 

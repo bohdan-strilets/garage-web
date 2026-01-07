@@ -1,31 +1,31 @@
 import { recipe } from '@vanilla-extract/recipes'
 
-import { themeContract } from '@shared/styles'
+import { vars } from '@shared/styles'
 
 export const root = recipe({
   base: {
-    fontFamily: themeContract.font.family.base,
-    lineHeight: themeContract.font.lineHeight.normal,
+    fontFamily: vars.font.family.base,
+    lineHeight: vars.font.lineHeight.normal,
     margin: 0,
   },
 
   variants: {
     size: {
-      xs: { fontSize: themeContract.font.size.xs },
-      sm: { fontSize: themeContract.font.size.sm },
-      md: { fontSize: themeContract.font.size.md },
-      lg: { fontSize: themeContract.font.size.lg },
+      xs: { fontSize: vars.font.size.xs },
+      sm: { fontSize: vars.font.size.sm },
+      md: { fontSize: vars.font.size.md },
+      lg: { fontSize: vars.font.size.lg },
     },
 
     tone: {
-      primary: { color: themeContract.color.text.primary },
-      secondary: { color: themeContract.color.text.secondary },
-      muted: { color: themeContract.color.text.muted },
-      inverted: { color: themeContract.color.text.inverted },
-      onAccent: { color: themeContract.color.text.onAccent },
-      success: { color: themeContract.color.status.success },
-      danger: { color: themeContract.color.status.danger },
-      warning: { color: themeContract.color.status.warning },
+      primary: { color: vars.color.text.primary },
+      secondary: { color: vars.color.text.secondary },
+      muted: { color: vars.color.text.muted },
+      inverted: { color: vars.color.text.inverted },
+      onAccent: { color: vars.color.text.onAccent },
+      success: { color: vars.color.status.success },
+      danger: { color: vars.color.status.danger },
+      warning: { color: vars.color.status.warning },
     },
 
     align: {
@@ -35,15 +35,15 @@ export const root = recipe({
     },
 
     weight: {
-      regular: { fontWeight: themeContract.font.weight.regular },
-      medium: { fontWeight: themeContract.font.weight.medium },
-      bold: { fontWeight: themeContract.font.weight.bold },
+      regular: { fontWeight: vars.font.weight.regular },
+      medium: { fontWeight: vars.font.weight.medium },
+      bold: { fontWeight: vars.font.weight.bold },
     },
 
     lineHeight: {
-      normal: { lineHeight: themeContract.font.lineHeight.normal },
-      relaxed: { lineHeight: themeContract.font.lineHeight.relaxed },
-      tight: { lineHeight: themeContract.font.lineHeight.tight },
+      normal: { lineHeight: vars.font.lineHeight.normal },
+      relaxed: { lineHeight: vars.font.lineHeight.relaxed },
+      tight: { lineHeight: vars.font.lineHeight.tight },
     },
   },
 

@@ -1,7 +1,7 @@
 import { keyframes } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 
-import { themeContract } from '@shared/styles'
+import { vars } from '@shared/styles'
 
 const spin = keyframes({
   '0%': { transform: 'rotate(0deg)' },
@@ -41,13 +41,13 @@ export const root = recipe({
 
     tone: {
       primary: {
-        color: themeContract.color.brand.primary,
+        color: vars.color.brand.primary,
       },
       muted: {
-        color: themeContract.color.text.muted,
+        color: vars.color.text.muted,
       },
       inverted: {
-        color: themeContract.color.text.inverted,
+        color: vars.color.text.inverted,
       },
     },
 

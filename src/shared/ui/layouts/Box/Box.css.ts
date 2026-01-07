@@ -1,6 +1,6 @@
 import { recipe } from '@vanilla-extract/recipes'
 
-import { themeContract } from '@shared/styles'
+import { vars } from '@shared/styles'
 
 export const root = recipe({
   base: {
@@ -47,43 +47,43 @@ export const root = recipe({
     },
 
     gap: {
-      xs: { gap: themeContract.space.xs },
-      sm: { gap: themeContract.space.sm },
-      md: { gap: themeContract.space.md },
-      lg: { gap: themeContract.space.lg },
-      xl: { gap: themeContract.space.xl },
+      xs: { gap: vars.space.xs },
+      sm: { gap: vars.space.sm },
+      md: { gap: vars.space.md },
+      lg: { gap: vars.space.lg },
+      xl: { gap: vars.space.xl },
     },
 
     padding: {
-      xs: { padding: themeContract.space.xs },
-      sm: { padding: themeContract.space.sm },
-      md: { padding: themeContract.space.md },
-      lg: { padding: themeContract.space.lg },
-      xl: { padding: themeContract.space.xl },
+      xs: { padding: vars.space.xs },
+      sm: { padding: vars.space.sm },
+      md: { padding: vars.space.md },
+      lg: { padding: vars.space.lg },
+      xl: { padding: vars.space.xl },
     },
 
     paddingX: {
-      xs: { paddingInline: themeContract.space.xs },
-      sm: { paddingInline: themeContract.space.sm },
-      md: { paddingInline: themeContract.space.md },
-      lg: { paddingInline: themeContract.space.lg },
-      xl: { paddingInline: themeContract.space.xl },
+      xs: { paddingInline: vars.space.xs },
+      sm: { paddingInline: vars.space.sm },
+      md: { paddingInline: vars.space.md },
+      lg: { paddingInline: vars.space.lg },
+      xl: { paddingInline: vars.space.xl },
     },
 
     paddingY: {
-      xs: { paddingBlock: themeContract.space.xs },
-      sm: { paddingBlock: themeContract.space.sm },
-      md: { paddingBlock: themeContract.space.md },
-      lg: { paddingBlock: themeContract.space.lg },
-      xl: { paddingBlock: themeContract.space.xl },
+      xs: { paddingBlock: vars.space.xs },
+      sm: { paddingBlock: vars.space.sm },
+      md: { paddingBlock: vars.space.md },
+      lg: { paddingBlock: vars.space.lg },
+      xl: { paddingBlock: vars.space.xl },
     },
 
     margin: {
-      xs: { margin: themeContract.space.xs },
-      sm: { margin: themeContract.space.sm },
-      md: { margin: themeContract.space.md },
-      lg: { margin: themeContract.space.lg },
-      xl: { margin: themeContract.space.xl },
+      xs: { margin: vars.space.xs },
+      sm: { margin: vars.space.sm },
+      md: { margin: vars.space.md },
+      lg: { margin: vars.space.lg },
+      xl: { margin: vars.space.xl },
     },
 
     overflow: {

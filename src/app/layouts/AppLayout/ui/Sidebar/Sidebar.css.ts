@@ -1,29 +1,29 @@
 import { recipe } from '@vanilla-extract/recipes'
 
 import { media } from '@shared/lib/responsive'
-import { themeContract } from '@shared/styles'
+import { vars } from '@shared/styles'
 
 export const root = recipe({
   base: {
     position: 'fixed',
     top: '0',
     left: '0',
-    zIndex: themeContract.zIndex.sidebar,
+    zIndex: vars.zIndex.sidebar,
 
     height: '100vh',
-    width: themeContract.layout.sidebar.expandedWidth,
-    padding: themeContract.space.md,
+    width: vars.layout.sidebar.expandedWidth,
+    padding: vars.space.md,
 
-    backgroundColor: themeContract.color.surface.base,
-    borderRight: `1px solid ${themeContract.color.border.subtle}`,
-    boxShadow: themeContract.shadow.md,
+    backgroundColor: vars.color.surface.base,
+    borderRight: `1px solid ${vars.color.border.subtle}`,
+    boxShadow: vars.shadow.md,
 
     transition: `transform
-      ${themeContract.motion.duration.base}
-      ${themeContract.motion.easing.standard},
+      ${vars.motion.duration.base}
+      ${vars.motion.easing.standard},
       width
-      ${themeContract.motion.duration.base}
-      ${themeContract.motion.easing.standard}`,
+      ${vars.motion.duration.base}
+      ${vars.motion.easing.standard}`,
 
     willChange: 'transform',
 
@@ -51,7 +51,7 @@ export const root = recipe({
         '@media': {
           [media.LAPTOP]: {
             transform: 'none',
-            width: themeContract.layout.sidebar.expandedWidth,
+            width: vars.layout.sidebar.expandedWidth,
           },
         },
       },
@@ -65,7 +65,7 @@ export const root = recipe({
         '@media': {
           [media.LAPTOP]: {
             transform: 'none',
-            width: themeContract.layout.sidebar.collapsedWidth,
+            width: vars.layout.sidebar.collapsedWidth,
           },
         },
       },

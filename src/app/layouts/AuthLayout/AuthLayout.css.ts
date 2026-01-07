@@ -1,15 +1,15 @@
 import { style } from '@vanilla-extract/css'
 
-import { themeContract } from '@shared/styles'
+import { vars } from '@shared/styles'
 
 export const root = style({
   display: 'grid',
   placeItems: 'center',
 
   minHeight: '100vh',
-  padding: themeContract.space.lg,
+  padding: vars.space.lg,
 
-  backgroundColor: themeContract.color.surface.canvas,
+  backgroundColor: vars.color.surface.canvas,
 })
 
 export const header = style({
@@ -18,20 +18,20 @@ export const header = style({
   alignItems: 'center',
 
   width: 440,
-  maxWidth: themeContract.layout.container.desktop,
+  maxWidth: vars.layout.container.desktop,
 })
 
 export const content = style({
   display: 'flex',
   flexDirection: 'column',
 
-  gap: themeContract.space.lg,
+  gap: vars.space.lg,
   width: '100%',
   maxWidth: 440,
 
-  padding: themeContract.space.xl,
+  padding: vars.space.xl,
 
-  backgroundColor: themeContract.color.surface.base,
-  borderRadius: themeContract.radius.lg,
-  boxShadow: themeContract.shadow.md,
+  backgroundColor: vars.color.surface.base,
+  borderRadius: vars.radius.lg,
+  boxShadow: vars.shadow.md,
 })

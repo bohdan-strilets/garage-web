@@ -1,19 +1,19 @@
 import { recipe } from '@vanilla-extract/recipes'
 
-import { themeContract } from '@shared/styles'
+import { vars } from '@shared/styles'
 
 export const root = recipe({
   base: {
     display: 'inline-flex',
     alignItems: 'center',
     justifyContent: 'center',
-    gap: themeContract.space.xs,
+    gap: vars.space.xs,
 
-    fontFamily: themeContract.font.family.base,
-    fontWeight: themeContract.font.weight.medium,
-    lineHeight: themeContract.font.lineHeight.normal,
+    fontFamily: vars.font.family.base,
+    fontWeight: vars.font.weight.medium,
+    lineHeight: vars.font.lineHeight.normal,
 
-    borderRadius: themeContract.radius.md,
+    borderRadius: vars.radius.md,
     userSelect: 'none',
     whiteSpace: 'nowrap',
   },
@@ -21,43 +21,43 @@ export const root = recipe({
   variants: {
     variant: {
       primary: {
-        backgroundColor: themeContract.color.brand.primary,
-        color: themeContract.color.text.onAccent,
+        backgroundColor: vars.color.brand.primary,
+        color: vars.color.text.onAccent,
       },
 
       secondary: {
-        backgroundColor: themeContract.color.surface.muted,
-        color: themeContract.color.text.primary,
+        backgroundColor: vars.color.surface.muted,
+        color: vars.color.text.primary,
       },
 
       ghost: {
         backgroundColor: 'transparent',
-        color: themeContract.color.text.primary,
+        color: vars.color.text.primary,
       },
 
       inverted: {
-        backgroundColor: themeContract.color.surface.inverted,
-        color: themeContract.color.text.inverted,
+        backgroundColor: vars.color.surface.inverted,
+        color: vars.color.text.inverted,
       },
     },
 
     size: {
       sm: {
-        height: themeContract.layout.input.height.sm,
-        paddingInline: themeContract.space.md,
-        fontSize: themeContract.font.size.sm,
+        height: vars.layout.input.height.sm,
+        paddingInline: vars.space.md,
+        fontSize: vars.font.size.sm,
       },
 
       md: {
-        height: themeContract.layout.input.height.md,
-        paddingInline: themeContract.space.lg,
-        fontSize: themeContract.font.size.md,
+        height: vars.layout.input.height.md,
+        paddingInline: vars.space.lg,
+        fontSize: vars.font.size.md,
       },
 
       lg: {
-        height: themeContract.layout.input.height.lg,
-        paddingInline: themeContract.space.xl,
-        fontSize: themeContract.font.size.md,
+        height: vars.layout.input.height.lg,
+        paddingInline: vars.space.xl,
+        fontSize: vars.font.size.md,
       },
     },
 

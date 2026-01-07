@@ -1,7 +1,7 @@
 import { style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 
-import { themeContract } from '@shared/styles'
+import { vars } from '@shared/styles'
 
 export const root = style({
   position: 'relative',
@@ -14,35 +14,35 @@ export const trigger = style({
   justifyContent: 'space-between',
 
   width: '100%',
-  height: themeContract.layout.input.height.md,
-  paddingInline: themeContract.space.md,
+  height: vars.layout.input.height.md,
+  paddingInline: vars.space.md,
 
-  backgroundColor: themeContract.color.surface.base,
-  border: `1px solid ${themeContract.color.border.subtle}`,
-  borderRadius: themeContract.radius.md,
-  boxShadow: themeContract.shadow.sm,
+  backgroundColor: vars.color.surface.base,
+  border: `1px solid ${vars.color.border.subtle}`,
+  borderRadius: vars.radius.md,
+  boxShadow: vars.shadow.sm,
 
   cursor: 'pointer',
 })
 
 export const value = style({
-  color: themeContract.color.text.primary,
+  color: vars.color.text.primary,
 })
 
 export const placeholder = style({
-  color: themeContract.color.text.muted,
+  color: vars.color.text.muted,
 })
 
 export const dropdown = style({
   position: 'absolute',
-  top: `calc(100% + ${themeContract.space.sm})`,
+  top: `calc(100% + ${vars.space.sm})`,
   left: 0,
   right: 0,
-  zIndex: themeContract.zIndex.dropdown,
+  zIndex: vars.zIndex.dropdown,
 
-  backgroundColor: themeContract.color.surface.base,
-  borderRadius: themeContract.radius.md,
-  boxShadow: themeContract.shadow.lg,
+  backgroundColor: vars.color.surface.base,
+  borderRadius: vars.radius.md,
+  boxShadow: vars.shadow.lg,
 })
 
 export const optionBtn = recipe({
@@ -51,7 +51,7 @@ export const optionBtn = recipe({
     alignItems: 'center',
 
     width: '100%',
-    padding: themeContract.space.sm,
+    padding: vars.space.sm,
 
     textAlign: 'left',
 
@@ -62,7 +62,7 @@ export const optionBtn = recipe({
 
     selectors: {
       '&:hover:not(:disabled)': {
-        backgroundColor: themeContract.color.surface.muted,
+        backgroundColor: vars.color.surface.muted,
       },
     },
   },
@@ -71,7 +71,7 @@ export const optionBtn = recipe({
     selected: {
       true: {
         fontWeight: 600,
-        backgroundColor: themeContract.color.surface.muted,
+        backgroundColor: vars.color.surface.muted,
       },
       false: {},
     },

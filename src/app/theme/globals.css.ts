@@ -1,14 +1,14 @@
 import { globalStyle } from '@vanilla-extract/css'
 
-import { themeContract } from '@shared/styles'
+import { vars } from '@shared/styles'
 
 globalStyle('body', {
-  fontFamily: themeContract.font.family.base,
-  fontSize: themeContract.font.size.md,
-  lineHeight: themeContract.font.lineHeight.normal,
+  fontFamily: vars.font.family.base,
+  fontSize: vars.font.size.md,
+  lineHeight: vars.font.lineHeight.normal,
 
-  color: themeContract.color.text.primary,
-  backgroundColor: themeContract.color.surface.canvas,
+  color: vars.color.text.primary,
+  backgroundColor: vars.color.surface.canvas,
 
   textRendering: 'optimizeLegibility',
   WebkitFontSmoothing: 'antialiased',
@@ -33,14 +33,14 @@ globalStyle(':focus-visible', {
 })
 
 globalStyle('::selection', {
-  backgroundColor: themeContract.color.brand.primary,
-  color: themeContract.color.text.onAccent,
+  backgroundColor: vars.color.brand.primary,
+  color: vars.color.text.onAccent,
 })
 
 globalStyle('html', {
   scrollbarWidth: 'thin',
   scrollbarColor: `
-    ${themeContract.color.border.default}
-    ${themeContract.color.surface.canvas}
+    ${vars.color.border.default}
+    ${vars.color.surface.canvas}
   `,
 })

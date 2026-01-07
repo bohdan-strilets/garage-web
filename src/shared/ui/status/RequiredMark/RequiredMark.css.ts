@@ -1,8 +1,8 @@
 import { style } from '@vanilla-extract/css'
 
-import { themeContract } from '@shared/styles'
+import { vars } from '@shared/styles'
 
 export const mark = style({
-  color: themeContract.color.status.danger,
+  color: vars.color.status.danger,
   fontWeight: 600,
 })

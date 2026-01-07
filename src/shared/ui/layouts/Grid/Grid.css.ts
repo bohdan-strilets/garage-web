@@ -1,6 +1,6 @@
 import { recipe } from '@vanilla-extract/recipes'
 
-import { themeContract } from '@shared/styles'
+import { vars } from '@shared/styles'
 
 export const root = recipe({
   base: {
@@ -10,11 +10,11 @@ export const root = recipe({
 
   variants: {
     gap: {
-      xs: { gap: themeContract.space.xs },
-      sm: { gap: themeContract.space.sm },
-      md: { gap: themeContract.space.md },
-      lg: { gap: themeContract.space.lg },
-      xl: { gap: themeContract.space.xl },
+      xs: { gap: vars.space.xs },
+      sm: { gap: vars.space.sm },
+      md: { gap: vars.space.md },
+      lg: { gap: vars.space.lg },
+      xl: { gap: vars.space.xl },
     },
 
     align: {

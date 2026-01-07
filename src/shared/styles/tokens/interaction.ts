@@ -1,6 +1,6 @@
-import { themeContract } from '../theme/contract.css'
+import { vars } from '../theme/contract.css'
 
-const { duration, easing } = themeContract.motion
+const { duration, easing } = vars.motion
 
 export const interaction = {
   disabledOpacity: 0.4,

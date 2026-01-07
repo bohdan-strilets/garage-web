@@ -1,24 +1,24 @@
 import { style } from '@vanilla-extract/css'
 
 import { media } from '@shared/lib/responsive'
-import { themeContract } from '@shared/styles'
+import { vars } from '@shared/styles'
 
 export const root = style({
-  maxWidth: themeContract.layout.container.mobile,
+  maxWidth: vars.layout.container.mobile,
   marginInline: 'auto',
-  paddingInline: themeContract.space.md,
+  paddingInline: vars.space.md,
 
   '@media': {
     [media.TABLET]: {
-      maxWidth: themeContract.layout.container.tablet,
+      maxWidth: vars.layout.container.tablet,
     },
 
     [media.LAPTOP]: {
-      maxWidth: themeContract.layout.container.laptop,
+      maxWidth: vars.layout.container.laptop,
     },
 
     [media.DESKTOP]: {
-      maxWidth: themeContract.layout.container.desktop,
+      maxWidth: vars.layout.container.desktop,
     },
   },
 })

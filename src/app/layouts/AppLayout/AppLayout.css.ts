@@ -1,17 +1,17 @@
 import { style } from '@vanilla-extract/css'
 
-import { themeContract } from '@shared/styles'
+import { vars } from '@shared/styles'
 
 export const root = style({
   position: 'relative',
 
   display: 'flex',
 
-  maxWidth: themeContract.layout.container.desktop,
+  maxWidth: vars.layout.container.desktop,
   minHeight: '100vh',
   marginInline: 'auto',
 
-  backgroundColor: themeContract.color.surface.canvas,
+  backgroundColor: vars.color.surface.canvas,
   overflow: 'hidden',
 })
 

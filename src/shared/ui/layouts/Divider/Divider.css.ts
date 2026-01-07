@@ -1,6 +1,6 @@
 import { recipe } from '@vanilla-extract/recipes'
 
-import { themeContract } from '@shared/styles'
+import { vars } from '@shared/styles'
 
 export const root = recipe({
   base: {
@@ -22,13 +22,13 @@ export const root = recipe({
     },
 
     tone: {
-      default: { backgroundColor: themeContract.color.border.default },
-      subtle: { backgroundColor: themeContract.color.border.subtle },
-      accent: { backgroundColor: themeContract.color.border.accent },
+      default: { backgroundColor: vars.color.border.default },
+      subtle: { backgroundColor: vars.color.border.subtle },
+      accent: { backgroundColor: vars.color.border.accent },
     },
 
     inset: {
-      true: { marginInline: themeContract.space.md },
+      true: { marginInline: vars.space.md },
     },
   },
 

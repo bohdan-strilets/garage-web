@@ -1,6 +1,6 @@
 import { style } from '@vanilla-extract/css'
 
-import { themeContract } from '@shared/styles'
+import { vars } from '@shared/styles'
 
 export const root = style({
   width: '100%',
@@ -9,5 +9,5 @@ export const root = style({
 export const list = style({
   display: 'flex',
   flexDirection: 'column',
-  gap: themeContract.space.sm,
+  gap: vars.space.sm,
 })

@@ -1,13 +1,13 @@
 import { style } from '@vanilla-extract/css'
 
-import { themeContract } from '@shared/styles'
+import { vars } from '@shared/styles'
 
 export const root = style({
   position: 'fixed',
   inset: 0,
-  zIndex: themeContract.zIndex.overlay,
+  zIndex: vars.zIndex.overlay,
 
-  backgroundColor: themeContract.overlay.base,
+  backgroundColor: vars.overlay.base,
   cursor: 'pointer',
   pointerEvents: 'auto',
 })

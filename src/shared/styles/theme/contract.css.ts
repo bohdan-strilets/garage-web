@@ -170,3 +170,5 @@ export const themeContract = createThemeContract({
     strong: null,
   },
 })
+
+export const vars = themeContract

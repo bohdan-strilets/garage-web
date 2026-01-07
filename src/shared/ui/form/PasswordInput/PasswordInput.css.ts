@@ -1,6 +1,6 @@
 import { style } from '@vanilla-extract/css'
 
-import { themeContract } from '@shared/styles'
+import { vars } from '@shared/styles'
 
 export const wrapper = style({
   position: 'relative',
@@ -10,16 +10,16 @@ export const wrapper = style({
 export const toggle = style({
   position: 'absolute',
   top: '50%',
-  right: themeContract.space.md,
+  right: vars.space.md,
   transform: 'translateY(-50%)',
 
   display: 'inline-flex',
   alignItems: 'center',
   justifyContent: 'center',
 
-  height: themeContract.layout.input.height.sm,
-  width: themeContract.layout.input.height.sm,
+  height: vars.layout.input.height.sm,
+  width: vars.layout.input.height.sm,
 
-  color: themeContract.color.text.muted,
+  color: vars.color.text.muted,
   cursor: 'pointer',
 })

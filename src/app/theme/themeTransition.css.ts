@@ -1,12 +1,12 @@
 import { globalStyle } from '@vanilla-extract/css'
 
-import { themeContract } from '@shared/styles'
+import { vars } from '@shared/styles'
 
 export const THEME_TRANSITION_CLASS = 'theme-transition'
 export const DISABLE_THEME_TRANSITION_CLASS = 'disable-theme-transition'
 export const THEME_TRANSITION_DURATION_MS = 120
 
-const { duration, easing } = themeContract.motion
+const { duration, easing } = vars.motion
 
 globalStyle('body', {
   transition: `
