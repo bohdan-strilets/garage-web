@@ -16,7 +16,7 @@ const Form = <T extends FieldValues>({
     <FormProvider {...methods}>
       <form
         className={className}
-        onSubmit={methods.handleSubmit(onSubmit)}
+        onSubmit={methods.handleSubmit(values => onSubmit(values, methods))}
         noValidate
         aria-busy={methods.formState.isSubmitting}
       >
