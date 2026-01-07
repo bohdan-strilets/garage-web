@@ -5,6 +5,7 @@ import type { FieldValues, Path } from 'react-hook-form'
 export type FormFieldProps<T extends FieldValues> = {
   name: Path<T>
   label?: ReactNode
+  helperText?: string
   required?: boolean
   className?: string
 

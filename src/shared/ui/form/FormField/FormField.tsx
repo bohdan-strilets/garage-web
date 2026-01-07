@@ -3,6 +3,7 @@ import { Controller, useFormContext, type FieldValues } from 'react-hook-form'
 
 import Stack from '@shared/ui/layouts/Stack'
 import ErrorMessage from '@shared/ui/typography/ErrorMessage'
+import HelperText from '@shared/ui/typography/HelperText'
 import Label from '@shared/ui/typography/Label'
 
 import type { FormFieldProps } from './Props'
@@ -10,6 +11,7 @@ import type { FormFieldProps } from './Props'
 const FormField = <T extends FieldValues>({
   name,
   label,
+  helperText,
   required,
   children,
   className,
@@ -34,6 +36,7 @@ const FormField = <T extends FieldValues>({
         return (
           <Stack gap="xs" className={className}>
             {label && <Label isRequired={required}>{label}</Label>}
+            {helperText && <HelperText tone="muted">{helperText}</HelperText>}
 
             {controlEl}
 
