@@ -2,10 +2,14 @@ import Paragraph from '../Paragraph'
 
 import type { HelperTextProps } from './Props'
 
-const HelperText = ({ children, variant, className }: HelperTextProps) => {
+const HelperText = ({
+  children,
+  tone = 'muted',
+  className,
+}: HelperTextProps) => {
   return (
     <Paragraph
-      tone={variant === 'muted' ? 'muted' : 'success'}
+      tone={tone === 'muted' ? 'muted' : 'success'}
       className={className}
       size="xs"
     >
