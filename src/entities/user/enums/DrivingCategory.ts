@@ -1,0 +1,21 @@
+export const DRIVING_CATEGORY = {
+  AM: 'AM',
+  A1: 'A1',
+  A2: 'A2',
+  A: 'A',
+  B1: 'B1',
+  B: 'B',
+  BE: 'B+E',
+  C1: 'C1',
+  C1E: 'C1+E',
+  C: 'C',
+  CE: 'C+E',
+  D1: 'D1',
+  D1E: 'D1+E',
+  D: 'D',
+  DE: 'D+E',
+  T: 'T',
+} as const
+
+export type DrivingCategory =
+  (typeof DRIVING_CATEGORY)[keyof typeof DRIVING_CATEGORY]
