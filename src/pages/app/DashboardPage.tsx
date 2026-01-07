@@ -1,15 +1,8 @@
 import { useState } from 'react'
 
-import Checkbox from '@shared/ui/form/Checkbox'
-import PasswordInput from '@shared/ui/form/PasswordInput'
-import Select from '@shared/ui/form/Select'
-import TextInput from '@shared/ui/form/TextInput'
-import Divider from '@shared/ui/layouts/Divider'
 import Stack from '@shared/ui/layouts/Stack'
 import Surface from '@shared/ui/layouts/Surface'
-import ErrorMessage from '@shared/ui/typography/ErrorMessage'
 import Heading from '@shared/ui/typography/Heading'
-import Label from '@shared/ui/typography/Label'
 import Paragraph from '@shared/ui/typography/Paragraph'
 
 const DashboardPage = () => {
@@ -41,38 +34,6 @@ const DashboardPage = () => {
           laborum repudiandae tenetur modi vel, doloremque, velit omnis minima
           nostrum ut sunt!
         </Paragraph>
-      </Stack>
-
-      <Stack gap="md">
-        <Label htmlFor="firstName" isRequired>
-          Set your name
-        </Label>
-        <TextInput id="firstName" placeholder="First name" />
-        <ErrorMessage>First name is required</ErrorMessage>
-
-        <TextInput placeholder="Last name" />
-
-        <PasswordInput placeholder="Password" />
-
-        <PasswordInput placeholder="Confirm password" />
-
-        <Checkbox label="Accept terms and conditions" />
-
-        <Divider />
-
-        <Checkbox label="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque dolorum voluptate, odit dicta nihil illum exercitationem aperiam voluptas dolores optio reprehenderit blanditiis accusamus id odio sapiente. Accusantium possimus dolores ratione tempora quia at odio nobis velit voluptas necessitatibus!" />
-
-        <Select
-          value={value}
-          onChange={setValue}
-          placeholder="Select option"
-          options={[
-            { value: 'option1', label: 'Option 1' },
-            { value: 'option2', label: 'Option 2' },
-            { value: 'option3', label: 'Option 3' },
-            { value: 'option4', label: 'Option 4' },
-          ]}
-        />
       </Stack>
     </Surface>
   )
