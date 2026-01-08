@@ -1,4 +1,4 @@
-import { VerifyEmailView } from '@features/auth/verifyEmail'
+import { VerifyEmailView } from '@features/auth/verify-email'
 
 const VerifyEmailPage = () => {
   return <VerifyEmailView />

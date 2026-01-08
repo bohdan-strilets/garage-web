@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 
 import { initSession } from '@entities/session'
 
-import { QueryProvider } from '../reactQuery'
+import { QueryProvider } from '../react-query'
 import { RouterProvider } from '../router'
 import { ThemeProvider } from '../theme'
 

@@ -1,6 +1,6 @@
 import { QueryClientProvider } from '@tanstack/react-query'
 
-import { queryClient } from '@shared/lib/reactQuery'
+import { queryClient } from '@shared/lib/react-query'
 
 import type { QueryProviderProps } from './Props'
 
