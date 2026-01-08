@@ -1,6 +1,7 @@
+import { AppHeader } from '@widgets/AppHeader'
+import { AppSidebar } from '@widgets/AppSidebar'
+
 import { content, root } from './AppLayout.css'
-import { AppHeader } from './ui/AppHeader'
-import { AppSidebar } from './ui/AppSidebar'
 import { Header } from './ui/Header'
 import { Main } from './ui/Main'
 import { Sidebar } from './ui/Sidebar'
