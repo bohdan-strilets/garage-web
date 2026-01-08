@@ -13,41 +13,50 @@ import { useRegisterFormSubmit } from '../../model/useRegisterFormSubmit'
 import type { RegisterFormValues } from '../../types/RegisterFormValues'
 
 const RegisterForm = () => {
-  const { isPending } = useRegister()
+  const mutation = useRegister()
   const resolver = zodResolver(RegisterFormSchema)
-  const onSubmit = useRegisterFormSubmit()
+  const onSubmit = useRegisterFormSubmit(mutation)
 
   return (
     <Form<RegisterFormValues> resolver={resolver} onSubmit={onSubmit}>
       <FormField<RegisterFormValues>
         name="firstName"
         label="First name"
-        required
+        required={true}
       >
         <TextInput />
       </FormField>
 
-      <FormField<RegisterFormValues> name="lastName" label="Last name" required>
+      <FormField<RegisterFormValues>
+        name="lastName"
+        label="Last name"
+        required={true}
+      >
         <TextInput />
       </FormField>
 
-      <FormField<RegisterFormValues> name="email" label="Email" required>
+      <FormField<RegisterFormValues> name="email" label="Email" required={true}>
         <TextInput type="email" />
       </FormField>
 
-      <FormField<RegisterFormValues> name="password" label="Password" required>
+      <FormField<RegisterFormValues>
+        name="password"
+        label="Password"
+        required={true}
+        helperText="Password must be at least 8 characters and include uppercase and lowercase letters, numbers, and at least one special character."
+      >
         <PasswordInput />
       </FormField>
 
       <FormField<RegisterFormValues>
         name="confirmPassword"
         label="Confirm password"
-        required
+        required={true}
       >
         <PasswordInput />
       </FormField>
 
-      <Button type="submit" loading={isPending} fullWidth={true}>
+      <Button type="submit" loading={mutation.isPending} fullWidth={true}>
         Create account
       </Button>
     </Form>
