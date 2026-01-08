@@ -31,7 +31,10 @@ const FormField = <T extends FieldValues>({
       render={({ field }) => {
         if (!isValidElement(child)) return <div />
 
-        const controlEl = cloneElement(child, { ...field })
+        const controlEl = cloneElement(child, {
+          ...field,
+          value: field.value ?? '',
+        })
 
         return (
           <Stack gap="xs" className={className}>
