@@ -5,5 +5,6 @@ export const apiRoutes = {
     logout: '/auth/logout',
     refresh: '/auth/refresh',
     me: '/auth/me',
+    resendVerification: '/auth/verify-email/resend',
   },
 } as const

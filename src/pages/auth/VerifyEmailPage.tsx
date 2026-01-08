@@ -1,5 +1,7 @@
+import { VerifyEmailView } from '@features/auth/verifyEmail'
+
 const VerifyEmailPage = () => {
-  return <div>Verify your email</div>
+  return <VerifyEmailView />
 }
 
 export default VerifyEmailPage
