@@ -1,8 +1,8 @@
-import Loader from '@shared/ui/feedback/Loader'
-import Stack from '@shared/ui/layouts/Stack'
-import Surface from '@shared/ui/layouts/Surface'
-import Heading from '@shared/ui/typography/Heading'
-import Paragraph from '@shared/ui/typography/Paragraph'
+import { Loader } from '@shared/ui/feedback/Loader'
+import { Stack } from '@shared/ui/layouts/Stack'
+import { Surface } from '@shared/ui/layouts/Surface'
+import { Heading } from '@shared/ui/typography/Heading'
+import { Paragraph } from '@shared/ui/typography/Paragraph'
 
 const VehiclesPage = () => {
   return (

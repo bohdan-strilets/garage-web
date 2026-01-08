@@ -1,3 +1,3 @@
-export * from './presets/fade'
-export * from './presets/scale'
-export * from './presets/slideUp'
+export { fade } from './presets/fade'
+export { scale } from './presets/scale'
+export { slideUp } from './presets/slideUp'

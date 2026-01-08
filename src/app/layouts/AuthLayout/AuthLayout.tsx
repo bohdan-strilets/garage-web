@@ -1,6 +1,6 @@
-import Logo from '@shared/ui/branding/Logo'
-import Button from '@shared/ui/controls/Button'
-import Paragraph from '@shared/ui/typography/Paragraph'
+import { Logo } from '@shared/ui/branding/Logo'
+import { Button } from '@shared/ui/controls/Button'
+import { Paragraph } from '@shared/ui/typography/Paragraph'
 
 import { content, header, root } from './AuthLayout.css'
 

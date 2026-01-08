@@ -1,1 +1,1 @@
-export * from './ui/VerifyEmailView'
+export { default as VerifyEmailView } from './ui/VerifyEmailView'

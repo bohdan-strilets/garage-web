@@ -6,7 +6,7 @@ import { QueryProvider } from '../react-query'
 import { RouterProvider } from '../router'
 import { ThemeProvider } from '../theme'
 
-export const AppProvider = () => {
+const AppProvider = () => {
   const [bootstrapped, setBootstrapped] = useState(false)
 
   useEffect(() => {
@@ -25,3 +25,5 @@ export const AppProvider = () => {
     </QueryProvider>
   )
 }
+
+export default AppProvider

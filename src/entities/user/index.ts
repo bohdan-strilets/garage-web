@@ -1,1 +1,1 @@
-export * from './types/UserSelf'
+export type { UserSelf } from './types/UserSelf'

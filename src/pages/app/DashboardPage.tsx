@@ -1,13 +1,9 @@
-import { useState } from 'react'
-
-import Stack from '@shared/ui/layouts/Stack'
-import Surface from '@shared/ui/layouts/Surface'
-import Heading from '@shared/ui/typography/Heading'
-import Paragraph from '@shared/ui/typography/Paragraph'
+import { Stack } from '@shared/ui/layouts/Stack'
+import { Surface } from '@shared/ui/layouts/Surface'
+import { Heading } from '@shared/ui/typography/Heading'
+import { Paragraph } from '@shared/ui/typography/Paragraph'
 
 const DashboardPage = () => {
-  const [value, setValue] = useState<string | undefined>()
-
   return (
     <Surface padding="xl" radius="lg" shadow="md">
       <Stack gap="md">

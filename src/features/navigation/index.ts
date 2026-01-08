@@ -1,2 +1,2 @@
-export * from './ui/Navigation'
-export * from './model/primaryNav'
+export { default as Navigation } from './ui/Navigation'
+export { primaryNav } from './model/primaryNav'

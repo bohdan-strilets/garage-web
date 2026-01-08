@@ -1,1 +1,1 @@
-export * from './storageKeys'
+export { STORAGE_KEYS } from './storageKeys'

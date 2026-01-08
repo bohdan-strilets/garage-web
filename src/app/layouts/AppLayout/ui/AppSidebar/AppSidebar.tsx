@@ -1,13 +1,13 @@
 import { primaryNav } from '@features/navigation'
-import Navigation from '@features/navigation/ui/Navigation'
-import Logo from '@shared/ui/branding/Logo'
-import Divider from '@shared/ui/layouts/Divider'
-import Spacer from '@shared/ui/layouts/Spacer'
-import Stack from '@shared/ui/layouts/Stack'
-import Heading from '@shared/ui/typography/Heading'
+import { Navigation } from '@features/navigation'
+import { Logo } from '@shared/ui/branding/Logo'
+import { Divider } from '@shared/ui/layouts/Divider'
+import { Spacer } from '@shared/ui/layouts/Spacer'
+import { Stack } from '@shared/ui/layouts/Stack'
+import { Heading } from '@shared/ui/typography/Heading'
 
 import { useSidebar } from '../../model/useSidebar'
-import SidebarToggle from '../SidebarToggle'
+import { SidebarToggle } from '../SidebarToggle/'
 
 const AppSidebar = () => {
   const { toggle, isOpen } = useSidebar()

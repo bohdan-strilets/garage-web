@@ -1,6 +1,6 @@
 import clsx from 'clsx'
 
-import Paragraph from '../Paragraph'
+import { Paragraph } from '../Paragraph'
 
 import type { ErrorMessageProps } from './Props'
 

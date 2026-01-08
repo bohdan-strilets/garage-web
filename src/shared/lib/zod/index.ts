@@ -1,1 +1,2 @@
-export * from './zod'
+export { z } from './zod'
+export type { Infer } from './zod'

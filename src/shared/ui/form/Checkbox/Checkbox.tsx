@@ -2,7 +2,7 @@ import clsx from 'clsx'
 import { forwardRef } from 'react'
 
 import { disabled, hoverable } from '@shared/styles'
-import Icon from '@shared/ui/controls/Icon'
+import { Icon } from '@shared/ui/controls/Icon'
 
 import { root, input, box, checkmark } from './Checkbox.css'
 

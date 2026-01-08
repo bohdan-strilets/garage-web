@@ -4,8 +4,10 @@ import { queryClient } from '@shared/lib/react-query'
 
 import type { QueryProviderProps } from './Props'
 
-export const QueryProvider = ({ children }: QueryProviderProps) => {
+const QueryProvider = ({ children }: QueryProviderProps) => {
   return (
     <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
   )
 }
+
+export default QueryProvider

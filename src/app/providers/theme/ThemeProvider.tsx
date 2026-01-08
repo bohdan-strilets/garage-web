@@ -12,7 +12,7 @@ import '@app/theme/reset.css'
 import '@app/theme/globals.css'
 import '@app/theme/themeTransition.css'
 
-export const ThemeProvider = ({ children }: ThemeProviderProps) => {
+const ThemeProvider = ({ children }: ThemeProviderProps) => {
   const { mode } = useTheme()
   const isMounted = useRef(false)
 
@@ -57,3 +57,5 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
 
   return <>{children}</>
 }
+
+export default ThemeProvider

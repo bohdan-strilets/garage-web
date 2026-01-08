@@ -2,9 +2,9 @@ import clsx from 'clsx'
 import { forwardRef, useState } from 'react'
 
 import { hoverable } from '@shared/styles'
-import Icon from '@shared/ui/controls/Icon'
+import { Icon } from '@shared/ui/controls/Icon'
 
-import TextInput from '../TextInput'
+import { TextInput } from '../TextInput'
 
 import { wrapper, toggle } from './PasswordInput.css'
 

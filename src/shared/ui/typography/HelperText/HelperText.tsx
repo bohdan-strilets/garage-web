@@ -1,4 +1,4 @@
-import Paragraph from '../Paragraph'
+import { Paragraph } from '../Paragraph'
 
 import type { HelperTextProps } from './Props'
 

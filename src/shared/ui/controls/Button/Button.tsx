@@ -1,7 +1,7 @@
 import clsx from 'clsx'
 
 import { disabled, focusable, hoverable, pressable } from '@shared/styles'
-import Loader from '@shared/ui/feedback/Loader'
+import { Loader } from '@shared/ui/feedback/Loader'
 
 import { root } from './Button.css'
 

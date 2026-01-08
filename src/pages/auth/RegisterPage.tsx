@@ -1,7 +1,7 @@
-import RegisterForm from '@features/auth/register'
-import Stack from '@shared/ui/layouts/Stack'
-import Surface from '@shared/ui/layouts/Surface'
-import Heading from '@shared/ui/typography/Heading'
+import { RegisterForm } from '@features/auth/register'
+import { Stack } from '@shared/ui/layouts/Stack'
+import { Surface } from '@shared/ui/layouts/Surface'
+import { Heading } from '@shared/ui/typography/Heading'
 
 const RegisterPage = () => {
   return (

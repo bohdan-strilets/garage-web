@@ -2,7 +2,7 @@ import clsx from 'clsx'
 import { useId } from 'react'
 
 import { disabled, focusable, hoverable } from '@shared/styles'
-import Icon from '@shared/ui/controls/Icon'
+import { Icon } from '@shared/ui/controls/Icon'
 
 import { useDropdown } from './model/useDropdown'
 import {

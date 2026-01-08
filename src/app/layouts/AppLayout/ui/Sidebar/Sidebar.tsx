@@ -1,7 +1,7 @@
 import { AnimatePresence } from 'motion/react'
 
 import { media, useMediaQuery } from '@shared/lib/responsive'
-import Overlay from '@shared/ui/overlays/Overlay'
+import { Overlay } from '@shared/ui/overlays/Overlay'
 
 import { useSidebar } from '../../model/useSidebar'
 

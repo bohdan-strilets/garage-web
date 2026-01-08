@@ -3,8 +3,8 @@ import clsx from 'clsx'
 
 import { useSidebar } from '@app/layouts/AppLayout'
 import { focusable, hoverable, pressable } from '@shared/styles'
-import Icon from '@shared/ui/controls/Icon'
-import Paragraph from '@shared/ui/typography/Paragraph'
+import { Icon } from '@shared/ui/controls/Icon'
+import { Paragraph } from '@shared/ui/typography/Paragraph'
 
 import { active, item, link } from './NavItem.css'
 

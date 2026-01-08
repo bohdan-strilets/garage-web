@@ -1,5 +1,5 @@
-import Button from '@shared/ui/controls/Button'
-import Icon from '@shared/ui/controls/Icon'
+import { Button } from '@shared/ui/controls/Button'
+import { Icon } from '@shared/ui/controls/Icon'
 
 import type { SidebarToggleProps } from './Props'
 

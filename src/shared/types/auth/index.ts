@@ -1,1 +1,1 @@
-export * from './AuthResponse'
+export type { AuthResponse } from './AuthResponse'

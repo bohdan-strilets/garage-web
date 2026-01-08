@@ -1,6 +1,6 @@
 import { FormProvider, useForm, type FieldValues } from 'react-hook-form'
 
-import Stack from '@shared/ui/layouts/Stack'
+import { Stack } from '@shared/ui/layouts/Stack'
 
 import type { FormProps } from './Props'
 

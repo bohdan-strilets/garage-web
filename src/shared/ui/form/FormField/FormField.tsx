@@ -1,10 +1,10 @@
 import { Children, cloneElement, isValidElement } from 'react'
 import { Controller, useFormContext, type FieldValues } from 'react-hook-form'
 
-import Stack from '@shared/ui/layouts/Stack'
-import ErrorMessage from '@shared/ui/typography/ErrorMessage'
-import HelperText from '@shared/ui/typography/HelperText'
-import Label from '@shared/ui/typography/Label'
+import { Stack } from '@shared/ui/layouts/Stack'
+import { ErrorMessage } from '@shared/ui/typography/ErrorMessage'
+import { HelperText } from '@shared/ui/typography/HelperText'
+import { Label } from '@shared/ui/typography/Label'
 
 import type { FormFieldProps } from './Props'
 

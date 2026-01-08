@@ -1,9 +1,9 @@
 import { content, root } from './AppLayout.css'
-import AppHeader from './ui/AppHeader'
-import AppSidebar from './ui/AppSidebar'
-import Header from './ui/Header'
-import Main from './ui/Main'
-import Sidebar from './ui/Sidebar'
+import { AppHeader } from './ui/AppHeader'
+import { AppSidebar } from './ui/AppSidebar'
+import { Header } from './ui/Header'
+import { Main } from './ui/Main'
+import { Sidebar } from './ui/Sidebar'
 
 import type { AppLayoutProps } from './Props'
 

@@ -1,8 +1,8 @@
 import clsx from 'clsx'
 
-import RequiredMark from '@shared/ui/status/RequiredMark'
+import { RequiredMark } from '@shared/ui/status/RequiredMark'
 
-import Paragraph from '../Paragraph'
+import { Paragraph } from '../Paragraph'
 
 import { root } from './Label.css'
 

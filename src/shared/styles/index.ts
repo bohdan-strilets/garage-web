@@ -1,16 +1,21 @@
-export * from './model/useTheme'
-export * from './model/themeActions'
+export { useTheme } from './model/useTheme'
+export { themeActions } from './model/themeActions'
 
-export * from './enums/Theme'
-export * from './helpers/applyTheme'
+export { THEME } from './enums/Theme'
 
-export * from './theme/contract.css'
-export * from './theme/dark.css'
-export * from './theme/light.css'
+export { applyTheme } from './helpers/applyTheme'
 
-export * from './primitives/active.css'
-export * from './primitives/disabled.css'
-export * from './primitives/focus.css'
-export * from './primitives/hover.css'
+export { themeContract } from './theme/contract.css'
+export { vars } from './theme/contract.css'
+export { darkTheme } from './theme/dark.css'
+export { lightTheme } from './theme/light.css'
 
-export * from './types/Media'
+export { pressable } from './primitives/active.css'
+export { disabled } from './primitives/disabled.css'
+export { focusable } from './primitives/focus.css'
+export { focusBoxShadow } from './primitives/focus.css'
+export { hoverable } from './primitives/hover.css'
+
+export type { Media } from './types/Media'
+export type { MediaQuery } from './types/Media'
+export type { ResolvedTheme } from './types/ResolvedTheme'

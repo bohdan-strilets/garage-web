@@ -1,14 +1,14 @@
 import { sessionSelectors } from '@entities/session'
-import Button from '@shared/ui/controls/Button'
-import Divider from '@shared/ui/layouts/Divider'
-import Stack from '@shared/ui/layouts/Stack'
-import Heading from '@shared/ui/typography/Heading'
-import Paragraph from '@shared/ui/typography/Paragraph'
+import { Button } from '@shared/ui/controls/Button'
+import { Divider } from '@shared/ui/layouts/Divider'
+import { Stack } from '@shared/ui/layouts/Stack'
+import { Heading } from '@shared/ui/typography/Heading'
+import { Paragraph } from '@shared/ui/typography/Paragraph'
 
 import { useCooldown } from '../model/useCooldown'
 import { useResendVerification } from '../model/useResendVerification'
 
-export const VerifyEmailView = () => {
+const VerifyEmailView = () => {
   const { mutate, isPending, isSuccess } = useResendVerification()
   const { cooldown, startCooldown, isCooldownActive } = useCooldown()
   const user = sessionSelectors.getUser()
@@ -67,3 +67,5 @@ export const VerifyEmailView = () => {
     </Stack>
   )
 }
+
+export default VerifyEmailView

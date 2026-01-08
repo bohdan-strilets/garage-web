@@ -1,12 +1,12 @@
-import Checkbox from '@shared/ui/form/Checkbox'
-import PasswordInput from '@shared/ui/form/PasswordInput'
-import TextInput from '@shared/ui/form/TextInput'
-import Divider from '@shared/ui/layouts/Divider'
-import Stack from '@shared/ui/layouts/Stack'
-import Surface from '@shared/ui/layouts/Surface'
-import ErrorMessage from '@shared/ui/typography/ErrorMessage'
-import Heading from '@shared/ui/typography/Heading'
-import Label from '@shared/ui/typography/Label'
+import { Checkbox } from '@shared/ui/form/Checkbox'
+import { PasswordInput } from '@shared/ui/form/PasswordInput'
+import { TextInput } from '@shared/ui/form/TextInput'
+import { Divider } from '@shared/ui/layouts/Divider'
+import { Stack } from '@shared/ui/layouts/Stack'
+import { Surface } from '@shared/ui/layouts/Surface'
+import { ErrorMessage } from '@shared/ui/typography/ErrorMessage'
+import { Heading } from '@shared/ui/typography/Heading'
+import { Label } from '@shared/ui/typography/Label'
 
 const LoginPage = () => {
   return (

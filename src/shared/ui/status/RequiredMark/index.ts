@@ -1,1 +1,1 @@
-export { default } from './RequiredMark'
+export { default as RequiredMark } from './RequiredMark'

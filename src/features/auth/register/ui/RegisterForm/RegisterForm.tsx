@@ -1,10 +1,10 @@
 import { zodResolver } from '@hookform/resolvers/zod'
 
-import Button from '@shared/ui/controls/Button'
-import Form from '@shared/ui/form/Form'
-import FormField from '@shared/ui/form/FormField'
-import PasswordInput from '@shared/ui/form/PasswordInput'
-import TextInput from '@shared/ui/form/TextInput'
+import { Button } from '@shared/ui/controls/Button'
+import { Form } from '@shared/ui/form/Form'
+import { FormField } from '@shared/ui/form/FormField'
+import { PasswordInput } from '@shared/ui/form/PasswordInput'
+import { TextInput } from '@shared/ui/form/TextInput'
 
 import { RegisterFormSchema } from '../../model/registerFormSchema'
 import { useRegister } from '../../model/useRegister'

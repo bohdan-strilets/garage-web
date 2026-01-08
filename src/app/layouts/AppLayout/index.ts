@@ -1,2 +1,2 @@
-export { default } from './AppLayout'
-export * from './model/useSidebar'
+export { default as AppLayout } from './AppLayout'
+export { useSidebar } from './model/useSidebar'
