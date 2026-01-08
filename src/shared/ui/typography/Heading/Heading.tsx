@@ -1,6 +1,6 @@
-import type { JSX } from 'react'
-
 import clsx from 'clsx'
+
+import type { JSX } from 'react'
 
 import { root } from './Heading.css'
 

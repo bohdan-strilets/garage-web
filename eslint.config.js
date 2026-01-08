@@ -81,12 +81,12 @@ export default defineConfig([
             {
               pattern: 'react',
               group: 'external',
-              position: 'before',
+              position: 'after',
             },
             {
               pattern: 'react/**',
               group: 'external',
-              position: 'before',
+              position: 'after',
             },
 
             { pattern: '@app/**', group: 'internal' },
@@ -103,7 +103,7 @@ export default defineConfig([
             },
           ],
 
-          pathGroupsExcludedImportTypes: ['builtin', 'external'],
+          pathGroupsExcludedImportTypes: ['builtin'],
 
           'newlines-between': 'always',
 
