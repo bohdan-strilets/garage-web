@@ -30,7 +30,8 @@ export const thumb = recipe({
     height: vars.layout.switcher.thumbSize,
 
     borderRadius: vars.radius.pill,
-    background: vars.color.brand.primarySoft,
+    background: vars.color.brand.primary,
+    color: vars.color.text.onAccent,
 
     transition: `transform
     ${vars.motion.duration.slow}
