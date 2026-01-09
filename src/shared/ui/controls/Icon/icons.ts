@@ -17,6 +17,8 @@ import {
   EyeOff,
   ChevronUp,
   ChevronDown,
+  Sun,
+  Moon,
 } from 'lucide-react'
 
 export const icons = {
@@ -39,4 +41,6 @@ export const icons = {
   checkmark: Check,
   arrowDown: ChevronDown,
   arrowUp: ChevronUp,
+  sun: Sun,
+  moon: Moon,
 } as const

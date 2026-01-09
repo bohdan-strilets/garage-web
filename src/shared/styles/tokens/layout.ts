@@ -50,4 +50,9 @@ export const layout = {
   checkbox: {
     size: '24px',
   },
+
+  switcher: {
+    width: '56px',
+    thumbSize: '24px',
+  },
 } as const

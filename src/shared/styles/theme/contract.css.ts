@@ -142,6 +142,11 @@ export const themeContract = createThemeContract({
     checkbox: {
       size: null,
     },
+
+    switcher: {
+      width: null,
+      thumbSize: null,
+    },
   },
 
   motion: {
