@@ -16,10 +16,17 @@ export const root = recipe({
       true: { textDecoration: 'underline' },
       false: { textDecoration: 'none' },
     },
+
+    align: {
+      left: { textAlign: 'left' },
+      center: { textAlign: 'center' },
+      right: { textAlign: 'right' },
+    },
   },
 
   defaultVariants: {
     tone: 'primary',
     underline: false,
+    align: 'left',
   },
 })

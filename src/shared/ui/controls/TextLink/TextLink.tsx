@@ -13,6 +13,7 @@ const TextLink = ({
   className,
   underline,
   tone,
+  align,
   ...props
 }: TextLinkProps) => {
   return (
@@ -20,7 +21,7 @@ const TextLink = ({
       to={to}
       {...props}
       className={clsx(
-        root({ underline, tone }),
+        root({ underline, tone, align }),
         focusable,
         hoverable,
         disabled,
