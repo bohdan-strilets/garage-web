@@ -1,3 +1,4 @@
+import { useSidebar } from '@app/layouts/AppLayout'
 import { primaryNav } from '@features/navigation'
 import { Navigation } from '@features/navigation'
 import { Logo } from '@shared/ui/branding/Logo'
@@ -6,7 +7,6 @@ import { Spacer } from '@shared/ui/layouts/Spacer'
 import { Stack } from '@shared/ui/layouts/Stack'
 import { Heading } from '@shared/ui/typography/Heading'
 
-import { useSidebar } from '../../model/useSidebar'
 import { SidebarToggle } from '../SidebarToggle/'
 
 const AppSidebar = () => {

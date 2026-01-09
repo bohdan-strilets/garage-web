@@ -1,7 +1,6 @@
+import { useSidebar } from '@app/layouts/AppLayout'
 import { media, useMediaQuery } from '@shared/lib/responsive'
-
-import { useSidebar } from '../../model/useSidebar'
-import { SidebarToggle } from '../SidebarToggle'
+import { SidebarToggle } from '@widgets/SidebarToggle'
 
 const AppHeader = () => {
   const isLaptop = useMediaQuery(media.LAPTOP)
