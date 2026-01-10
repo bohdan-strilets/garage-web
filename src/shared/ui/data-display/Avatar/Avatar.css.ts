@@ -11,7 +11,7 @@ export const root = recipe({
 
     fontWeight: vars.font.weight.medium,
 
-    backgroundColor: vars.color.surface.muted,
+    backgroundColor: vars.color.brand.primarySoft,
     color: vars.color.text.primary,
 
     userSelect: 'none',
