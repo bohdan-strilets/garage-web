@@ -12,6 +12,10 @@ const LoginPage = () => {
       <Heading level={1}>Login</Heading>
       <LoginForm />
 
+      <TextLink to={paths.AUTH.FORGOT_PASSWORD} underline={true} align="center">
+        Forgot your password?
+      </TextLink>
+
       <Divider />
 
       <Paragraph align="center">
