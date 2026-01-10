@@ -1,6 +1,6 @@
 import { sessionSelectors } from '@entities/session'
 import { AUTH_COOLDOWNS } from '@shared/config/authCooldowns'
-import { useCooldown } from '@shared/hooks'
+import { useCooldown } from '@shared/hooks/cooldown'
 import { Button } from '@shared/ui/controls/Button'
 import { Divider } from '@shared/ui/layouts/Divider'
 import { Stack } from '@shared/ui/layouts/Stack'

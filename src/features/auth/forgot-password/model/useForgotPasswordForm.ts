@@ -1,5 +1,5 @@
 import { AUTH_COOLDOWNS } from '@shared/config/authCooldowns'
-import { useCooldown } from '@shared/hooks'
+import { useCooldown } from '@shared/hooks/cooldown'
 
 import { useForgotPassword } from './useForgotPassword'
 import { useForgotPasswordFormSubmit } from './useForgotPasswordFormSubmit'
