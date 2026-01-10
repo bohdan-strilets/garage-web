@@ -1,1 +1,1 @@
-export { default as ForgotPasswordForm } from './ui/ForgotPasswordForm/ForgotPasswordForm'
+export { default as ForgotPasswordForm } from './ui/ForgotPasswordForm'

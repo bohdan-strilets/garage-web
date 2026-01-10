@@ -5,10 +5,10 @@ import { Form } from '@shared/ui/form/Form'
 import { FormField } from '@shared/ui/form/FormField'
 import { TextInput } from '@shared/ui/form/TextInput'
 
-import { useForgotPasswordForm } from '../../model/useForgotPasswordForm'
-import { ForgotPasswordSchema } from '../../schema/forgotPasswordSchema'
+import { useForgotPasswordForm } from '../model/useForgotPasswordForm'
+import { ForgotPasswordSchema } from '../schema/forgotPasswordSchema'
 
-import type { ForgotPasswordFormValues } from '../../types/ForgotPasswordFormValues'
+import type { ForgotPasswordFormValues } from '../types/ForgotPasswordFormValues'
 
 const ForgotPasswordForm = () => {
   const { onSubmit, isDisabled, isPending, cooldown, isCooldownActive } =

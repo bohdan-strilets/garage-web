@@ -6,11 +6,11 @@ import { FormField } from '@shared/ui/form/FormField'
 import { PasswordInput } from '@shared/ui/form/PasswordInput'
 import { TextInput } from '@shared/ui/form/TextInput'
 
-import { RegisterFormSchema } from '../../model/registerFormSchema'
-import { useRegister } from '../../model/useRegister'
-import { useRegisterFormSubmit } from '../../model/useRegisterFormSubmit'
+import { RegisterFormSchema } from '../model/registerFormSchema'
+import { useRegister } from '../model/useRegister'
+import { useRegisterFormSubmit } from '../model/useRegisterFormSubmit'
 
-import type { RegisterFormValues } from '../../types/RegisterFormValues'
+import type { RegisterFormValues } from '../types/RegisterFormValues'
 
 const RegisterForm = () => {
   const mutation = useRegister()

@@ -6,11 +6,11 @@ import { FormField } from '@shared/ui/form/FormField'
 import { PasswordInput } from '@shared/ui/form/PasswordInput'
 import { TextInput } from '@shared/ui/form/TextInput'
 
-import { LoginFormSchema } from '../../model/loginFormSchema'
-import { useLogin } from '../../model/useLogin'
-import { useLoginFormSubmit } from '../../model/useLoginFormSubmit'
+import { LoginFormSchema } from '../model/loginFormSchema'
+import { useLogin } from '../model/useLogin'
+import { useLoginFormSubmit } from '../model/useLoginFormSubmit'
 
-import type { LoginFormValues } from '../../types/LoginFormValues'
+import type { LoginFormValues } from '../types/LoginFormValues'
 
 const LoginForm = () => {
   const mutation = useLogin()

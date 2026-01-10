@@ -1,1 +1,1 @@
-export { default as RegisterForm } from './ui/RegisterForm/RegisterForm'
+export { default as RegisterForm } from './ui/RegisterForm'
