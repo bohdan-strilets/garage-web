@@ -21,6 +21,9 @@ import {
   Moon,
   CircleX,
   BadgeCheck,
+  UserRound,
+  Settings,
+  LogOut,
 } from 'lucide-react'
 
 export const icons = {
@@ -47,4 +50,7 @@ export const icons = {
   moon: Moon,
   error: CircleX,
   success: BadgeCheck,
+  profile: UserRound,
+  settings: Settings,
+  logout: LogOut,
 } as const
