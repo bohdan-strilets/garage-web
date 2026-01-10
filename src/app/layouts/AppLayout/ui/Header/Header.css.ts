@@ -7,8 +7,7 @@ export const root = style({
   alignItems: 'center',
 
   flexShrink: 0,
-  height: vars.layout.header.height,
-  padding: vars.space.md,
+  padding: vars.space.xl,
 
   backgroundColor: vars.color.surface.base,
   borderBottom: `1px solid ${vars.color.border.subtle}`,
