@@ -1,11 +1,12 @@
 import { sessionSelectors } from '@entities/session'
+import { AUTH_COOLDOWNS } from '@shared/config/authCooldowns'
+import { useCooldown } from '@shared/hooks'
 import { Button } from '@shared/ui/controls/Button'
 import { Divider } from '@shared/ui/layouts/Divider'
 import { Stack } from '@shared/ui/layouts/Stack'
 import { Heading } from '@shared/ui/typography/Heading'
 import { Paragraph } from '@shared/ui/typography/Paragraph'
 
-import { useCooldown } from '../model/useCooldown'
 import { useResendVerification } from '../model/useResendVerification'
 
 const VerifyEmailView = () => {
@@ -13,7 +14,7 @@ const VerifyEmailView = () => {
   const { cooldown, startCooldown, isCooldownActive } = useCooldown()
   const user = sessionSelectors.getUser()
 
-  const RESEND_COOLDOWN = 15
+  const RESEND_COOLDOWN = AUTH_COOLDOWNS.RESEND_ACTIVATION_EMAIL
 
   const handleResend = () => {
     mutate()
