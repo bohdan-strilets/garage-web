@@ -1,6 +1,7 @@
 import { media, useMediaQuery } from '@shared/lib/responsive'
 import { Icon } from '@shared/ui/controls/Icon'
 import { Avatar } from '@shared/ui/data-display/Avatar'
+import { Loader } from '@shared/ui/feedback/Loader'
 import { Box } from '@shared/ui/layouts/Box'
 import { Divider } from '@shared/ui/layouts/Divider'
 import { DropdownMenu } from '@shared/ui/navigation/DropdownMenu'
@@ -12,6 +13,7 @@ import type { UserMenuProps } from './Props'
 const UserMenu = ({
   name,
   avatarUrl,
+  isLoading,
   onProfile,
   onSettings,
   onLogout,
@@ -21,6 +23,8 @@ const UserMenu = ({
   return (
     <Box gap="md" display="flex" align="center">
       {isTablet && <Paragraph weight="medium">{name}</Paragraph>}
+      {isLoading && <Loader size="sm" />}
+
       <DropdownMenu trigger={<Avatar name={name} src={avatarUrl} />}>
         {({ close }) => (
           <>
