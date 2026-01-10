@@ -2,7 +2,7 @@ import { Logo } from '@shared/ui/branding/Logo'
 import { Paragraph } from '@shared/ui/typography/Paragraph'
 import { ThemeToggle } from '@widgets/ThemeToggle'
 
-import { content, header, root } from './AuthLayout.css'
+import { content, header, main, root } from './AuthLayout.css'
 
 import type { AuthLayoutProps } from './Props'
 
@@ -16,7 +16,7 @@ const AuthLayout = ({ children }: AuthLayoutProps) => {
         <ThemeToggle />
       </header>
 
-      <main>
+      <main className={main}>
         <section className={content}>{children}</section>
       </main>
 

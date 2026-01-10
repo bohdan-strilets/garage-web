@@ -15,6 +15,10 @@ export const layout = {
     desktop: '1440px',
   },
 
+  authContainer: {
+    maxWidth: '440px',
+  },
+
   modal: {
     width: '100%',
     maxWidth: '520px',

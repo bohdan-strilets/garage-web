@@ -107,6 +107,10 @@ export const themeContract = createThemeContract({
       desktop: null,
     },
 
+    authContainer: {
+      maxWidth: null,
+    },
+
     modal: {
       width: null,
       maxWidth: null,
