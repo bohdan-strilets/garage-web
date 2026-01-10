@@ -19,6 +19,8 @@ import {
   ChevronDown,
   Sun,
   Moon,
+  CircleX,
+  BadgeCheck,
 } from 'lucide-react'
 
 export const icons = {
@@ -43,4 +45,6 @@ export const icons = {
   arrowUp: ChevronUp,
   sun: Sun,
   moon: Moon,
+  error: CircleX,
+  success: BadgeCheck,
 } as const

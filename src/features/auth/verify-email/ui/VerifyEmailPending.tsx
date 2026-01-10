@@ -9,7 +9,7 @@ import { Paragraph } from '@shared/ui/typography/Paragraph'
 
 import { useResendVerification } from '../model/useResendVerification'
 
-const VerifyEmailView = () => {
+const VerifyEmailPending = () => {
   const { mutate, isPending, isSuccess } = useResendVerification()
   const { cooldown, startCooldown, isCooldownActive } = useCooldown()
   const user = sessionSelectors.getUser()
@@ -69,4 +69,4 @@ const VerifyEmailView = () => {
   )
 }
 
-export default VerifyEmailView
+export default VerifyEmailPending
