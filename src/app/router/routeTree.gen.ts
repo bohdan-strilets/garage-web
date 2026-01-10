@@ -15,6 +15,7 @@ import { Route as IndexRouteImport } from './index'
 import { Route as AuthVerifyEmailRouteImport } from './auth/verify-email'
 import { Route as AuthRegisterRouteImport } from './auth/register'
 import { Route as AuthLoginRouteImport } from './auth/login'
+import { Route as AuthForgotPasswordRouteImport } from './auth/forgot-password'
 import { Route as AppVehiclesRouteImport } from './app/vehicles'
 import { Route as AppDashboardRouteImport } from './app/dashboard'
 
@@ -48,6 +49,11 @@ const AuthLoginRoute = AuthLoginRouteImport.update({
   path: '/login',
   getParentRoute: () => AuthRouteRoute,
 } as any)
+const AuthForgotPasswordRoute = AuthForgotPasswordRouteImport.update({
+  id: '/forgot-password',
+  path: '/forgot-password',
+  getParentRoute: () => AuthRouteRoute,
+} as any)
 const AppVehiclesRoute = AppVehiclesRouteImport.update({
   id: '/vehicles',
   path: '/vehicles',
@@ -65,6 +71,7 @@ export interface FileRoutesByFullPath {
   '/auth': typeof AuthRouteRouteWithChildren
   '/app/dashboard': typeof AppDashboardRoute
   '/app/vehicles': typeof AppVehiclesRoute
+  '/auth/forgot-password': typeof AuthForgotPasswordRoute
   '/auth/login': typeof AuthLoginRoute
   '/auth/register': typeof AuthRegisterRoute
   '/auth/verify-email': typeof AuthVerifyEmailRoute
@@ -75,6 +82,7 @@ export interface FileRoutesByTo {
   '/auth': typeof AuthRouteRouteWithChildren
   '/app/dashboard': typeof AppDashboardRoute
   '/app/vehicles': typeof AppVehiclesRoute
+  '/auth/forgot-password': typeof AuthForgotPasswordRoute
   '/auth/login': typeof AuthLoginRoute
   '/auth/register': typeof AuthRegisterRoute
   '/auth/verify-email': typeof AuthVerifyEmailRoute
@@ -86,6 +94,7 @@ export interface FileRoutesById {
   '/auth': typeof AuthRouteRouteWithChildren
   '/app/dashboard': typeof AppDashboardRoute
   '/app/vehicles': typeof AppVehiclesRoute
+  '/auth/forgot-password': typeof AuthForgotPasswordRoute
   '/auth/login': typeof AuthLoginRoute
   '/auth/register': typeof AuthRegisterRoute
   '/auth/verify-email': typeof AuthVerifyEmailRoute
@@ -98,6 +107,7 @@ export interface FileRouteTypes {
     | '/auth'
     | '/app/dashboard'
     | '/app/vehicles'
+    | '/auth/forgot-password'
     | '/auth/login'
     | '/auth/register'
     | '/auth/verify-email'
@@ -108,6 +118,7 @@ export interface FileRouteTypes {
     | '/auth'
     | '/app/dashboard'
     | '/app/vehicles'
+    | '/auth/forgot-password'
     | '/auth/login'
     | '/auth/register'
     | '/auth/verify-email'
@@ -118,6 +129,7 @@ export interface FileRouteTypes {
     | '/auth'
     | '/app/dashboard'
     | '/app/vehicles'
+    | '/auth/forgot-password'
     | '/auth/login'
     | '/auth/register'
     | '/auth/verify-email'
@@ -173,6 +185,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthLoginRouteImport
       parentRoute: typeof AuthRouteRoute
     }
+    '/auth/forgot-password': {
+      id: '/auth/forgot-password'
+      path: '/forgot-password'
+      fullPath: '/auth/forgot-password'
+      preLoaderRoute: typeof AuthForgotPasswordRouteImport
+      parentRoute: typeof AuthRouteRoute
+    }
     '/app/vehicles': {
       id: '/app/vehicles'
       path: '/vehicles'
@@ -205,12 +224,14 @@ const AppRouteRouteWithChildren = AppRouteRoute._addFileChildren(
 )
 
 interface AuthRouteRouteChildren {
+  AuthForgotPasswordRoute: typeof AuthForgotPasswordRoute
   AuthLoginRoute: typeof AuthLoginRoute
   AuthRegisterRoute: typeof AuthRegisterRoute
   AuthVerifyEmailRoute: typeof AuthVerifyEmailRoute
 }
 
 const AuthRouteRouteChildren: AuthRouteRouteChildren = {
+  AuthForgotPasswordRoute: AuthForgotPasswordRoute,
   AuthLoginRoute: AuthLoginRoute,
   AuthRegisterRoute: AuthRegisterRoute,
   AuthVerifyEmailRoute: AuthVerifyEmailRoute,

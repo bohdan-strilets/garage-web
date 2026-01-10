@@ -10,3 +10,4 @@ export type StaticPath =
   | typeof paths.APP.ENERGY.ROOT
   | typeof paths.APP.STATISTICS.ROOT
   | typeof paths.AUTH.VERIFY_EMAIL
+  | typeof paths.AUTH.FORGOT_PASSWORD
