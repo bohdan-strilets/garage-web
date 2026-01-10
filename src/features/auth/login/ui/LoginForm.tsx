@@ -3,12 +3,13 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { Button } from '@shared/ui/controls/Button'
 import { Form } from '@shared/ui/form/Form'
 import { FormField } from '@shared/ui/form/FormField'
+import { FormRootError } from '@shared/ui/form/FormRootError'
 import { PasswordInput } from '@shared/ui/form/PasswordInput'
 import { TextInput } from '@shared/ui/form/TextInput'
 
-import { LoginFormSchema } from '../model/loginFormSchema'
 import { useLogin } from '../model/useLogin'
 import { useLoginFormSubmit } from '../model/useLoginFormSubmit'
+import { LoginFormSchema } from '../schema/loginFormSchema'
 
 import type { LoginFormValues } from '../types/LoginFormValues'
 
@@ -17,8 +18,17 @@ const LoginForm = () => {
   const resolver = zodResolver(LoginFormSchema)
   const onSubmit = useLoginFormSubmit(mutation)
 
+  const defaultValues: LoginFormValues = {
+    email: '',
+    password: '',
+  }
+
   return (
-    <Form<LoginFormValues> resolver={resolver} onSubmit={onSubmit}>
+    <Form<LoginFormValues>
+      resolver={resolver}
+      onSubmit={onSubmit}
+      defaultValues={defaultValues}
+    >
       <FormField<LoginFormValues> name="email" label="Email" required={true}>
         <TextInput type="email" />
       </FormField>
@@ -30,6 +40,8 @@ const LoginForm = () => {
       >
         <PasswordInput />
       </FormField>
+
+      <FormRootError />
 
       <Button type="submit" loading={mutation.isPending} fullWidth={true}>
         Log in

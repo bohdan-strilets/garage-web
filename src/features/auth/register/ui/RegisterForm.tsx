@@ -3,12 +3,13 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { Button } from '@shared/ui/controls/Button'
 import { Form } from '@shared/ui/form/Form'
 import { FormField } from '@shared/ui/form/FormField'
+import { FormRootError } from '@shared/ui/form/FormRootError'
 import { PasswordInput } from '@shared/ui/form/PasswordInput'
 import { TextInput } from '@shared/ui/form/TextInput'
 
-import { RegisterFormSchema } from '../model/registerFormSchema'
 import { useRegister } from '../model/useRegister'
 import { useRegisterFormSubmit } from '../model/useRegisterFormSubmit'
+import { RegisterFormSchema } from '../schema/registerFormSchema'
 
 import type { RegisterFormValues } from '../types/RegisterFormValues'
 
@@ -17,8 +18,20 @@ const RegisterForm = () => {
   const resolver = zodResolver(RegisterFormSchema)
   const onSubmit = useRegisterFormSubmit(mutation)
 
+  const defaultValues: RegisterFormValues = {
+    firstName: '',
+    lastName: '',
+    email: '',
+    password: '',
+    confirmPassword: '',
+  }
+
   return (
-    <Form<RegisterFormValues> resolver={resolver} onSubmit={onSubmit}>
+    <Form<RegisterFormValues>
+      resolver={resolver}
+      onSubmit={onSubmit}
+      defaultValues={defaultValues}
+    >
       <FormField<RegisterFormValues>
         name="firstName"
         label="First name"
@@ -55,6 +68,8 @@ const RegisterForm = () => {
       >
         <PasswordInput />
       </FormField>
+
+      <FormRootError />
 
       <Button type="submit" loading={mutation.isPending} fullWidth={true}>
         Create account

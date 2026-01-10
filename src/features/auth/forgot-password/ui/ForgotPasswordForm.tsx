@@ -3,6 +3,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { Button } from '@shared/ui/controls/Button'
 import { Form } from '@shared/ui/form/Form'
 import { FormField } from '@shared/ui/form/FormField'
+import { FormRootError } from '@shared/ui/form/FormRootError'
 import { TextInput } from '@shared/ui/form/TextInput'
 
 import { useForgotPasswordForm } from '../model/useForgotPasswordForm'
@@ -33,6 +34,8 @@ const ForgotPasswordForm = () => {
       >
         <TextInput type="email" disabled={isDisabled} />
       </FormField>
+
+      <FormRootError />
 
       <Button
         type="submit"

@@ -2,7 +2,7 @@ import { applyFormError } from '@shared/api'
 import type { NormalizedError } from '@shared/api/types/NormalizedError'
 import type { AuthResponse } from '@shared/types/auth'
 
-import { mapRegisterToDto } from './mapRegisterToDto'
+import { mapRegisterToDto } from '../dto/mapRegisterToDto'
 
 import type { RegisterDto } from '../types/RegisterDto'
 import type { RegisterFormValues } from '../types/RegisterFormValues'
