@@ -1,0 +1,4 @@
+export const AUTH_COOLDOWNS = {
+  FORGOT_PASSWORD: 30,
+  RESEND_ACTIVATION_EMAIL: 30,
+} as const
