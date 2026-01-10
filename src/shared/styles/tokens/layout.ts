@@ -68,4 +68,8 @@ export const layout = {
       lg: '48px',
     },
   },
+
+  dropdownMenu: {
+    minWidth: '180px',
+  },
 } as const

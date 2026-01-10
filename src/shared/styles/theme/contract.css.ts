@@ -160,6 +160,10 @@ export const themeContract = createThemeContract({
         lg: null,
       },
     },
+
+    dropdownMenu: {
+      minWidth: null,
+    },
   },
 
   motion: {
