@@ -9,24 +9,22 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './__root'
-import { Route as AuthRouteRouteImport } from './auth/route'
-import { Route as AppRouteRouteImport } from './app/route'
+import { Route as AuthRouteRouteImport } from './_auth/route'
+import { Route as AppRouteRouteImport } from './_app/route'
 import { Route as IndexRouteImport } from './index'
-import { Route as AuthVerifyEmailRouteImport } from './auth/verify-email'
-import { Route as AuthRegisterRouteImport } from './auth/register'
-import { Route as AuthLoginRouteImport } from './auth/login'
-import { Route as AuthForgotPasswordRouteImport } from './auth/forgot-password'
-import { Route as AppVehiclesRouteImport } from './app/vehicles'
-import { Route as AppDashboardRouteImport } from './app/dashboard'
+import { Route as AuthVerifyEmailRouteImport } from './_auth/verify-email'
+import { Route as AuthRegisterRouteImport } from './_auth/register'
+import { Route as AuthLoginRouteImport } from './_auth/login'
+import { Route as AuthForgotPasswordRouteImport } from './_auth/forgot-password'
+import { Route as AppVehiclesRouteImport } from './_app/vehicles'
+import { Route as AppDashboardRouteImport } from './_app/dashboard'
 
 const AuthRouteRoute = AuthRouteRouteImport.update({
-  id: '/auth',
-  path: '/auth',
+  id: '/_auth',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AppRouteRoute = AppRouteRouteImport.update({
-  id: '/app',
-  path: '/app',
+  id: '/_app',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -67,72 +65,64 @@ const AppDashboardRoute = AppDashboardRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/app': typeof AppRouteRouteWithChildren
-  '/auth': typeof AuthRouteRouteWithChildren
-  '/app/dashboard': typeof AppDashboardRoute
-  '/app/vehicles': typeof AppVehiclesRoute
-  '/auth/forgot-password': typeof AuthForgotPasswordRoute
-  '/auth/login': typeof AuthLoginRoute
-  '/auth/register': typeof AuthRegisterRoute
-  '/auth/verify-email': typeof AuthVerifyEmailRoute
+  '/dashboard': typeof AppDashboardRoute
+  '/vehicles': typeof AppVehiclesRoute
+  '/forgot-password': typeof AuthForgotPasswordRoute
+  '/login': typeof AuthLoginRoute
+  '/register': typeof AuthRegisterRoute
+  '/verify-email': typeof AuthVerifyEmailRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/app': typeof AppRouteRouteWithChildren
-  '/auth': typeof AuthRouteRouteWithChildren
-  '/app/dashboard': typeof AppDashboardRoute
-  '/app/vehicles': typeof AppVehiclesRoute
-  '/auth/forgot-password': typeof AuthForgotPasswordRoute
-  '/auth/login': typeof AuthLoginRoute
-  '/auth/register': typeof AuthRegisterRoute
-  '/auth/verify-email': typeof AuthVerifyEmailRoute
+  '/dashboard': typeof AppDashboardRoute
+  '/vehicles': typeof AppVehiclesRoute
+  '/forgot-password': typeof AuthForgotPasswordRoute
+  '/login': typeof AuthLoginRoute
+  '/register': typeof AuthRegisterRoute
+  '/verify-email': typeof AuthVerifyEmailRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/app': typeof AppRouteRouteWithChildren
-  '/auth': typeof AuthRouteRouteWithChildren
-  '/app/dashboard': typeof AppDashboardRoute
-  '/app/vehicles': typeof AppVehiclesRoute
-  '/auth/forgot-password': typeof AuthForgotPasswordRoute
-  '/auth/login': typeof AuthLoginRoute
-  '/auth/register': typeof AuthRegisterRoute
-  '/auth/verify-email': typeof AuthVerifyEmailRoute
+  '/_app': typeof AppRouteRouteWithChildren
+  '/_auth': typeof AuthRouteRouteWithChildren
+  '/_app/dashboard': typeof AppDashboardRoute
+  '/_app/vehicles': typeof AppVehiclesRoute
+  '/_auth/forgot-password': typeof AuthForgotPasswordRoute
+  '/_auth/login': typeof AuthLoginRoute
+  '/_auth/register': typeof AuthRegisterRoute
+  '/_auth/verify-email': typeof AuthVerifyEmailRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
-    | '/app'
-    | '/auth'
-    | '/app/dashboard'
-    | '/app/vehicles'
-    | '/auth/forgot-password'
-    | '/auth/login'
-    | '/auth/register'
-    | '/auth/verify-email'
+    | '/dashboard'
+    | '/vehicles'
+    | '/forgot-password'
+    | '/login'
+    | '/register'
+    | '/verify-email'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
-    | '/app'
-    | '/auth'
-    | '/app/dashboard'
-    | '/app/vehicles'
-    | '/auth/forgot-password'
-    | '/auth/login'
-    | '/auth/register'
-    | '/auth/verify-email'
+    | '/dashboard'
+    | '/vehicles'
+    | '/forgot-password'
+    | '/login'
+    | '/register'
+    | '/verify-email'
   id:
     | '__root__'
     | '/'
-    | '/app'
-    | '/auth'
-    | '/app/dashboard'
-    | '/app/vehicles'
-    | '/auth/forgot-password'
-    | '/auth/login'
-    | '/auth/register'
-    | '/auth/verify-email'
+    | '/_app'
+    | '/_auth'
+    | '/_app/dashboard'
+    | '/_app/vehicles'
+    | '/_auth/forgot-password'
+    | '/_auth/login'
+    | '/_auth/register'
+    | '/_auth/verify-email'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -143,17 +133,17 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/auth': {
-      id: '/auth'
-      path: '/auth'
-      fullPath: '/auth'
+    '/_auth': {
+      id: '/_auth'
+      path: ''
+      fullPath: ''
       preLoaderRoute: typeof AuthRouteRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/app': {
-      id: '/app'
-      path: '/app'
-      fullPath: '/app'
+    '/_app': {
+      id: '/_app'
+      path: ''
+      fullPath: ''
       preLoaderRoute: typeof AppRouteRouteImport
       parentRoute: typeof rootRouteImport
     }
@@ -164,45 +154,45 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/auth/verify-email': {
-      id: '/auth/verify-email'
+    '/_auth/verify-email': {
+      id: '/_auth/verify-email'
       path: '/verify-email'
-      fullPath: '/auth/verify-email'
+      fullPath: '/verify-email'
       preLoaderRoute: typeof AuthVerifyEmailRouteImport
       parentRoute: typeof AuthRouteRoute
     }
-    '/auth/register': {
-      id: '/auth/register'
+    '/_auth/register': {
+      id: '/_auth/register'
       path: '/register'
-      fullPath: '/auth/register'
+      fullPath: '/register'
       preLoaderRoute: typeof AuthRegisterRouteImport
       parentRoute: typeof AuthRouteRoute
     }
-    '/auth/login': {
-      id: '/auth/login'
+    '/_auth/login': {
+      id: '/_auth/login'
       path: '/login'
-      fullPath: '/auth/login'
+      fullPath: '/login'
       preLoaderRoute: typeof AuthLoginRouteImport
       parentRoute: typeof AuthRouteRoute
     }
-    '/auth/forgot-password': {
-      id: '/auth/forgot-password'
+    '/_auth/forgot-password': {
+      id: '/_auth/forgot-password'
       path: '/forgot-password'
-      fullPath: '/auth/forgot-password'
+      fullPath: '/forgot-password'
       preLoaderRoute: typeof AuthForgotPasswordRouteImport
       parentRoute: typeof AuthRouteRoute
     }
-    '/app/vehicles': {
-      id: '/app/vehicles'
+    '/_app/vehicles': {
+      id: '/_app/vehicles'
       path: '/vehicles'
-      fullPath: '/app/vehicles'
+      fullPath: '/vehicles'
       preLoaderRoute: typeof AppVehiclesRouteImport
       parentRoute: typeof AppRouteRoute
     }
-    '/app/dashboard': {
-      id: '/app/dashboard'
+    '/_app/dashboard': {
+      id: '/_app/dashboard'
       path: '/dashboard'
-      fullPath: '/app/dashboard'
+      fullPath: '/dashboard'
       preLoaderRoute: typeof AppDashboardRouteImport
       parentRoute: typeof AppRouteRoute
     }

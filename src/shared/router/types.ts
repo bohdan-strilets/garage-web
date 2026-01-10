@@ -1,7 +1,7 @@
 import type { paths } from './paths'
 
 export type StaticPath =
-  | typeof paths.HOME
+  | typeof paths.HOME.ROOT
   | typeof paths.AUTH.LOGIN
   | typeof paths.AUTH.REGISTER
   | typeof paths.APP.DASHBOARD.ROOT

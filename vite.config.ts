@@ -1,6 +1,6 @@
 import path from 'node:path'
 
-import router from '@tanstack/router-plugin/vite'
+import { tanstackRouter } from '@tanstack/router-vite-plugin'
 import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin'
 import react from '@vitejs/plugin-react-swc'
 import { defineConfig } from 'vite'
@@ -9,10 +9,9 @@ export default defineConfig({
   plugins: [
     react(),
     vanillaExtractPlugin(),
-    router({
+    tanstackRouter({
       routesDirectory: 'src/app/router',
       generatedRouteTree: 'src/app/router/routeTree.gen.ts',
-      routeFileIgnorePattern: '(routeTree\\.gen\\.ts|router\\.ts)$',
     }),
   ],
   resolve: {

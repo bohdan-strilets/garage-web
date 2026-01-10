@@ -1,30 +1,34 @@
 const withId = (base: string) => (id: string) => `${base}/${id}`
 
 export const paths = {
-  HOME: '/',
-  AUTH: {
-    LOGIN: '/auth/login',
-    REGISTER: '/auth/register',
-    VERIFY_EMAIL: '/auth/verify-email',
-    FORGOT_PASSWORD: '/auth/forgot-password',
+  HOME: {
+    ROOT: '/',
   },
+
+  AUTH: {
+    LOGIN: '/login',
+    REGISTER: '/register',
+    VERIFY_EMAIL: '/verify-email',
+    FORGOT_PASSWORD: '/forgot-password',
+  },
+
   APP: {
     DASHBOARD: {
-      ROOT: '/app/dashboard',
+      ROOT: '/dashboard',
     },
     VEHICLES: {
-      ROOT: '/app/vehicles',
-      DETAILS: withId('/app/vehicles'),
+      ROOT: '/vehicles',
+      DETAILS: withId('/vehicles'),
     },
     MAINTENANCE: {
-      ROOT: '/app/maintenance',
-      DETAILS: withId('/app/maintenance'),
+      ROOT: '/maintenance',
+      DETAILS: withId('/maintenance'),
     },
     ENERGY: {
-      ROOT: '/app/energy',
+      ROOT: '/energy',
     },
     STATISTICS: {
-      ROOT: '/app/statistics',
+      ROOT: '/statistics',
     },
   },
 } as const
