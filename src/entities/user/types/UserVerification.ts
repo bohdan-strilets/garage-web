@@ -1,4 +1,4 @@
 export type UserVerification = {
-  isEmailVerified: boolean
-  isPhoneVerified: boolean
+  email: { isVerified: boolean }
+  phone: { isVerified: boolean }
 }

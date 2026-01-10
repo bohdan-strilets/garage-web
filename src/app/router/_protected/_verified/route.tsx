@@ -4,12 +4,12 @@ import { AppLayout } from '@app/layouts/AppLayout'
 import { sessionSelectors } from '@entities/session'
 import { paths } from '@shared/router'
 
-export const Route = createFileRoute('/_app')({
+export const Route = createFileRoute('/_protected/_verified')({
   beforeLoad: () => {
-    const isAuthenticated = sessionSelectors.isAuthenticated()
+    const user = sessionSelectors.getUser()
 
-    if (!isAuthenticated) {
-      throw redirect({ to: paths.AUTH.LOGIN })
+    if (!user?.verification.email.isVerified) {
+      throw redirect({ to: paths.AUTH.VERIFY_EMAIL })
     }
   },
 

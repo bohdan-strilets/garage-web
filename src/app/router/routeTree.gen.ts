@@ -9,22 +9,23 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './__root'
+import { Route as ProtectedRouteRouteImport } from './_protected/route'
 import { Route as AuthRouteRouteImport } from './_auth/route'
-import { Route as AppRouteRouteImport } from './_app/route'
 import { Route as IndexRouteImport } from './index'
 import { Route as AuthVerifyEmailRouteImport } from './_auth/verify-email'
 import { Route as AuthRegisterRouteImport } from './_auth/register'
 import { Route as AuthLoginRouteImport } from './_auth/login'
 import { Route as AuthForgotPasswordRouteImport } from './_auth/forgot-password'
-import { Route as AppVehiclesRouteImport } from './_app/vehicles'
-import { Route as AppDashboardRouteImport } from './_app/dashboard'
+import { Route as ProtectedVerifiedRouteRouteImport } from './_protected/_verified/route'
+import { Route as ProtectedVerifiedVehiclesRouteImport } from './_protected/_verified/vehicles'
+import { Route as ProtectedVerifiedDashboardRouteImport } from './_protected/_verified/dashboard'
 
-const AuthRouteRoute = AuthRouteRouteImport.update({
-  id: '/_auth',
+const ProtectedRouteRoute = ProtectedRouteRouteImport.update({
+  id: '/_protected',
   getParentRoute: () => rootRouteImport,
 } as any)
-const AppRouteRoute = AppRouteRouteImport.update({
-  id: '/_app',
+const AuthRouteRoute = AuthRouteRouteImport.update({
+  id: '/_auth',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -52,99 +53,107 @@ const AuthForgotPasswordRoute = AuthForgotPasswordRouteImport.update({
   path: '/forgot-password',
   getParentRoute: () => AuthRouteRoute,
 } as any)
-const AppVehiclesRoute = AppVehiclesRouteImport.update({
-  id: '/vehicles',
-  path: '/vehicles',
-  getParentRoute: () => AppRouteRoute,
+const ProtectedVerifiedRouteRoute = ProtectedVerifiedRouteRouteImport.update({
+  id: '/_verified',
+  getParentRoute: () => ProtectedRouteRoute,
 } as any)
-const AppDashboardRoute = AppDashboardRouteImport.update({
-  id: '/dashboard',
-  path: '/dashboard',
-  getParentRoute: () => AppRouteRoute,
-} as any)
+const ProtectedVerifiedVehiclesRoute =
+  ProtectedVerifiedVehiclesRouteImport.update({
+    id: '/vehicles',
+    path: '/vehicles',
+    getParentRoute: () => ProtectedVerifiedRouteRoute,
+  } as any)
+const ProtectedVerifiedDashboardRoute =
+  ProtectedVerifiedDashboardRouteImport.update({
+    id: '/dashboard',
+    path: '/dashboard',
+    getParentRoute: () => ProtectedVerifiedRouteRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/dashboard': typeof AppDashboardRoute
-  '/vehicles': typeof AppVehiclesRoute
   '/forgot-password': typeof AuthForgotPasswordRoute
   '/login': typeof AuthLoginRoute
   '/register': typeof AuthRegisterRoute
   '/verify-email': typeof AuthVerifyEmailRoute
+  '/dashboard': typeof ProtectedVerifiedDashboardRoute
+  '/vehicles': typeof ProtectedVerifiedVehiclesRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/dashboard': typeof AppDashboardRoute
-  '/vehicles': typeof AppVehiclesRoute
   '/forgot-password': typeof AuthForgotPasswordRoute
   '/login': typeof AuthLoginRoute
   '/register': typeof AuthRegisterRoute
   '/verify-email': typeof AuthVerifyEmailRoute
+  '/dashboard': typeof ProtectedVerifiedDashboardRoute
+  '/vehicles': typeof ProtectedVerifiedVehiclesRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/_app': typeof AppRouteRouteWithChildren
   '/_auth': typeof AuthRouteRouteWithChildren
-  '/_app/dashboard': typeof AppDashboardRoute
-  '/_app/vehicles': typeof AppVehiclesRoute
+  '/_protected': typeof ProtectedRouteRouteWithChildren
+  '/_protected/_verified': typeof ProtectedVerifiedRouteRouteWithChildren
   '/_auth/forgot-password': typeof AuthForgotPasswordRoute
   '/_auth/login': typeof AuthLoginRoute
   '/_auth/register': typeof AuthRegisterRoute
   '/_auth/verify-email': typeof AuthVerifyEmailRoute
+  '/_protected/_verified/dashboard': typeof ProtectedVerifiedDashboardRoute
+  '/_protected/_verified/vehicles': typeof ProtectedVerifiedVehiclesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
-    | '/dashboard'
-    | '/vehicles'
     | '/forgot-password'
     | '/login'
     | '/register'
     | '/verify-email'
+    | '/dashboard'
+    | '/vehicles'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
-    | '/dashboard'
-    | '/vehicles'
     | '/forgot-password'
     | '/login'
     | '/register'
     | '/verify-email'
+    | '/dashboard'
+    | '/vehicles'
   id:
     | '__root__'
     | '/'
-    | '/_app'
     | '/_auth'
-    | '/_app/dashboard'
-    | '/_app/vehicles'
+    | '/_protected'
+    | '/_protected/_verified'
     | '/_auth/forgot-password'
     | '/_auth/login'
     | '/_auth/register'
     | '/_auth/verify-email'
+    | '/_protected/_verified/dashboard'
+    | '/_protected/_verified/vehicles'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  AppRouteRoute: typeof AppRouteRouteWithChildren
   AuthRouteRoute: typeof AuthRouteRouteWithChildren
+  ProtectedRouteRoute: typeof ProtectedRouteRouteWithChildren
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/_protected': {
+      id: '/_protected'
+      path: ''
+      fullPath: ''
+      preLoaderRoute: typeof ProtectedRouteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/_auth': {
       id: '/_auth'
       path: ''
       fullPath: ''
       preLoaderRoute: typeof AuthRouteRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/_app': {
-      id: '/_app'
-      path: ''
-      fullPath: ''
-      preLoaderRoute: typeof AppRouteRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -182,36 +191,29 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthForgotPasswordRouteImport
       parentRoute: typeof AuthRouteRoute
     }
-    '/_app/vehicles': {
-      id: '/_app/vehicles'
+    '/_protected/_verified': {
+      id: '/_protected/_verified'
+      path: ''
+      fullPath: ''
+      preLoaderRoute: typeof ProtectedVerifiedRouteRouteImport
+      parentRoute: typeof ProtectedRouteRoute
+    }
+    '/_protected/_verified/vehicles': {
+      id: '/_protected/_verified/vehicles'
       path: '/vehicles'
       fullPath: '/vehicles'
-      preLoaderRoute: typeof AppVehiclesRouteImport
-      parentRoute: typeof AppRouteRoute
+      preLoaderRoute: typeof ProtectedVerifiedVehiclesRouteImport
+      parentRoute: typeof ProtectedVerifiedRouteRoute
     }
-    '/_app/dashboard': {
-      id: '/_app/dashboard'
+    '/_protected/_verified/dashboard': {
+      id: '/_protected/_verified/dashboard'
       path: '/dashboard'
       fullPath: '/dashboard'
-      preLoaderRoute: typeof AppDashboardRouteImport
-      parentRoute: typeof AppRouteRoute
+      preLoaderRoute: typeof ProtectedVerifiedDashboardRouteImport
+      parentRoute: typeof ProtectedVerifiedRouteRoute
     }
   }
 }
-
-interface AppRouteRouteChildren {
-  AppDashboardRoute: typeof AppDashboardRoute
-  AppVehiclesRoute: typeof AppVehiclesRoute
-}
-
-const AppRouteRouteChildren: AppRouteRouteChildren = {
-  AppDashboardRoute: AppDashboardRoute,
-  AppVehiclesRoute: AppVehiclesRoute,
-}
-
-const AppRouteRouteWithChildren = AppRouteRoute._addFileChildren(
-  AppRouteRouteChildren,
-)
 
 interface AuthRouteRouteChildren {
   AuthForgotPasswordRoute: typeof AuthForgotPasswordRoute
@@ -231,10 +233,38 @@ const AuthRouteRouteWithChildren = AuthRouteRoute._addFileChildren(
   AuthRouteRouteChildren,
 )
 
+interface ProtectedVerifiedRouteRouteChildren {
+  ProtectedVerifiedDashboardRoute: typeof ProtectedVerifiedDashboardRoute
+  ProtectedVerifiedVehiclesRoute: typeof ProtectedVerifiedVehiclesRoute
+}
+
+const ProtectedVerifiedRouteRouteChildren: ProtectedVerifiedRouteRouteChildren =
+  {
+    ProtectedVerifiedDashboardRoute: ProtectedVerifiedDashboardRoute,
+    ProtectedVerifiedVehiclesRoute: ProtectedVerifiedVehiclesRoute,
+  }
+
+const ProtectedVerifiedRouteRouteWithChildren =
+  ProtectedVerifiedRouteRoute._addFileChildren(
+    ProtectedVerifiedRouteRouteChildren,
+  )
+
+interface ProtectedRouteRouteChildren {
+  ProtectedVerifiedRouteRoute: typeof ProtectedVerifiedRouteRouteWithChildren
+}
+
+const ProtectedRouteRouteChildren: ProtectedRouteRouteChildren = {
+  ProtectedVerifiedRouteRoute: ProtectedVerifiedRouteRouteWithChildren,
+}
+
+const ProtectedRouteRouteWithChildren = ProtectedRouteRoute._addFileChildren(
+  ProtectedRouteRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  AppRouteRoute: AppRouteRouteWithChildren,
   AuthRouteRoute: AuthRouteRouteWithChildren,
+  ProtectedRouteRoute: ProtectedRouteRouteWithChildren,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

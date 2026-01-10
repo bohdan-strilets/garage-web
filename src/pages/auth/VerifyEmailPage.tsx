@@ -1,13 +1,11 @@
-import { useSearch } from '@tanstack/react-router'
-
+import { Route } from '@app/router/_auth/verify-email'
 import {
   VerifyEmailPending,
   VerifyEmailResult,
 } from '@features/auth/verify-email'
-import { paths } from '@shared/router'
 
 const VerifyEmailPage = () => {
-  const { token } = useSearch({ from: paths.AUTH.VERIFY_EMAIL })
+  const { token } = Route.useSearch()
 
   if (token) {
     return <VerifyEmailResult token={token} />
