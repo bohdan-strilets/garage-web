@@ -1,11 +1,11 @@
 import { zodResolver } from '@hookform/resolvers/zod'
 
 import { Button } from '@shared/ui/controls/Button'
+import { PasswordInput } from '@shared/ui/controls/PasswordInput'
+import { TextInput } from '@shared/ui/controls/TextInput'
 import { Form } from '@shared/ui/form/Form'
 import { FormField } from '@shared/ui/form/FormField'
 import { FormRootError } from '@shared/ui/form/FormRootError'
-import { PasswordInput } from '@shared/ui/form/PasswordInput'
-import { TextInput } from '@shared/ui/form/TextInput'
 
 import { useRegister } from '../model/useRegister'
 import { useRegisterFormSubmit } from '../model/useRegisterFormSubmit'

@@ -1,10 +1,10 @@
 import { zodResolver } from '@hookform/resolvers/zod'
 
 import { Button } from '@shared/ui/controls/Button'
+import { TextInput } from '@shared/ui/controls/TextInput'
 import { Form } from '@shared/ui/form/Form'
 import { FormField } from '@shared/ui/form/FormField'
 import { FormRootError } from '@shared/ui/form/FormRootError'
-import { TextInput } from '@shared/ui/form/TextInput'
 
 import { useForgotPasswordForm } from '../model/useForgotPasswordForm'
 import { ForgotPasswordSchema } from '../schema/forgotPasswordSchema'
