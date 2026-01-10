@@ -11,16 +11,16 @@ export const root = recipe({
   variants: {
     size: {
       sm: {
-        width: vars.layout.input.height.sm,
-        height: vars.layout.input.height.sm,
+        width: vars.layout.input.size.sm,
+        height: vars.layout.input.size.sm,
       },
       md: {
-        width: vars.layout.input.height.md,
-        height: vars.layout.input.height.md,
+        width: vars.layout.input.size.md,
+        height: vars.layout.input.size.md,
       },
       lg: {
-        width: vars.layout.input.height.lg,
-        height: vars.layout.input.height.lg,
+        width: vars.layout.input.size.lg,
+        height: vars.layout.input.size.lg,
       },
     },
   },

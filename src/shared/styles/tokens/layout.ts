@@ -25,7 +25,7 @@ export const layout = {
   },
 
   input: {
-    height: {
+    size: {
       sm: '32px',
       md: '40px',
       lg: '48px',

@@ -17,8 +17,8 @@ export const toggle = style({
   alignItems: 'center',
   justifyContent: 'center',
 
-  height: vars.layout.input.height.sm,
-  width: vars.layout.input.height.sm,
+  height: vars.layout.input.size.sm,
+  width: vars.layout.input.size.sm,
 
   color: vars.color.text.muted,
   cursor: 'pointer',

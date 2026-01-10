@@ -117,7 +117,7 @@ export const themeContract = createThemeContract({
     },
 
     input: {
-      height: {
+      size: {
         sm: null,
         md: null,
         lg: null,

@@ -4,7 +4,7 @@ import { vars } from '@shared/styles'
 
 export const item = style({
   width: '100%',
-  height: vars.layout.input.height.lg,
+  height: vars.layout.input.size.lg,
 })
 
 export const link = style({

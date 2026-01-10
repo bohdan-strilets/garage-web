@@ -7,7 +7,7 @@ export const root = style({
   color: vars.color.text.primary,
 
   width: '100%',
-  height: vars.layout.input.height.md,
+  height: vars.layout.input.size.md,
   paddingInline: vars.space.md,
 
   backgroundColor: vars.color.surface.base,

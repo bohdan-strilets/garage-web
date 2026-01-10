@@ -43,19 +43,19 @@ export const root = recipe({
 
     size: {
       sm: {
-        height: vars.layout.input.height.sm,
+        height: vars.layout.input.size.sm,
         paddingInline: vars.space.md,
         fontSize: vars.font.size.sm,
       },
 
       md: {
-        height: vars.layout.input.height.md,
+        height: vars.layout.input.size.md,
         paddingInline: vars.space.lg,
         fontSize: vars.font.size.md,
       },
 
       lg: {
-        height: vars.layout.input.height.lg,
+        height: vars.layout.input.size.lg,
         paddingInline: vars.space.xl,
         fontSize: vars.font.size.md,
       },
