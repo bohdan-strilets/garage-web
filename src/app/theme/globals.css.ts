@@ -1,6 +1,18 @@
 import { globalStyle } from '@vanilla-extract/css'
 
-import { vars } from '@shared/styles'
+import { darkTheme, lightTheme, vars } from '@shared/styles'
+
+globalStyle(':root', {
+  colorScheme: 'light dark',
+})
+
+globalStyle(`body.${darkTheme}`, {
+  colorScheme: 'dark',
+})
+
+globalStyle(`body.${lightTheme}`, {
+  colorScheme: 'light',
+})
 
 globalStyle('body', {
   fontFamily: vars.font.family.base,
