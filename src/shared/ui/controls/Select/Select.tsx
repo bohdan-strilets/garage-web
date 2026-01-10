@@ -2,10 +2,10 @@ import clsx from 'clsx'
 
 import { useId } from 'react'
 
+import { useDropdown } from '@shared/hooks/dropdwon'
 import { disabled, focusable, hoverable } from '@shared/styles'
 import { Icon } from '@shared/ui/controls/Icon'
 
-import { useDropdown } from './model/useDropdown'
 import {
   root,
   trigger,

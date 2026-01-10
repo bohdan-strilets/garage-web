@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 
-import type { SelectParams } from '../types/Params'
+import type { useDropdownParams } from './Params'
 
-export const useDropdown = ({ disabled: isDisabled }: SelectParams) => {
+export const useDropdown = ({ disabled: isDisabled }: useDropdownParams) => {
   const [open, setOpen] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
 
