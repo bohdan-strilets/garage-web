@@ -5,6 +5,7 @@ import { initSession } from '@entities/session'
 import { QueryProvider } from '../react-query'
 import { RouterProvider } from '../router'
 import { ThemeProvider } from '../theme'
+import { ToastProvider } from '../toast'
 
 const AppProvider = () => {
   const [bootstrapped, setBootstrapped] = useState(false)
@@ -20,7 +21,9 @@ const AppProvider = () => {
   return (
     <QueryProvider>
       <ThemeProvider>
-        <RouterProvider />
+        <ToastProvider>
+          <RouterProvider />
+        </ToastProvider>
       </ThemeProvider>
     </QueryProvider>
   )
