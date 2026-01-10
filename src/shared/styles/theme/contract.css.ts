@@ -151,6 +151,15 @@ export const themeContract = createThemeContract({
       width: null,
       thumbSize: null,
     },
+
+    avatar: {
+      size: {
+        xs: null,
+        sm: null,
+        md: null,
+        lg: null,
+      },
+    },
   },
 
   motion: {

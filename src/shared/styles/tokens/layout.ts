@@ -59,4 +59,13 @@ export const layout = {
     width: '56px',
     thumbSize: '24px',
   },
+
+  avatar: {
+    size: {
+      xs: '24px',
+      sm: '32px',
+      md: '40px',
+      lg: '48px',
+    },
+  },
 } as const
